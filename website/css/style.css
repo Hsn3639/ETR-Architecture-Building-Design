@@ -70,8 +70,11 @@ h3 { font-size: 1.35rem; }
   border-bottom: 1px solid var(--line-soft);
 }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; min-height: 78px; gap: 18px; }
-.brand { font-family: var(--serif); font-size: 1.5rem; letter-spacing: 0.02em; color: var(--charcoal); }
-.brand span { font-family: var(--display); font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--muted); display: block; margin-top: 2px; }
+.brand { display: flex; align-items: center; gap: 13px; }
+.brand-mark { width: 36px; height: 36px; display: block; flex-shrink: 0; }
+.brand-text { display: flex; flex-direction: column; line-height: 1; }
+.brand-word { font-family: var(--serif); font-size: 1.55rem; letter-spacing: 0.04em; color: var(--charcoal); }
+.brand-tag { font-family: var(--display); font-size: 0.6rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
 .nav { display: flex; align-items: center; gap: 26px; }
 .nav a { font-family: var(--display); font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); }
 .nav a:hover { color: var(--sand-dk); }
