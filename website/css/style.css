@@ -284,6 +284,37 @@ section { padding: var(--sp) 0; }
 @media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 
 /* ============================================================
+   FULL-WIDTH IMAGE HERO
+   ============================================================ */
+.hero-image {
+  background:
+    linear-gradient(180deg, rgba(20,19,15,0.45), rgba(20,19,15,0.72)),
+    url("../assets/hero.svg") center / cover no-repeat;
+  border-bottom: none;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+}
+.hero-image::after { display: none; }              /* image carries the texture */
+.hero-image .tag { color: rgba(255,255,255,0.72); }
+.hero-image h1 { color: #fff; }
+.hero-image p { color: rgba(255,255,255,0.85); }
+.hero-scroll { margin-top: 56px; font-family: var(--display); font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+
+/* ============================================================
+   PORTFOLIO / SELECTED WORK
+   ============================================================ */
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); }
+.project { background: var(--paper); display: block; overflow: hidden; color: var(--ink); }
+.project:hover { color: var(--ink); text-decoration: none; }
+.project-img { aspect-ratio: 4 / 3; overflow: hidden; background: var(--bone); }
+.project-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .7s cubic-bezier(.22,.61,.36,1); }
+.project:hover .project-img img { transform: scale(1.05); }
+.project-cap { padding: 24px 26px; display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+.project-cap h3 { font-size: 1.3rem; }
+.project-cap .pt { font-family: var(--display); font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+
+/* ============================================================
    CHATBOT — Nero (monogram, sharp panel)
    ============================================================ */
 .cb-wrap { position: fixed; bottom: 28px; right: 28px; z-index: 50; display: flex; flex-direction: column; align-items: flex-end; }

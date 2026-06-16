@@ -31,7 +31,9 @@ Object.assign(I18N.en, {
   h_p4_t: "Build & support", h_p4_d: "We guide construction and stand by the result.",
   h_band_h: "Ready to build smarter?",
   h_band_p: "Start with a free, no-obligation project consultation.",
-  h_band_btn: "Request a consultation"
+  h_band_btn: "Request a consultation",
+  h_work_title: "Selected Work",
+  h_work_sub: "A selection of studies and project types. Replace these placeholders with your own photography."
 });
 
 Object.assign(I18N.ar, {
@@ -63,7 +65,9 @@ Object.assign(I18N.ar, {
   h_p4_t: "البناء والدعم", h_p4_d: "نرافق التنفيذ ونقف خلف النتيجة.",
   h_band_h: "هل أنت مستعد للبناء بذكاء؟",
   h_band_p: "ابدأ باستشارة مجانية لمشروعك دون أي التزام.",
-  h_band_btn: "اطلب استشارة"
+  h_band_btn: "اطلب استشارة",
+  h_work_title: "أعمال مختارة",
+  h_work_sub: "مجموعة من الدراسات وأنواع المشاريع. استبدل هذه الصور المؤقتة بصورك الخاصة."
 });
 
 Object.assign(I18N.fr, {
@@ -95,7 +99,9 @@ Object.assign(I18N.fr, {
   h_p4_t: "Construire & accompagner", h_p4_d: "Nous guidons le chantier et répondons du résultat.",
   h_band_h: "Prêt à construire plus intelligemment ?",
   h_band_p: "Commencez par une consultation de projet gratuite et sans engagement.",
-  h_band_btn: "Demander une consultation"
+  h_band_btn: "Demander une consultation",
+  h_work_title: "Travaux sélectionnés",
+  h_work_sub: "Une sélection d'études et de types de projets. Remplacez ces images temporaires par vos propres photos."
 });
 
 Object.assign(I18N.es, {
@@ -127,7 +133,9 @@ Object.assign(I18N.es, {
   h_p4_t: "Construir y acompañar", h_p4_d: "Guiamos la obra y respondemos por el resultado.",
   h_band_h: "¿Listo para construir de forma más inteligente?",
   h_band_p: "Comience con una consulta de proyecto gratuita y sin compromiso.",
-  h_band_btn: "Solicitar una consulta"
+  h_band_btn: "Solicitar una consulta",
+  h_work_title: "Trabajos seleccionados",
+  h_work_sub: "Una selección de estudios y tipos de proyecto. Sustituya estas imágenes provisionales por sus propias fotos."
 });
 
 Object.assign(I18N.ru, {
@@ -159,7 +167,9 @@ Object.assign(I18N.ru, {
   h_p4_t: "Строительство и поддержка", h_p4_d: "Мы сопровождаем стройку и отвечаем за результат.",
   h_band_h: "Готовы строить умнее?",
   h_band_p: "Начните с бесплатной консультации по проекту без обязательств.",
-  h_band_btn: "Запросить консультацию"
+  h_band_btn: "Запросить консультацию",
+  h_work_title: "Избранные работы",
+  h_work_sub: "Подборка исследований и типов проектов. Замените эти временные изображения собственными фотографиями."
 });
 
 Object.assign(I18N.zh, {
@@ -191,7 +201,9 @@ Object.assign(I18N.zh, {
   h_p4_t: "施工与支持", h_p4_d: "我们指导施工，并对成果负责。",
   h_band_h: "准备好更聪明地建造了吗？",
   h_band_p: "从一次免费、无义务的项目咨询开始。",
-  h_band_btn: "预约咨询"
+  h_band_btn: "预约咨询",
+  h_work_title: "精选作品",
+  h_work_sub: "一组研究与项目类型示例。请用您自己的摄影作品替换这些占位图。"
 });
 
 Object.assign(I18N.it, {
@@ -223,5 +235,7 @@ Object.assign(I18N.it, {
   h_p4_t: "Costruire e supportare", h_p4_d: "Guidiamo il cantiere e rispondiamo del risultato.",
   h_band_h: "Pronto a costruire in modo più intelligente?",
   h_band_p: "Inizia con una consulenza di progetto gratuita e senza impegno.",
-  h_band_btn: "Richiedi una consulenza"
+  h_band_btn: "Richiedi una consulenza",
+  h_work_title: "Lavori selezionati",
+  h_work_sub: "Una selezione di studi e tipologie di progetto. Sostituisci queste immagini segnaposto con le tue fotografie."
 });
