@@ -11,6 +11,9 @@ the founder's own research on desert and Libyan architecture.
 | `website/index.html` | Multilingual **homepage** (services, why-us, process, CTA) |
 | `website/questionnaire.html` | **Smart questionnaire** + plan upload → instant preliminary estimate |
 | `website/contact-about.html` | **Contact + About** page (founder bio, credentials, contact form) |
+| `website/careers.html` | **Careers** — 70-question graduate assessment (English fluency + industry knowledge) |
+| `website/js/careers.js` | Careers submission (Formspree/mailto) |
+| `website/js/reveal.js` | Subtle scroll-reveal animations |
 | `website/js/config.js` | Central config — Formspree endpoint, contact email, chat API URL |
 | `server/` | Optional **backend**: AI concierge chat, lead capture, plan-image estimate (Claude) |
 | `docs/SETUP.md` | Integration guide — Formspree, backend, local run, launch checklist |

@@ -19,8 +19,8 @@
 
   var CB = {
     en: {
-      launch: "Chat with ETR", title: "ETR Assistant", close: "Close",
-      greeting: "Hi! I'm the ETR assistant. What are you planning to build?",
+      launch: "Chat with Nero", title: "Nero", persona: "Architect · ETR", close: "Close",
+      greeting: "I'm Nero, ETR's resident architect. I think in light, proportion and climate. Tell me what you're planning to build — and where — and I'll help you shape it.",
       t_res: "Residential", t_villa: "Villa", t_comm: "Commercial", t_ind: "Industrial", t_herit: "Heritage", t_mixed: "Mixed-use",
       ask_area: "Great choice. Roughly how many square metres (m²)?",
       area_invalid: "Please enter a number of m², e.g. 250.",
@@ -31,8 +31,8 @@
       placeholder: "Type your answer…", send: "Send", restart: "Start over"
     },
     ar: {
-      launch: "تحدّث مع ETR", title: "مساعد ETR", close: "إغلاق",
-      greeting: "مرحباً! أنا مساعد ETR. ماذا تخطّط أن تبني؟",
+      launch: "تحدّث مع نيرو", title: "نيرو", persona: "معماري · ETR", close: "إغلاق",
+      greeting: "أنا نيرو، المعماري المقيم في ETR. أفكّر بالضوء والتناسب والمناخ. أخبرني بما تنوي بناءه — وأين — وسأساعدك على تشكيله.",
       t_res: "سكني", t_villa: "فيلا", t_comm: "تجاري", t_ind: "صناعي", t_herit: "تراث", t_mixed: "متعدد الاستخدامات",
       ask_area: "اختيار ممتاز. كم تبلغ المساحة تقريباً بالمتر المربع (م²)؟",
       area_invalid: "يرجى إدخال مساحة بالمتر المربع، مثل ٢٥٠.",
@@ -43,8 +43,8 @@
       placeholder: "اكتب إجابتك…", send: "إرسال", restart: "ابدأ من جديد"
     },
     fr: {
-      launch: "Discuter avec ETR", title: "Assistant ETR", close: "Fermer",
-      greeting: "Bonjour ! Je suis l'assistant ETR. Que prévoyez-vous de construire ?",
+      launch: "Discuter avec Nero", title: "Nero", persona: "Architecte · ETR", close: "Fermer",
+      greeting: "Je suis Nero, l'architecte d'ETR. Je pense en lumière, proportion et climat. Dites-moi ce que vous prévoyez de construire — et où — et je vous aiderai à le concevoir.",
       t_res: "Résidentiel", t_villa: "Villa", t_comm: "Commercial", t_ind: "Industriel", t_herit: "Patrimoine", t_mixed: "Mixte",
       ask_area: "Excellent choix. Environ combien de mètres carrés (m²) ?",
       area_invalid: "Veuillez saisir un nombre de m², par ex. 250.",
@@ -55,8 +55,8 @@
       placeholder: "Tapez votre réponse…", send: "Envoyer", restart: "Recommencer"
     },
     es: {
-      launch: "Chatear con ETR", title: "Asistente ETR", close: "Cerrar",
-      greeting: "¡Hola! Soy el asistente de ETR. ¿Qué planea construir?",
+      launch: "Chatear con Nero", title: "Nero", persona: "Arquitecto · ETR", close: "Cerrar",
+      greeting: "Soy Nero, el arquitecto de ETR. Pienso en luz, proporción y clima. Dígame qué planea construir — y dónde — y le ayudaré a darle forma.",
       t_res: "Residencial", t_villa: "Villa", t_comm: "Comercial", t_ind: "Industrial", t_herit: "Patrimonio", t_mixed: "Uso mixto",
       ask_area: "Buena elección. ¿Aproximadamente cuántos metros cuadrados (m²)?",
       area_invalid: "Introduzca un número de m², p. ej. 250.",
@@ -67,8 +67,8 @@
       placeholder: "Escriba su respuesta…", send: "Enviar", restart: "Empezar de nuevo"
     },
     ru: {
-      launch: "Чат с ETR", title: "Ассистент ETR", close: "Закрыть",
-      greeting: "Здравствуйте! Я ассистент ETR. Что вы планируете строить?",
+      launch: "Чат с Неро", title: "Неро", persona: "Архитектор · ETR", close: "Закрыть",
+      greeting: "Я Неро, архитектор ETR. Я мыслю светом, пропорцией и климатом. Расскажите, что вы планируете построить — и где — и я помогу придать этому форму.",
       t_res: "Жильё", t_villa: "Вилла", t_comm: "Коммерция", t_ind: "Промышленность", t_herit: "Наследие", t_mixed: "Смешанное",
       ask_area: "Отличный выбор. Примерно сколько квадратных метров (м²)?",
       area_invalid: "Введите площадь в м², например 250.",
@@ -79,8 +79,8 @@
       placeholder: "Введите ответ…", send: "Отправить", restart: "Начать заново"
     },
     zh: {
-      launch: "与 ETR 对话", title: "ETR 助手", close: "关闭",
-      greeting: "您好！我是 ETR 助手。您打算建造什么？",
+      launch: "与 Nero 对话", title: "Nero", persona: "建筑师 · ETR", close: "关闭",
+      greeting: "我是 Nero，ETR 的常驻建筑师。我以光线、比例与气候来思考。请告诉我您打算建造什么、在哪里建造，我来帮您塑造它。",
       t_res: "住宅", t_villa: "别墅", t_comm: "商业", t_ind: "工业", t_herit: "遗产", t_mixed: "综合用途",
       ask_area: "很好。大约多少平方米（m²）？",
       area_invalid: "请输入平方米数，例如 250。",
@@ -91,8 +91,8 @@
       placeholder: "输入您的回答…", send: "发送", restart: "重新开始"
     },
     it: {
-      launch: "Chatta con ETR", title: "Assistente ETR", close: "Chiudi",
-      greeting: "Ciao! Sono l'assistente ETR. Cosa hai intenzione di costruire?",
+      launch: "Chatta con Nero", title: "Nero", persona: "Architetto · ETR", close: "Chiudi",
+      greeting: "Sono Nero, l'architetto di ETR. Penso in luce, proporzione e clima. Dimmi cosa intendi costruire — e dove — e ti aiuterò a dargli forma.",
       t_res: "Residenziale", t_villa: "Villa", t_comm: "Commerciale", t_ind: "Industriale", t_herit: "Patrimonio", t_mixed: "Uso misto",
       ask_area: "Ottima scelta. All'incirca quanti metri quadri (m²)?",
       area_invalid: "Inserisci un numero di m², es. 250.",
@@ -221,14 +221,15 @@
   function applyChrome() {
     els.launch.setAttribute("aria-label", t().launch);
     els.launch.title = t().launch;
-    els.titleEl.textContent = t().title;
+    var persona = t().persona ? '<small>' + t().persona + '</small>' : '';
+    els.titleEl.innerHTML = t().title + persona;
     els.input.placeholder = t().placeholder;
     els.sendBtn.textContent = t().send;
     els.closeBtn.setAttribute("aria-label", t().close);
   }
 
   function build() {
-    var launch = el("button", "cb-launch"); launch.type = "button"; launch.innerHTML = "💬";
+    var launch = el("button", "cb-launch"); launch.type = "button"; launch.innerHTML = "N";
     var panel = el("div", "cb-panel"); panel.hidden = true;
     var header = el("div", "cb-header");
     var titleEl = el("span", "cb-title");
