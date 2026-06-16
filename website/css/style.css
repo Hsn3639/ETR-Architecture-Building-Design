@@ -122,6 +122,41 @@ section { padding: 48px 0; }
 
 .alt { background: #efeae1; }
 
+/* ---------- Buttons & home hero ---------- */
+.hero-home { padding: 84px 0; }
+.hero-cta { margin-top: 26px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-block; padding: 13px 26px; border-radius: 999px;
+  font-weight: 600; font-size: 0.98rem; cursor: pointer; transition: transform .12s ease, opacity .12s ease;
+}
+.btn:hover { transform: translateY(-2px); text-decoration: none; }
+.btn-primary { background: var(--sand); color: #1d2a32; }
+.btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.6); }
+
+/* ---------- Service / feature cards ---------- */
+.card.svc h3, .card.feature h3 { color: var(--accent); }
+.card.svc, .card.feature { transition: transform .12s ease, box-shadow .12s ease; }
+.card.svc:hover, .card.feature:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(29,42,50,0.14); }
+
+/* ---------- Process steps ---------- */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; }
+.step { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px 22px; box-shadow: var(--shadow); }
+.step-num {
+  width: 42px; height: 42px; border-radius: 50%; background: var(--ink); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 14px;
+}
+.step h3 { font-size: 1.08rem; margin-bottom: 8px; }
+.step p { color: var(--slate); font-size: 0.95rem; }
+
+/* ---------- CTA band ---------- */
+.cta-band { background: linear-gradient(135deg, var(--accent), #17524f); color: #fff; text-align: center; }
+.cta-band h2 { font-size: 1.8rem; margin-bottom: 10px; }
+.cta-band p { opacity: 0.95; margin-bottom: 22px; }
+
+/* RTL extras for home */
+[dir="rtl"] .step-num { margin-left: auto; }
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--ink); color: #cdd6da; padding: 30px 0; font-size: 0.9rem;
