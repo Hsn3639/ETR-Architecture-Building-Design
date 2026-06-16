@@ -8,7 +8,9 @@
  * includes this script (it injects its own DOM and listens to #lang-select).
  */
 (function () {
-  var CONTACT_EMAIL = "hsn.importazioni@outlook.com";
+  var CFG = (typeof window !== "undefined" && window.ETR_CONFIG) || {};
+  var CONTACT_EMAIL = CFG.CONTACT_EMAIL || "hsn.importazioni@outlook.com";
+  var CHAT_API_URL = CFG.CHAT_API_URL || ""; // set in config.js to enable real AI replies
 
   // Rough mid-point build cost (USD/m²) for the ballpark only — see quote.js for the
   // documented, finish-aware rates used by the full estimator.
@@ -165,18 +167,41 @@
     state.step = "done";
   }
 
+  var history = []; // {role, content} for the live-AI path
+
   function handleFreeText(text) {
-    // --- LLM hook: replace this block with a fetch() to your AI backend ---
+    // Guided flow always handles the "area" step locally so the ballpark works offline.
     if (state.step === "area") {
       var n = parseFloat((text || "").replace(/[^0-9.]/g, ""));
       if (!n || n <= 0) { bubble(t().area_invalid, "bot"); return; }
       state.area = Math.round(n);
       showBallpark();
-    } else {
-      // outside the guided flow: gently steer back
-      bubble(t().greeting, "bot");
-      askType();
+      return;
     }
+    // Live-AI path: if a backend is configured, send the message there.
+    if (CHAT_API_URL) {
+      askAI(text);
+      return;
+    }
+    // Otherwise, gently steer back into the guided flow.
+    bubble(t().greeting, "bot");
+    askType();
+  }
+
+  function askAI(text) {
+    history.push({ role: "user", content: text });
+    var typing = bubble("…", "bot");
+    fetch(CHAT_API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ messages: history, lang: lang() })
+    }).then(function (r) { return r.json(); }).then(function (data) {
+      var reply = (data && data.reply) || "";
+      typing.textContent = reply || t().area_invalid;
+      if (reply) history.push({ role: "assistant", content: reply });
+    }).catch(function () {
+      typing.textContent = t().cta_contact + ": " + CONTACT_EMAIL;
+    });
   }
 
   function onSend() {

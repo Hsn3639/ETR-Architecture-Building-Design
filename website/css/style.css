@@ -198,6 +198,26 @@ section { padding: 48px 0; }
 /* RTL form */
 [dir="rtl"] .q-checks label { flex-direction: row-reverse; justify-content: flex-end; }
 
+/* ---------- About / Contact ---------- */
+.about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: start; }
+.about-grid h3 { margin: 22px 0 10px; color: var(--accent); }
+.cred-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.cred-list li { padding-left: 22px; position: relative; color: var(--slate); }
+.cred-list li::before { content: "▹"; position: absolute; left: 0; color: var(--sand-dark); }
+[dir="rtl"] .cred-list li { padding-left: 0; padding-right: 22px; }
+[dir="rtl"] .cred-list li::before { left: auto; right: 0; }
+.contact-card { padding: 28px; }
+.contact-card h2 { font-size: 1.3rem; margin-bottom: 16px; }
+.contact-card .field { margin-bottom: 14px; }
+.contact-card textarea {
+  padding: 11px 12px; border: 1px solid var(--line); border-radius: 8px;
+  font-size: 0.98rem; font-family: inherit; resize: vertical;
+}
+.contact-card textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+.contact-card .btn { width: 100%; margin-top: 4px; }
+.contact-card .q-send-status { color: var(--accent); }
+@media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; } }
+
 /* ---------- Chatbot widget ---------- */
 .cb-wrap { position: fixed; bottom: 22px; right: 22px; z-index: 50; display: flex; flex-direction: column; align-items: flex-end; }
 [dir="rtl"] .cb-wrap { right: auto; left: 22px; align-items: flex-start; }

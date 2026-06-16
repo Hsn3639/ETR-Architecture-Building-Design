@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="ca_meta_title">Contact &amp; About | ETR Architecture &amp; Building Design</title>
+  <meta name="description" content="About ETR — climate-smart, heritage-rooted architecture led by Dr. Ali Eltrapolsi — and how to get in touch." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">ETR <span data-i18n="tagline">Architecture &amp; Building Design</span></div>
+      <nav class="nav">
+        <a href="index.html" data-i18n="ca_nav_home">Home</a>
+        <a href="index.html#services" data-i18n="ca_nav_services">Services</a>
+        <a href="research-evidence.html" data-i18n="ca_nav_research">Research</a>
+        <a href="contact-about.html" data-i18n="ca_nav_contact">Contact</a>
+        <label class="lang-picker">
+          <span class="sr-only" data-i18n="lang_label">Language</span>
+          <select id="lang-select" aria-label="Language">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="ru">Русский</option>
+            <option value="zh">中文</option>
+            <option value="it">Italiano</option>
+          </select>
+        </label>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero hero-form">
+    <div class="container">
+      <h1 data-i18n="ca_title">About ETR &amp; Get in Touch</h1>
+      <p data-i18n="ca_sub">Climate-smart, heritage-rooted architecture for Libya and the world.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container about-grid">
+      <div>
+        <h2 class="section-title" data-i18n="ca_about_h">About the practice</h2>
+        <p class="section-sub" data-i18n="ca_about_p">ETR is led by Dr. Ali Hassan A. Eltrapolsi…</p>
+
+        <h3 data-i18n="ca_cred_h">Credentials</h3>
+        <ul class="cred-list">
+          <li data-i18n="ca_cred_1">PhD, University of Sheffield (UK) — passive cooling in desert housing</li>
+          <li data-i18n="ca_cred_2">Peer-reviewed publications (MDPI, Springer, Taylor &amp; Francis)</li>
+          <li data-i18n="ca_cred_3">Department of Architecture &amp; Urban Planning, University of Benghazi</li>
+          <li data-i18n="ca_cred_4">Specialist in passive cooling for hot-arid climates</li>
+        </ul>
+      </div>
+
+      <div class="card contact-card">
+        <h2 data-i18n="ca_contact_h">Contact us</h2>
+        <form id="contact-form">
+          <label class="field">
+            <span data-i18n="ca_f_name">Your name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label class="field">
+            <span data-i18n="ca_f_email">Email or phone</span>
+            <input type="text" name="contact" autocomplete="email" required />
+          </label>
+          <label class="field">
+            <span data-i18n="ca_f_msg">How can we help?</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" data-i18n="ca_f_send">Send message</button>
+          <p id="contact-status" class="q-send-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <h3 data-i18n="ca_reach_h">Reach us directly</h3>
+        <p><a href="mailto:hsn.importazioni@outlook.com">hsn.importazioni@outlook.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <span data-i18n="foot_p">ETR — Architecture &amp; Building Design · Climate-smart, heritage-rooted design for Libya &amp; the world. Evidence base maintained in</span>
+        <a href="../docs/research/knowledge-base.md">knowledge-base.md</a> ·
+        <a href="../docs/research/reading-list.md">reading-list.md</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/contact-i18n.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

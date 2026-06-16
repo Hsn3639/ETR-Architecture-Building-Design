@@ -19,9 +19,10 @@
  * opening the visitor's email client (mailto) pre-filled with their enquiry.
  */
 (function () {
-  // --- Lead delivery configuration ---
-  var FORMSPREE_ENDPOINT = ""; // e.g. "https://formspree.io/f/xxxxxxxx"
-  var CONTACT_EMAIL = "hsn.importazioni@outlook.com";
+  // --- Lead delivery configuration (overridable via window.ETR_CONFIG in config.js) ---
+  var CFG = (typeof window !== "undefined" && window.ETR_CONFIG) || {};
+  var FORMSPREE_ENDPOINT = CFG.FORMSPREE_ENDPOINT || ""; // e.g. "https://formspree.io/f/xxxxxxxx"
+  var CONTACT_EMAIL = CFG.CONTACT_EMAIL || "hsn.importazioni@outlook.com";
 
   // --- Illustrative base construction cost, USD/m², by project type & finish ---
   var RATES = {

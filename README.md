@@ -10,6 +10,10 @@ the founder's own research on desert and Libyan architecture.
 |------|---------|
 | `website/index.html` | Multilingual **homepage** (services, why-us, process, CTA) |
 | `website/questionnaire.html` | **Smart questionnaire** + plan upload → instant preliminary estimate |
+| `website/contact-about.html` | **Contact + About** page (founder bio, credentials, contact form) |
+| `website/js/config.js` | Central config — Formspree endpoint, contact email, chat API URL |
+| `server/` | Optional **backend**: AI concierge chat, lead capture, plan-image estimate (Claude) |
+| `docs/SETUP.md` | Integration guide — Formspree, backend, local run, launch checklist |
 | `website/research-evidence.html` | Public **Research & Evidence** page — the science behind our services |
 | `website/js/i18n.js` | Shared 7-language engine (EN/AR/FR/ES/RU/ZH/IT) + RTL |
 | `website/js/home-i18n.js` · `quote-i18n.js` | Page-specific translations extending the shared dictionary |
