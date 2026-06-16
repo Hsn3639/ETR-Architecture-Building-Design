@@ -271,10 +271,20 @@ section { padding: var(--sp) 0; }
 /* ============================================================
    FOOTER
    ============================================================ */
-.site-footer { background: var(--charcoal); color: rgba(255,255,255,0.6); padding: 64px 0; font-size: 0.85rem; font-weight: 300; }
-.site-footer .container { display: flex; flex-direction: column; gap: 8px; }
+.site-footer { background: var(--charcoal); color: rgba(255,255,255,0.6); padding: 72px 0; font-size: 0.88rem; font-weight: 300; }
+.site-footer .container { display: flex; flex-direction: column; gap: 10px; }
 .site-footer a { color: var(--sand); border-bottom: 1px solid rgba(255,255,255,0.2); }
 .site-footer a:hover { color: #fff; }
+.foot-name { font-family: var(--serif); font-size: 1.7rem; color: #fff; letter-spacing: 0.01em; }
+.foot-contact { color: rgba(255,255,255,0.78); font-family: var(--display); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 6px; }
+.foot-contact a { letter-spacing: 0.06em; }
+.foot-links { margin-top: 14px; font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+[dir="rtl"] .site-footer .container { text-align: right; }
+
+/* About byline + reach lines */
+.byline { font-family: var(--display); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sand-dk); margin-bottom: 20px; }
+.reach-line { margin: 4px 0; color: var(--ink); font-weight: 300; }
+.reach-line strong { font-weight: 500; }
 
 /* ============================================================
    SCROLL REVEAL (subtle)

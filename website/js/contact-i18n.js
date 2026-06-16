@@ -22,7 +22,8 @@ Object.assign(I18N.en, {
   ca_f_sent: "Thank you — we've received your message and will be in touch.",
   ca_f_err: "Couldn't send automatically. Please email us directly.",
   ca_reach_h: "Reach us directly",
-  ca_subject: "Website enquiry — ETR"
+  ca_subject: "Website enquiry — ETR",
+  ca_loc: "Benghazi, Libya"
 });
 
 Object.assign(I18N.ar, {
@@ -46,7 +47,8 @@ Object.assign(I18N.ar, {
   ca_f_sent: "شكراً لك — استلمنا رسالتك وسنتواصل معك.",
   ca_f_err: "تعذّر الإرسال تلقائياً. يرجى مراسلتنا مباشرةً.",
   ca_reach_h: "تواصل مباشر",
-  ca_subject: "استفسار عبر الموقع — ETR"
+  ca_subject: "استفسار عبر الموقع — ETR",
+  ca_loc: "بنغازي، ليبيا"
 });
 
 Object.assign(I18N.fr, {
@@ -70,7 +72,8 @@ Object.assign(I18N.fr, {
   ca_f_sent: "Merci — nous avons bien reçu votre message et vous recontacterons.",
   ca_f_err: "Envoi automatique impossible. Merci de nous écrire directement.",
   ca_reach_h: "Nous joindre directement",
-  ca_subject: "Demande via le site — ETR"
+  ca_subject: "Demande via le site — ETR",
+  ca_loc: "Benghazi, Libye"
 });
 
 Object.assign(I18N.es, {
@@ -94,7 +97,8 @@ Object.assign(I18N.es, {
   ca_f_sent: "Gracias — hemos recibido su mensaje y nos pondremos en contacto.",
   ca_f_err: "No se pudo enviar automáticamente. Escríbanos directamente, por favor.",
   ca_reach_h: "Contacto directo",
-  ca_subject: "Consulta desde el sitio web — ETR"
+  ca_subject: "Consulta desde el sitio web — ETR",
+  ca_loc: "Bengasi, Libia"
 });
 
 Object.assign(I18N.ru, {
@@ -118,7 +122,8 @@ Object.assign(I18N.ru, {
   ca_f_sent: "Спасибо — мы получили ваше сообщение и свяжемся с вами.",
   ca_f_err: "Не удалось отправить автоматически. Напишите нам напрямую.",
   ca_reach_h: "Прямые контакты",
-  ca_subject: "Запрос с сайта — ETR"
+  ca_subject: "Запрос с сайта — ETR",
+  ca_loc: "Бенгази, Ливия"
 });
 
 Object.assign(I18N.zh, {
@@ -142,7 +147,8 @@ Object.assign(I18N.zh, {
   ca_f_sent: "谢谢——我们已收到您的消息，会尽快与您联系。",
   ca_f_err: "无法自动发送。请直接给我们发邮件。",
   ca_reach_h: "直接联系",
-  ca_subject: "网站咨询 — ETR"
+  ca_subject: "网站咨询 — ETR",
+  ca_loc: "利比亚班加西"
 });
 
 Object.assign(I18N.it, {
@@ -166,5 +172,6 @@ Object.assign(I18N.it, {
   ca_f_sent: "Grazie — abbiamo ricevuto il tuo messaggio e ti contatteremo.",
   ca_f_err: "Invio automatico non riuscito. Scrivici direttamente.",
   ca_reach_h: "Contatti diretti",
-  ca_subject: "Richiesta dal sito — ETR"
+  ca_subject: "Richiesta dal sito — ETR",
+  ca_loc: "Bengasi, Libia"
 });

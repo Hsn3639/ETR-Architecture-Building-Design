@@ -6,7 +6,7 @@ const I18N = {
   /* ---------------- ENGLISH ---------------- */
   en: {
     meta_title: "Research & Evidence | ETR Architecture & Building Design",
-    tagline: "Architecture & Building Design",
+    tagline: "Architectural Consultants",
     nav_evidence: "Evidence", nav_sources: "Sources", nav_integrity: "Integrity",
     lang_label: "Language", nav_careers: "Careers",
     hero_tag: "PEER-REVIEWED BUILDING SCIENCE",
@@ -52,13 +52,14 @@ const I18N = {
     int_title: "Our Research Integrity Pledge",
     int_h4: "Evidence you can trust — sourced the right way",
     int_p: "We cite only legal, open-access, or author-shared research. We do not use paywall-bypassing services. AI-generated figures are always presented as preliminary estimates and reviewed by a qualified architect or engineer before any commitment. Findings from other regions are clearly labelled and used as directional evidence — never as guarantees for your specific site. If we make a claim, you can check it.",
-    foot_p: "ETR — Architecture & Building Design · Climate-smart, heritage-rooted design for Libya & the world. Evidence base maintained in"
+    foot_p: "ETR Architectural Consultants · Benghazi, Libya — climate-smart, heritage-rooted design.",
+    foot_ceo: "CEO & Principal Architect"
   },
 
   /* ---------------- ARABIC ---------------- */
   ar: {
     meta_title: "الأبحاث والأدلة | ETR للعمارة وتصميم المباني",
-    tagline: "العمارة وتصميم المباني",
+    tagline: "استشارات معمارية",
     nav_evidence: "الأدلة", nav_sources: "المصادر", nav_integrity: "النزاهة",
     lang_label: "اللغة", nav_careers: "الوظائف",
     hero_tag: "علم بناء خاضع لمراجعة الأقران",
@@ -104,13 +105,14 @@ const I18N = {
     int_title: "تعهّدنا بنزاهة البحث",
     int_h4: "أدلة جديرة بالثقة — مصدرها سليم",
     int_p: "نستشهد فقط بأبحاث قانونية أو مفتوحة الوصول أو مشاركة من مؤلفيها. ولا نستخدم خدمات تجاوز جدران الدفع. وتُعرض الأرقام الناتجة عن الذكاء الاصطناعي دائماً كتقديرات أولية تُراجَع من مهندس معماري أو إنشائي مؤهّل قبل أي التزام. والنتائج من مناطق أخرى تُوسَم بوضوح وتُستخدم كأدلة استرشادية — لا كضمانات لموقعك بالتحديد. وإن قلنا شيئاً، فيمكنك التحقق منه.",
-    foot_p: "ETR — العمارة وتصميم المباني · تصميم ذكي مناخياً متجذّر في التراث لليبيا والعالم. قاعدة الأدلة محفوظة في"
+    foot_p: "ETR للاستشارات المعمارية · بنغازي، ليبيا — تصميم ذكي مناخياً متجذّر في التراث.",
+    foot_ceo: "الرئيس التنفيذي والمعماري الرئيسي"
   },
 
   /* ---------------- FRENCH ---------------- */
   fr: {
     meta_title: "Recherche & Preuves | ETR Architecture & Conception de Bâtiments",
-    tagline: "Architecture & Conception de Bâtiments",
+    tagline: "Consultants en Architecture",
     nav_evidence: "Preuves", nav_sources: "Sources", nav_integrity: "Intégrité",
     lang_label: "Langue", nav_careers: "Carrières",
     hero_tag: "SCIENCE DU BÂTIMENT ÉVALUÉE PAR LES PAIRS",
@@ -156,13 +158,14 @@ const I18N = {
     int_title: "Notre engagement d'intégrité de la recherche",
     int_h4: "Des preuves fiables — obtenues correctement",
     int_p: "Nous ne citons que des recherches légales, en libre accès ou partagées par leurs auteurs. Nous n'utilisons aucun service de contournement de péage. Les chiffres issus de l'IA sont toujours présentés comme des estimations préliminaires, revues par un architecte ou ingénieur qualifié avant tout engagement. Les résultats d'autres régions sont clairement signalés et utilisés comme indications — jamais comme garanties pour votre site. Si nous affirmons quelque chose, vous pouvez le vérifier.",
-    foot_p: "ETR — Architecture & Conception de Bâtiments · Conception climato-intelligente et ancrée dans le patrimoine, pour la Libye et le monde. Base de preuves tenue dans"
+    foot_p: "ETR Consultants en Architecture · Benghazi, Libye — conception climato-intelligente et ancrée dans le patrimoine.",
+    foot_ceo: "PDG & Architecte principal"
   },
 
   /* ---------------- SPANISH ---------------- */
   es: {
     meta_title: "Investigación y Evidencia | ETR Arquitectura y Diseño de Edificios",
-    tagline: "Arquitectura y Diseño de Edificios",
+    tagline: "Consultores de Arquitectura",
     nav_evidence: "Evidencia", nav_sources: "Fuentes", nav_integrity: "Integridad",
     lang_label: "Idioma", nav_careers: "Empleo",
     hero_tag: "CIENCIA DE LA EDIFICACIÓN REVISADA POR PARES",
@@ -208,13 +211,14 @@ const I18N = {
     int_title: "Nuestro compromiso de integridad investigadora",
     int_h4: "Evidencia confiable, obtenida del modo correcto",
     int_p: "Solo citamos investigación legal, de acceso abierto o compartida por sus autores. No usamos servicios que eluden muros de pago. Las cifras generadas por IA se presentan siempre como estimaciones preliminares y las revisa un arquitecto o ingeniero cualificado antes de cualquier compromiso. Los hallazgos de otras regiones se etiquetan con claridad y se usan como orientación, nunca como garantía para su sitio concreto. Si afirmamos algo, usted puede comprobarlo.",
-    foot_p: "ETR — Arquitectura y Diseño de Edificios · Diseño climáticamente inteligente y arraigado en el patrimonio, para Libia y el mundo. Base de evidencia mantenida en"
+    foot_p: "ETR Consultores de Arquitectura · Bengasi, Libia — diseño climáticamente inteligente y arraigado en el patrimonio.",
+    foot_ceo: "CEO y Arquitecto Principal"
   },
 
   /* ---------------- RUSSIAN ---------------- */
   ru: {
     meta_title: "Исследования и доказательства | ETR Архитектура и проектирование зданий",
-    tagline: "Архитектура и проектирование зданий",
+    tagline: "Архитектурные консультанты",
     nav_evidence: "Доказательства", nav_sources: "Источники", nav_integrity: "Добросовестность",
     lang_label: "Язык", nav_careers: "Карьера",
     hero_tag: "СТРОИТЕЛЬНАЯ НАУКА, ПРОШЕДШАЯ РЕЦЕНЗИРОВАНИЕ",
@@ -260,13 +264,14 @@ const I18N = {
     int_title: "Наше обязательство о научной добросовестности",
     int_h4: "Доказательства, которым можно доверять — полученные правильно",
     int_p: "Мы цитируем только легальные, открытые или предоставленные авторами исследования. Мы не используем сервисы обхода платного доступа. Цифры, полученные ИИ, всегда подаются как предварительные оценки и проверяются квалифицированным архитектором или инженером до любых обязательств. Результаты из других регионов чётко помечаются и используются как ориентир, а не как гарантия для вашего объекта. Если мы что-то утверждаем — это можно проверить.",
-    foot_p: "ETR — Архитектура и проектирование зданий · Климатически разумное, укоренённое в наследии проектирование для Ливии и мира. База доказательств ведётся в"
+    foot_p: "ETR Архитектурные консультанты · Бенгази, Ливия — климатически разумное проектирование, укоренённое в наследии.",
+    foot_ceo: "Генеральный директор и главный архитектор"
   },
 
   /* ---------------- CHINESE (MANDARIN, SIMPLIFIED) ---------------- */
   zh: {
     meta_title: "研究与证据 | ETR 建筑与建筑设计",
-    tagline: "建筑与建筑设计",
+    tagline: "建筑顾问",
     nav_evidence: "证据", nav_sources: "来源", nav_integrity: "诚信",
     lang_label: "语言", nav_careers: "招聘",
     hero_tag: "经同行评审的建筑科学",
@@ -312,13 +317,14 @@ const I18N = {
     int_title: "我们的研究诚信承诺",
     int_h4: "可信的证据——以正当方式获取",
     int_p: "我们只引用合法、开放获取或作者分享的研究。我们不使用绕过付费墙的服务。AI 生成的数字始终作为初步估算呈现，并在任何承诺前由合格的建筑师或工程师审核。来自其他地区的结论会明确标注，仅作方向性参考，绝不作为对您具体场地的保证。我们若有所主张，您皆可核查。",
-    foot_p: "ETR — 建筑与建筑设计 · 面向利比亚与世界的气候智慧、扎根传统的设计。证据库维护于"
+    foot_p: "ETR 建筑顾问 · 利比亚班加西 — 气候智慧、扎根传统的设计。",
+    foot_ceo: "首席执行官兼首席建筑师"
   },
 
   /* ---------------- ITALIAN ---------------- */
   it: {
     meta_title: "Ricerca e Prove | ETR Architettura e Progettazione di Edifici",
-    tagline: "Architettura e Progettazione di Edifici",
+    tagline: "Consulenti di Architettura",
     nav_evidence: "Prove", nav_sources: "Fonti", nav_integrity: "Integrità",
     lang_label: "Lingua", nav_careers: "Carriere",
     hero_tag: "SCIENZA DELL'EDILIZIA SOTTOPOSTA A REVISIONE PARITARIA",
@@ -364,7 +370,8 @@ const I18N = {
     int_title: "Il nostro impegno per l'integrità della ricerca",
     int_h4: "Prove affidabili — ottenute nel modo giusto",
     int_p: "Citiamo solo ricerche legali, ad accesso aperto o condivise dagli autori. Non usiamo servizi che aggirano i paywall. I numeri generati dall'IA sono sempre presentati come stime preliminari e rivisti da un architetto o ingegnere qualificato prima di qualsiasi impegno. I risultati di altre regioni sono chiaramente indicati e usati come orientamento, mai come garanzia per il vostro sito specifico. Se affermiamo qualcosa, potete verificarlo.",
-    foot_p: "ETR — Architettura e Progettazione di Edifici · Progettazione climaticamente intelligente e radicata nel patrimonio, per la Libia e il mondo. Base di prove mantenuta in"
+    foot_p: "ETR Consulenti di Architettura · Bengasi, Libia — progettazione climaticamente intelligente e radicata nel patrimonio.",
+    foot_ceo: "CEO e Architetto Principale"
   }
 };
 

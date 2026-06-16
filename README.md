@@ -1,8 +1,11 @@
-# ETR — Architecture & Building Design
+# ETR Architectural Consultants
 
-Climate-smart, heritage-rooted architecture and building-design practice for the
-Libyan and international markets — grounded in peer-reviewed building science and
-the founder's own research on desert and Libyan architecture.
+Climate-smart, heritage-rooted architectural consultancy based in **Benghazi, Libya**,
+serving the Libyan and international markets — grounded in peer-reviewed building
+science and the founder's own research on desert and Libyan architecture.
+
+**CEO & Principal Architect:** Dr. Ali Hassan A. Eltrapolsi (PhD, University of Sheffield)
+**Contact:** +218 92 276 3420 · hsn.importazioni@outlook.com
 
 ## What's in this repo
 

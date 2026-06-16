@@ -11,6 +11,7 @@ window.ETR_CONFIG = {
 
   // Where mailto fallbacks and the contact page send to.
   CONTACT_EMAIL: "hsn.importazioni@outlook.com",
+  CONTACT_PHONE: "+218922763420",
 
   // --- AI concierge chatbot ---
   // Set to your backend chat endpoint (see server/) to enable real AI replies,
