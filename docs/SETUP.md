@@ -64,7 +64,21 @@ cd website && python3 -m http.server 8000
 
 ---
 
-## 4. Before going public — checklist
+## 4. Deploy the site (GitHub Pages)
+
+A workflow at `.github/workflows/deploy.yml` publishes the static site automatically.
+
+1. In the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. Merge this branch into `main` (the workflow runs on push to `main`, or trigger it
+   manually from the Actions tab).
+3. Your site goes live at `https://<user>.github.io/<repo>/` — the root redirects to
+   the homepage; `website/` and `docs/` are both served.
+
+> The **backend (`server/`) is not deployed by Pages** — Pages is static-only. Host
+> it separately (Render, Railway, Fly.io, a VM, or a serverless function), set its
+> `ANTHROPIC_API_KEY`, then put its public URL in `CHAT_API_URL` / `ESTIMATE_API_URL`.
+
+## 5. Before going public — checklist
 
 - [ ] Set `FORMSPREE_ENDPOINT` so leads are captured.
 - [ ] **Tune `RATES` in `website/js/quote.js`** with real Libyan/market cost data —

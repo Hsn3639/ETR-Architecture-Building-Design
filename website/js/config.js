@@ -16,5 +16,10 @@ window.ETR_CONFIG = {
   // Set to your backend chat endpoint (see server/) to enable real AI replies,
   // e.g. "http://localhost:8787/api/chat". Leave blank to use the built-in
   // rule-based guided assistant.
-  CHAT_API_URL: ""
+  CHAT_API_URL: "",
+
+  // Set to your backend plan-estimate endpoint to have an uploaded plan image
+  // analysed by AI, e.g. "http://localhost:8787/api/estimate-plan". Leave blank
+  // to skip plan analysis (the form still works).
+  ESTIMATE_API_URL: ""
 };

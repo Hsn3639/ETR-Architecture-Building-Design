@@ -23,6 +23,7 @@
   var CFG = (typeof window !== "undefined" && window.ETR_CONFIG) || {};
   var FORMSPREE_ENDPOINT = CFG.FORMSPREE_ENDPOINT || ""; // e.g. "https://formspree.io/f/xxxxxxxx"
   var CONTACT_EMAIL = CFG.CONTACT_EMAIL || "hsn.importazioni@outlook.com";
+  var ESTIMATE_API_URL = CFG.ESTIMATE_API_URL || ""; // backend plan-image analysis
 
   // --- Illustrative base construction cost, USD/m², by project type & finish ---
   var RATES = {
@@ -114,6 +115,29 @@
     }
   }
 
+  function analyzePlan(form) {
+    var fileInput = form.elements["plan"];
+    var planWrap = document.getElementById("q-plan");
+    var out = document.getElementById("q-plan-analysis");
+    if (!planWrap || !out) return;
+    if (!ESTIMATE_API_URL || !fileInput || !fileInput.files || !fileInput.files[0]) {
+      planWrap.hidden = true;
+      return;
+    }
+    var d = dict();
+    planWrap.hidden = false;
+    out.textContent = d.q_plan_wait || "Analysing your plan…";
+    var fd = new FormData();
+    fd.append("plan", fileInput.files[0]);
+    fd.append("lang", lang());
+    fetch(ESTIMATE_API_URL, { method: "POST", body: fd })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        out.textContent = (data && (data.analysis || data.note)) || (dict().q_send_err || "");
+      })
+      .catch(function () { out.textContent = dict().q_send_err || ""; });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var form = document.getElementById("quote-form");
     var result = document.getElementById("q-result");
@@ -149,6 +173,7 @@
         result.hidden = false;
         result.scrollIntoView({ behavior: "smooth", block: "start" });
       }
+      analyzePlan(form);
     });
 
     var sendBtn = document.getElementById("q-send");

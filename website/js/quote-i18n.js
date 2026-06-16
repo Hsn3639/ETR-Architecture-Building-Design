@@ -46,7 +46,9 @@ Object.assign(I18N.en, {
   q_sending: "Sending…",
   q_sent: "Thank you — we've received your details and will be in touch.",
   q_send_err: "Couldn't send automatically. Please email us at hsn.importazioni@outlook.com.",
-  q_lead_subject: "New project enquiry via ETR website"
+  q_lead_subject: "New project enquiry via ETR website",
+  q_plan_h: "AI plan reading",
+  q_plan_wait: "Analysing your plan…"
 });
 
 Object.assign(I18N.ar, {
@@ -94,7 +96,9 @@ Object.assign(I18N.ar, {
   q_sending: "جارٍ الإرسال…",
   q_sent: "شكراً لك — استلمنا بياناتك وسنتواصل معك.",
   q_send_err: "تعذّر الإرسال تلقائياً. يرجى مراسلتنا على hsn.importazioni@outlook.com.",
-  q_lead_subject: "طلب مشروع جديد عبر موقع ETR"
+  q_lead_subject: "طلب مشروع جديد عبر موقع ETR",
+  q_plan_h: "قراءة المخطط بالذكاء الاصطناعي",
+  q_plan_wait: "جارٍ تحليل مخططك…"
 });
 
 Object.assign(I18N.fr, {
@@ -142,7 +146,9 @@ Object.assign(I18N.fr, {
   q_sending: "Envoi…",
   q_sent: "Merci — nous avons bien reçu vos informations et vous recontacterons.",
   q_send_err: "Envoi automatique impossible. Écrivez-nous à hsn.importazioni@outlook.com.",
-  q_lead_subject: "Nouvelle demande de projet via le site ETR"
+  q_lead_subject: "Nouvelle demande de projet via le site ETR",
+  q_plan_h: "Lecture du plan par IA",
+  q_plan_wait: "Analyse de votre plan…"
 });
 
 Object.assign(I18N.es, {
@@ -190,7 +196,9 @@ Object.assign(I18N.es, {
   q_sending: "Enviando…",
   q_sent: "Gracias — hemos recibido sus datos y nos pondremos en contacto.",
   q_send_err: "No se pudo enviar automáticamente. Escríbanos a hsn.importazioni@outlook.com.",
-  q_lead_subject: "Nueva consulta de proyecto desde el sitio de ETR"
+  q_lead_subject: "Nueva consulta de proyecto desde el sitio de ETR",
+  q_plan_h: "Lectura del plano con IA",
+  q_plan_wait: "Analizando su plano…"
 });
 
 Object.assign(I18N.ru, {
@@ -238,7 +246,9 @@ Object.assign(I18N.ru, {
   q_sending: "Отправка…",
   q_sent: "Спасибо — мы получили ваши данные и свяжемся с вами.",
   q_send_err: "Не удалось отправить автоматически. Напишите нам на hsn.importazioni@outlook.com.",
-  q_lead_subject: "Новый запрос по проекту с сайта ETR"
+  q_lead_subject: "Новый запрос по проекту с сайта ETR",
+  q_plan_h: "ИИ-чтение чертежа",
+  q_plan_wait: "Анализируем ваш чертёж…"
 });
 
 Object.assign(I18N.zh, {
@@ -286,7 +296,9 @@ Object.assign(I18N.zh, {
   q_sending: "发送中…",
   q_sent: "谢谢——我们已收到您的信息，会尽快与您联系。",
   q_send_err: "无法自动发送。请发送邮件至 hsn.importazioni@outlook.com。",
-  q_lead_subject: "通过 ETR 网站提交的新项目咨询"
+  q_lead_subject: "通过 ETR 网站提交的新项目咨询",
+  q_plan_h: "AI 图纸解读",
+  q_plan_wait: "正在分析您的图纸…"
 });
 
 Object.assign(I18N.it, {
@@ -334,5 +346,7 @@ Object.assign(I18N.it, {
   q_sending: "Invio…",
   q_sent: "Grazie — abbiamo ricevuto i tuoi dati e ti contatteremo.",
   q_send_err: "Invio automatico non riuscito. Scrivici a hsn.importazioni@outlook.com.",
-  q_lead_subject: "Nuova richiesta di progetto dal sito ETR"
+  q_lead_subject: "Nuova richiesta di progetto dal sito ETR",
+  q_plan_h: "Lettura del disegno con IA",
+  q_plan_wait: "Analisi del tuo disegno…"
 });
