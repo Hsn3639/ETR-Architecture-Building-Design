@@ -8,10 +8,18 @@ the founder's own research on desert and Libyan architecture.
 
 | Path | Purpose |
 |------|---------|
+| `website/index.html` | Multilingual **homepage** (services, why-us, process, CTA) |
+| `website/questionnaire.html` | **Smart questionnaire** + plan upload → instant preliminary estimate |
 | `website/research-evidence.html` | Public **Research & Evidence** page — the science behind our services |
-| `website/css/style.css` | Site styling (desert/heritage palette, responsive) |
+| `website/js/i18n.js` | Shared 7-language engine (EN/AR/FR/ES/RU/ZH/IT) + RTL |
+| `website/js/home-i18n.js` · `quote-i18n.js` | Page-specific translations extending the shared dictionary |
+| `website/js/quote.js` | Instant-estimate logic (Tier-1 "Estimate Ladder") |
+| `website/css/style.css` | Site styling (desert/heritage palette, responsive, RTL) |
 | `docs/research/knowledge-base.md` | Referenced **knowledge base** — findings + how ETR applies them |
 | `docs/research/reading-list.md` | **Legal source register** — DOIs and free/open-access links |
+
+All pages share one language switcher (English, Arabic, French, Spanish, Russian,
+Chinese, Italian) with automatic right-to-left layout for Arabic.
 
 ## Preview the site
 

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="q_meta_title">Get an Instant Estimate | ETR Architecture &amp; Building Design</title>
+  <meta name="description" content="Answer a few questions and get an instant, science-based preliminary construction estimate from ETR." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">ETR <span data-i18n="tagline">Architecture &amp; Building Design</span></div>
+      <nav class="nav">
+        <a href="index.html" data-i18n="q_nav_back">← Back to home</a>
+        <label class="lang-picker">
+          <span class="sr-only" data-i18n="lang_label">Language</span>
+          <select id="lang-select" aria-label="Language">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="ru">Русский</option>
+            <option value="zh">中文</option>
+            <option value="it">Italiano</option>
+          </select>
+        </label>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero hero-form">
+    <div class="container">
+      <h1 data-i18n="q_title">Smart Project Questionnaire</h1>
+      <p data-i18n="q_sub">Answer a few questions and get an instant, science-based preliminary estimate.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container form-wrap">
+      <form id="quote-form" novalidate>
+
+        <!-- Section 1 -->
+        <fieldset class="q-section">
+          <legend data-i18n="q_sec1">1 · Project details</legend>
+          <div class="q-grid">
+            <label class="field">
+              <span data-i18n="q_l_type">Project type</span>
+              <select name="type" required>
+                <option value="res" data-i18n="q_type_res">Residential</option>
+                <option value="villa" data-i18n="q_type_villa">Villa</option>
+                <option value="comm" data-i18n="q_type_comm">Commercial</option>
+                <option value="ind" data-i18n="q_type_ind">Industrial</option>
+                <option value="herit" data-i18n="q_type_herit">Heritage / Restoration</option>
+                <option value="mixed" data-i18n="q_type_mixed">Mixed-use</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span data-i18n="q_l_location">Location climate</span>
+              <select name="location">
+                <option value="coastal" data-i18n="q_loc_coastal">Coastal (humid)</option>
+                <option value="inland" data-i18n="q_loc_inland">Inland / desert (dry)</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span data-i18n="q_l_stage">Project stage</span>
+              <select name="stage">
+                <option value="idea" data-i18n="q_stage_idea">Idea only</option>
+                <option value="land" data-i18n="q_stage_land">I have land</option>
+                <option value="design" data-i18n="q_stage_design">I have drawings</option>
+                <option value="build" data-i18n="q_stage_build">Under construction</option>
+                <option value="reno" data-i18n="q_stage_reno">Renovation</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span data-i18n="q_l_area">Built area (m²)</span>
+              <input type="number" name="area" min="1" step="1" placeholder="e.g. 250" required />
+            </label>
+
+            <label class="field">
+              <span data-i18n="q_l_finish">Finish level</span>
+              <select name="finish">
+                <option value="standard" data-i18n="q_finish_standard">Standard</option>
+                <option value="premium" data-i18n="q_finish_premium">Premium</option>
+                <option value="luxury" data-i18n="q_finish_luxury">Luxury</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span data-i18n="q_l_currency">Currency</span>
+              <select name="currency">
+                <option value="LYD">LYD — Libyan Dinar</option>
+                <option value="USD">USD — US Dollar</option>
+                <option value="EUR">EUR — Euro</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Section 2 -->
+        <fieldset class="q-section">
+          <legend data-i18n="q_sec2">2 · Your priorities</legend>
+          <p class="section-sub" data-i18n="q_sec2_hint">Select everything that matters to you.</p>
+          <div class="q-checks">
+            <label><input type="checkbox" name="pain" value="heat" /> <span data-i18n="q_pain_heat">Keep cool in summer heat</span></label>
+            <label><input type="checkbox" name="pain" value="power" /> <span data-i18n="q_pain_power">Stay comfortable during power cuts</span></label>
+            <label><input type="checkbox" name="pain" value="cost" /> <span data-i18n="q_pain_cost">Lower running &amp; energy costs</span></label>
+            <label><input type="checkbox" name="pain" value="identity" /> <span data-i18n="q_pain_identity">Modern design with local identity</span></label>
+            <label><input type="checkbox" name="pain" value="durability" /> <span data-i18n="q_pain_durability">Durability &amp; low maintenance</span></label>
+            <label><input type="checkbox" name="pain" value="space" /> <span data-i18n="q_pain_space">Efficient use of space</span></label>
+            <label><input type="checkbox" name="pain" value="sustain" /> <span data-i18n="q_pain_sustain">Sustainability / green certification</span></label>
+          </div>
+        </fieldset>
+
+        <!-- Section 3 -->
+        <fieldset class="q-section">
+          <legend data-i18n="q_sec3">3 · Upload your plan (optional)</legend>
+          <label class="field">
+            <span data-i18n="q_upload_label">Choose a plan file</span>
+            <input type="file" name="plan" accept=".pdf,.png,.jpg,.jpeg,.dwg,.dxf" />
+          </label>
+          <p class="hint" data-i18n="q_upload_hint">PDF, image or CAD. Used only to refine your estimate — nothing is uploaded in this demo.</p>
+
+          <div class="q-grid">
+            <label class="field">
+              <span data-i18n="q_l_name">Your name</span>
+              <input type="text" name="name" autocomplete="name" />
+            </label>
+            <label class="field">
+              <span data-i18n="q_l_contact">Email or phone</span>
+              <input type="text" name="contact" autocomplete="email" />
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="q-actions">
+          <button type="submit" class="btn btn-primary" data-i18n="q_submit">Get my instant estimate</button>
+        </div>
+      </form>
+
+      <!-- Result -->
+      <div id="q-result" class="q-result" hidden>
+        <h2 data-i18n="q_result_title">Your preliminary estimate</h2>
+        <div class="q-range-label" data-i18n="q_result_range_label">Estimated construction cost range</div>
+        <div id="q-range" class="q-range">—</div>
+        <h3 data-i18n="q_result_climate_label">Climate &amp; material guidance</h3>
+        <p id="q-advice" data-i18n="q_advice_inland">—</p>
+        <p class="q-disclaimer" data-i18n="q_disclaimer">This is a preliminary, science-based estimate — not a binding quote.</p>
+        <button type="button" id="q-reset" class="btn btn-ghost-dark" data-i18n="q_reset">Start over</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <span data-i18n="foot_p">ETR — Architecture &amp; Building Design · Climate-smart, heritage-rooted design for Libya &amp; the world. Evidence base maintained in</span>
+        <a href="../docs/research/knowledge-base.md">knowledge-base.md</a> ·
+        <a href="../docs/research/reading-list.md">reading-list.md</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/quote-i18n.js"></script>
+  <script src="js/quote.js"></script>
+</body>
+</html>
