@@ -150,7 +150,11 @@
         <h3 data-i18n="q_result_climate_label">Climate &amp; material guidance</h3>
         <p id="q-advice" data-i18n="q_advice_inland">—</p>
         <p class="q-disclaimer" data-i18n="q_disclaimer">This is a preliminary, science-based estimate — not a binding quote.</p>
-        <button type="button" id="q-reset" class="btn btn-ghost-dark" data-i18n="q_reset">Start over</button>
+        <div class="q-result-actions">
+          <button type="button" id="q-send" class="btn" data-i18n="q_send">Send this to ETR</button>
+          <button type="button" id="q-reset" class="btn btn-ghost-light" data-i18n="q_reset">Start over</button>
+        </div>
+        <p id="q-send-status" class="q-send-status" role="status" aria-live="polite"></p>
       </div>
     </div>
   </section>
@@ -168,5 +172,6 @@
   <script src="js/i18n.js"></script>
   <script src="js/quote-i18n.js"></script>
   <script src="js/quote.js"></script>
+  <script src="js/chatbot.js"></script>
 </body>
 </html>

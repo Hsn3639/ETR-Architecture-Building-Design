@@ -41,7 +41,12 @@ Object.assign(I18N.en, {
   q_advice_coastal: "Coastal humidity raises the risk of condensation and salt damage. We recommend salt-resistant finishes, a ventilated facade and moisture-tolerant materials, with cross-ventilation to manage humidity.",
   q_advice_inland: "In a dry desert climate, high thermal mass, shaded courtyards, night ventilation and evaporative cooling are highly effective. We prioritise solar control and passive cooling before any mechanical system.",
   q_disclaimer: "This is a preliminary, science-based estimate — not a binding quote. A qualified architect or engineer will review your project before any commitment.",
-  q_required_msg: "Please choose a project type and enter the built area."
+  q_required_msg: "Please choose a project type and enter the built area.",
+  q_send: "Send this to ETR",
+  q_sending: "Sending…",
+  q_sent: "Thank you — we've received your details and will be in touch.",
+  q_send_err: "Couldn't send automatically. Please email us at hsn.importazioni@outlook.com.",
+  q_lead_subject: "New project enquiry via ETR website"
 });
 
 Object.assign(I18N.ar, {
@@ -84,7 +89,12 @@ Object.assign(I18N.ar, {
   q_advice_coastal: "ترفع الرطوبة الساحلية خطر التكثّف وتلف الملح. نوصي بتشطيبات مقاومة للملح وواجهة مهوّاة ومواد تتحمّل الرطوبة، مع تهوية متقاطعة لإدارة الرطوبة.",
   q_advice_inland: "في المناخ الصحراوي الجاف، تكون الكتلة الحرارية العالية والأفنية المظلّلة والتهوية الليلية والتبريد التبخيري فعّالة جداً. نعطي الأولوية للتحكّم الشمسي والتبريد السلبي قبل أي نظام ميكانيكي.",
   q_disclaimer: "هذا تقدير أولي قائم على العلم — وليس عرض سعر ملزماً. سيراجع مهندس معماري أو إنشائي مؤهّل مشروعك قبل أي التزام.",
-  q_required_msg: "يرجى اختيار نوع المشروع وإدخال المساحة المبنية."
+  q_required_msg: "يرجى اختيار نوع المشروع وإدخال المساحة المبنية.",
+  q_send: "أرسل هذا إلى ETR",
+  q_sending: "جارٍ الإرسال…",
+  q_sent: "شكراً لك — استلمنا بياناتك وسنتواصل معك.",
+  q_send_err: "تعذّر الإرسال تلقائياً. يرجى مراسلتنا على hsn.importazioni@outlook.com.",
+  q_lead_subject: "طلب مشروع جديد عبر موقع ETR"
 });
 
 Object.assign(I18N.fr, {
@@ -127,7 +137,12 @@ Object.assign(I18N.fr, {
   q_advice_coastal: "L'humidité côtière augmente le risque de condensation et de dégâts dus au sel. Nous recommandons des finitions résistantes au sel, une façade ventilée et des matériaux tolérants à l'humidité, avec une ventilation traversante.",
   q_advice_inland: "En climat désertique sec, une forte masse thermique, des cours ombragées, la ventilation nocturne et le refroidissement évaporatif sont très efficaces. Nous privilégions le contrôle solaire et le refroidissement passif avant tout système mécanique.",
   q_disclaimer: "Ceci est une estimation préliminaire fondée sur la science — et non un devis ferme. Un architecte ou ingénieur qualifié examinera votre projet avant tout engagement.",
-  q_required_msg: "Veuillez choisir un type de projet et saisir la surface bâtie."
+  q_required_msg: "Veuillez choisir un type de projet et saisir la surface bâtie.",
+  q_send: "Envoyer à ETR",
+  q_sending: "Envoi…",
+  q_sent: "Merci — nous avons bien reçu vos informations et vous recontacterons.",
+  q_send_err: "Envoi automatique impossible. Écrivez-nous à hsn.importazioni@outlook.com.",
+  q_lead_subject: "Nouvelle demande de projet via le site ETR"
 });
 
 Object.assign(I18N.es, {
@@ -170,7 +185,12 @@ Object.assign(I18N.es, {
   q_advice_coastal: "La humedad costera aumenta el riesgo de condensación y daños por sal. Recomendamos acabados resistentes a la sal, una fachada ventilada y materiales tolerantes a la humedad, con ventilación cruzada.",
   q_advice_inland: "En clima desértico seco, una alta masa térmica, patios sombreados, ventilación nocturna y enfriamiento evaporativo son muy eficaces. Priorizamos el control solar y el enfriamiento pasivo antes de cualquier sistema mecánico.",
   q_disclaimer: "Esta es una estimación preliminar basada en la ciencia, no un presupuesto vinculante. Un arquitecto o ingeniero cualificado revisará su proyecto antes de cualquier compromiso.",
-  q_required_msg: "Elija un tipo de proyecto e introduzca la superficie construida."
+  q_required_msg: "Elija un tipo de proyecto e introduzca la superficie construida.",
+  q_send: "Enviar a ETR",
+  q_sending: "Enviando…",
+  q_sent: "Gracias — hemos recibido sus datos y nos pondremos en contacto.",
+  q_send_err: "No se pudo enviar automáticamente. Escríbanos a hsn.importazioni@outlook.com.",
+  q_lead_subject: "Nueva consulta de proyecto desde el sitio de ETR"
 });
 
 Object.assign(I18N.ru, {
@@ -213,7 +233,12 @@ Object.assign(I18N.ru, {
   q_advice_coastal: "Прибрежная влажность повышает риск конденсации и солевых повреждений. Рекомендуем солестойкую отделку, вентилируемый фасад и влагостойкие материалы со сквозным проветриванием.",
   q_advice_inland: "В сухом пустынном климате высокоэффективны большая тепловая масса, затенённые дворы, ночное проветривание и испарительное охлаждение. Сначала мы обеспечиваем солнцезащиту и пассивное охлаждение, а затем — механические системы.",
   q_disclaimer: "Это предварительная оценка на научной основе, а не обязывающая смета. Квалифицированный архитектор или инженер проверит ваш проект до любых обязательств.",
-  q_required_msg: "Пожалуйста, выберите тип проекта и укажите площадь застройки."
+  q_required_msg: "Пожалуйста, выберите тип проекта и укажите площадь застройки.",
+  q_send: "Отправить в ETR",
+  q_sending: "Отправка…",
+  q_sent: "Спасибо — мы получили ваши данные и свяжемся с вами.",
+  q_send_err: "Не удалось отправить автоматически. Напишите нам на hsn.importazioni@outlook.com.",
+  q_lead_subject: "Новый запрос по проекту с сайта ETR"
 });
 
 Object.assign(I18N.zh, {
@@ -256,7 +281,12 @@ Object.assign(I18N.zh, {
   q_advice_coastal: "沿海湿度增加了冷凝与盐害风险。我们建议采用耐盐饰面、通风幕墙与耐潮材料，并配合对流通风来管理湿度。",
   q_advice_inland: "在干燥沙漠气候中，高热质量、遮荫庭院、夜间通风与蒸发降温非常有效。我们会在任何机械系统之前优先考虑遮阳与被动式降温。",
   q_disclaimer: "这是基于科学的初步估算，并非具有约束力的报价。在任何承诺之前，将由合格的建筑师或工程师审核您的项目。",
-  q_required_msg: "请选择项目类型并填写建筑面积。"
+  q_required_msg: "请选择项目类型并填写建筑面积。",
+  q_send: "发送给 ETR",
+  q_sending: "发送中…",
+  q_sent: "谢谢——我们已收到您的信息，会尽快与您联系。",
+  q_send_err: "无法自动发送。请发送邮件至 hsn.importazioni@outlook.com。",
+  q_lead_subject: "通过 ETR 网站提交的新项目咨询"
 });
 
 Object.assign(I18N.it, {
@@ -299,5 +329,10 @@ Object.assign(I18N.it, {
   q_advice_coastal: "L'umidità costiera aumenta il rischio di condensa e danni da sale. Consigliamo finiture resistenti al sale, una facciata ventilata e materiali tolleranti all'umidità, con ventilazione incrociata.",
   q_advice_inland: "In clima desertico secco, elevata massa termica, corti ombreggiate, ventilazione notturna e raffrescamento evaporativo sono molto efficaci. Diamo priorità al controllo solare e al raffrescamento passivo prima di qualsiasi impianto meccanico.",
   q_disclaimer: "Questa è una stima preliminare basata sulla scienza, non un preventivo vincolante. Un architetto o ingegnere qualificato esaminerà il tuo progetto prima di qualsiasi impegno.",
-  q_required_msg: "Scegli un tipo di progetto e inserisci la superficie costruita."
+  q_required_msg: "Scegli un tipo di progetto e inserisci la superficie costruita.",
+  q_send: "Invia a ETR",
+  q_sending: "Invio…",
+  q_sent: "Grazie — abbiamo ricevuto i tuoi dati e ti contatteremo.",
+  q_send_err: "Invio automatico non riuscito. Scrivici a hsn.importazioni@outlook.com.",
+  q_lead_subject: "Nuova richiesta di progetto dal sito ETR"
 });
