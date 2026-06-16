@@ -1,0 +1,17 @@
+{
+  "name": "etr-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "ETR website backend: AI concierge chat, lead capture, and plan-upload estimate.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.2"
+  }
+}

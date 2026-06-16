@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Heritage arcade restoration study">
+  <rect width="800" height="600" fill="#e8e3d9"/>
+  <g fill="#1b1a18">
+    <rect x="90" y="120" width="620" height="360"/>
+  </g>
+  <!-- arcade of arches -->
+  <g fill="#e8e3d9">
+    <path d="M140 460 V300 a55 55 0 0 1 110 0 V460 Z"/>
+    <path d="M290 460 V300 a55 55 0 0 1 110 0 V460 Z"/>
+    <path d="M440 460 V300 a55 55 0 0 1 110 0 V460 Z"/>
+    <path d="M590 460 V300 a55 55 0 0 1 110 0 V460 Z" transform="translate(-30,0)"/>
+  </g>
+  <rect x="90" y="120" width="620" height="40" fill="#b29a78" fill-opacity="0.6"/>
+  <g stroke="#93794f" stroke-width="2" stroke-opacity="0.5" fill="none">
+    <line x1="90" y1="200" x2="710" y2="200" stroke-dasharray="5 7"/>
+  </g>
+</svg>

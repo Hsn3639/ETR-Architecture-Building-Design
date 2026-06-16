@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="cr_meta_title">Careers — Graduate Architect Assessment | ETR</title>
+  <meta name="description" content="A 70-question assessment for talented architecture graduates seeking experience in a growing, design-led practice. English fluency and industry knowledge required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">ETR <span data-i18n="tagline">Architecture &amp; Building Design</span></div>
+      <nav class="nav">
+        <a href="index.html" data-i18n="h_nav_home">Home</a>
+        <a href="index.html#services" data-i18n="h_nav_services">Services</a>
+        <a href="research-evidence.html" data-i18n="h_nav_research">Research</a>
+        <a href="careers.html" data-i18n="nav_careers">Careers</a>
+        <a href="contact-about.html" data-i18n="h_nav_contact">Contact</a>
+        <label class="lang-picker">
+          <span class="sr-only" data-i18n="lang_label">Language</span>
+          <select id="lang-select" aria-label="Language">
+            <option value="en">English</option><option value="ar">العربية</option>
+            <option value="fr">Français</option><option value="es">Español</option>
+            <option value="ru">Русский</option><option value="zh">中文</option>
+            <option value="it">Italiano</option>
+          </select>
+        </label>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero hero-form">
+    <div class="container">
+      <span class="tag" data-i18n="cr_tag">Graduate Programme</span>
+      <h1 data-i18n="cr_h1">Build your career where research meets the drawing board.</h1>
+      <p data-i18n="cr_sub">ETR is a growing, design-led practice bridging the Libyan and international markets. We are looking for exceptionally talented architecture graduates who want real responsibility, mentorship from published research, and the experience to grow fast. This assessment is conducted in English and tests both fluency and industry knowledge — answer thoughtfully and in your own words.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container form-wrap">
+
+      <div class="careers-meta">
+        <div><div class="k" data-i18n="cr_role_k">Role</div><div class="v" data-i18n="cr_role_v">Graduate Architect</div></div>
+        <div><div class="k" data-i18n="cr_level_k">Level</div><div class="v" data-i18n="cr_level_v">Entry / Early-career</div></div>
+        <div><div class="k" data-i18n="cr_lang_k">Language</div><div class="v" data-i18n="cr_lang_v">English (C1+)</div></div>
+        <div><div class="k" data-i18n="cr_q_k">Questions</div><div class="v" data-i18n="cr_q_v">70</div></div>
+      </div>
+
+      <form id="careers-form" class="q-block">
+
+        <!-- Applicant -->
+        <div class="q-cat" data-i18n="cr_applicant">Applicant details</div>
+        <div class="q-item"><label data-i18n="cr_l_name">Full name</label><input type="text" name="name" required /></div>
+        <div class="q-item"><label data-i18n="cr_l_contact">Email or phone</label><input type="text" name="contact" required /></div>
+        <div class="q-item"><label data-i18n="cr_l_portfolio">Portfolio / LinkedIn URL</label><input type="text" name="portfolio" /></div>
+        <div class="q-item"><label data-i18n="cr_l_location">City &amp; country of residence</label><input type="text" name="location" /></div>
+
+        <!-- A. Motivation & fit -->
+        <div class="q-cat">A · Motivation &amp; Fit</div>
+        <div class="q-item"><label>Why do you want to join a growing practice rather than an established one, and what do you hope to gain in your first two years?</label><textarea name="q1" rows="3"></textarea></div>
+        <div class="q-item"><label>Describe, in three precise sentences, the kind of architect you intend to become.</label><textarea name="q2" rows="3"></textarea></div>
+        <div class="q-item"><label>What does "experience worth having" mean to you at this stage of your career?</label><textarea name="q3" rows="2"></textarea></div>
+        <div class="q-item"><label>Which architect, building or movement has most shaped your thinking, and why? Be specific.</label><textarea name="q4" rows="3"></textarea></div>
+        <div class="q-item"><label>How comfortable are you working in English on technical documents and client correspondence?</label>
+          <div class="q-choices">
+            <label><input type="radio" name="q5" value="native" /> Native / bilingual</label>
+            <label><input type="radio" name="q5" value="fluent" /> Fluent (C1–C2)</label>
+            <label><input type="radio" name="q5" value="working" /> Working (B2)</label>
+            <label><input type="radio" name="q5" value="basic" /> Basic (B1 or below)</label>
+          </div></div>
+        <div class="q-item"><label>What is your single greatest strength as a designer, and how would a teammate describe your weakness?</label><textarea name="q6" rows="2"></textarea></div>
+        <div class="q-item"><label>How do you respond when your design is criticised in a review? Give a real example.</label><textarea name="q7" rows="3"></textarea></div>
+        <div class="q-item"><label>What are your salary expectations and earliest available start date?</label><input type="text" name="q8" /></div>
+
+        <!-- B. Design thinking -->
+        <div class="q-cat">B · Design Thinking &amp; Philosophy</div>
+        <div class="q-item"><label>Define, in your own words, the relationship between <em>form</em>, <em>function</em> and <em>context</em>.</label><textarea name="q9" rows="3"></textarea></div>
+        <div class="q-item"><label>What is the difference between a <em>concept</em> and a <em>parti</em> in architectural design?</label><textarea name="q10" rows="2"></textarea></div>
+        <div class="q-item"><label>Explain how you use <em>scale</em> and <em>proportion</em> to control the human experience of a space.</label><textarea name="q11" rows="3"></textarea></div>
+        <div class="q-item"><label>What role does <em>negative space</em> (void) play in composition?</label><textarea name="q12" rows="2"></textarea></div>
+        <div class="q-item"><label>Describe the idea of <em>tectonics</em> — the expression of structure and joinery as architecture.</label><textarea name="q13" rows="2"></textarea></div>
+        <div class="q-item"><label>How do you design <em>circulation</em> so that a building "reads" intuitively to a first-time visitor?</label><textarea name="q14" rows="3"></textarea></div>
+        <div class="q-item"><label>What is <em>genius loci</em>, and how would you let a site's spirit inform a design?</label><textarea name="q15" rows="2"></textarea></div>
+        <div class="q-item"><label>When does ornament become justified, and when is it merely decoration?</label><textarea name="q16" rows="2"></textarea></div>
+        <div class="q-item"><label>Explain the difference between <em>vernacular</em> and <em>contextual</em> architecture.</label><textarea name="q17" rows="2"></textarea></div>
+        <div class="q-item"><label>How do you reconcile a client's brief with what you believe the project <em>should</em> be?</label><textarea name="q18" rows="3"></textarea></div>
+
+        <!-- C. Technical & building science -->
+        <div class="q-cat">C · Technical &amp; Building Science</div>
+        <div class="q-item"><label>Distinguish between a <em>load-bearing</em> wall and a <em>curtain wall</em>.</label><textarea name="q19" rows="2"></textarea></div>
+        <div class="q-item"><label>Explain <em>thermal mass</em> and how it moderates indoor temperature.</label><textarea name="q20" rows="2"></textarea></div>
+        <div class="q-item"><label>What is a <em>thermal bridge</em>, and how do you detail one out?</label><textarea name="q21" rows="2"></textarea></div>
+        <div class="q-item"><label>Define the <em>building envelope</em> and list its primary performance functions.</label><textarea name="q22" rows="2"></textarea></div>
+        <div class="q-item"><label>What is the <em>dew point</em>, and why does it matter for facade and wall detailing?</label><textarea name="q23" rows="2"></textarea></div>
+        <div class="q-item"><label>Explain the difference between <em>U-value</em> and <em>R-value</em>.</label><textarea name="q24" rows="2"></textarea></div>
+        <div class="q-item"><label>Describe a <em>ventilated (rainscreen) facade</em> and when you would specify one.</label><textarea name="q25" rows="2"></textarea></div>
+        <div class="q-item"><label>What is the difference between <em>dead load</em>, <em>live load</em> and <em>lateral load</em>?</label><textarea name="q26" rows="2"></textarea></div>
+        <div class="q-item"><label>Which structural system would you choose for a 4-storey mixed-use building, and why?</label>
+          <div class="q-choices">
+            <label><input type="radio" name="q27" value="rc" /> Reinforced-concrete frame</label>
+            <label><input type="radio" name="q27" value="steel" /> Steel frame</label>
+            <label><input type="radio" name="q27" value="loadbearing" /> Load-bearing masonry</label>
+            <label><input type="radio" name="q27" value="hybrid" /> Hybrid</label>
+          </div></div>
+        <div class="q-item"><label>Briefly justify your choice above.</label><textarea name="q28" rows="2"></textarea></div>
+        <div class="q-item"><label>What is <em>expansion-joint</em> detailing for, and where would you place one?</label><textarea name="q29" rows="2"></textarea></div>
+        <div class="q-item"><label>Explain <em>waterproofing</em> strategy for a flat roof in a hot, occasionally humid climate.</label><textarea name="q30" rows="3"></textarea></div>
+
+        <!-- D. Sustainability & climate -->
+        <div class="q-cat">D · Sustainability &amp; Climate-Responsive Design</div>
+        <div class="q-item"><label>Define <em>passive cooling</em> and name three strategies suited to a hot-arid climate.</label><textarea name="q31" rows="3"></textarea></div>
+        <div class="q-item"><label>How does a <em>courtyard</em> regulate microclimate? Reference airflow and radiation.</label><textarea name="q32" rows="3"></textarea></div>
+        <div class="q-item"><label>Explain the working principle of a <em>wind catcher / wind tower</em>.</label><textarea name="q33" rows="2"></textarea></div>
+        <div class="q-item"><label>When does <em>evaporative cooling</em> succeed, and when does humidity defeat it?</label><textarea name="q34" rows="2"></textarea></div>
+        <div class="q-item"><label>What is <em>embodied carbon</em>, and how does it differ from <em>operational carbon</em>?</label><textarea name="q35" rows="2"></textarea></div>
+        <div class="q-item"><label>Name two green-building rating systems and one metric each measures.</label><textarea name="q36" rows="2"></textarea></div>
+        <div class="q-item"><label>How would you orient and shade a building on a coastal Benghazi site to cut cooling loads?</label><textarea name="q37" rows="3"></textarea></div>
+        <div class="q-item"><label>Explain <em>design for disassembly</em> and its role in a circular economy.</label><textarea name="q38" rows="2"></textarea></div>
+        <div class="q-item"><label>What is the <em>urban heat island</em> effect, and how can design mitigate it?</label><textarea name="q39" rows="2"></textarea></div>
+        <div class="q-item"><label>How do you keep a building comfortable during a prolonged power outage — by design?</label><textarea name="q40" rows="3"></textarea></div>
+
+        <!-- E. Software & tools -->
+        <div class="q-cat">E · Software, Tools &amp; BIM</div>
+        <div class="q-item"><label>Which software are you proficient in? (tick all that apply)</label>
+          <div class="q-choices">
+            <label><input type="checkbox" name="q41" value="autocad" /> AutoCAD</label>
+            <label><input type="checkbox" name="q41" value="revit" /> Revit</label>
+            <label><input type="checkbox" name="q41" value="archicad" /> ArchiCAD</label>
+            <label><input type="checkbox" name="q41" value="rhino" /> Rhino</label>
+            <label><input type="checkbox" name="q41" value="grasshopper" /> Grasshopper</label>
+            <label><input type="checkbox" name="q41" value="sketchup" /> SketchUp</label>
+            <label><input type="checkbox" name="q41" value="enscape" /> Enscape / Lumion</label>
+            <label><input type="checkbox" name="q41" value="adobe" /> Adobe Suite</label>
+          </div></div>
+        <div class="q-item"><label>Explain what <em>BIM</em> is, and how it differs from drafting in CAD.</label><textarea name="q42" rows="2"></textarea></div>
+        <div class="q-item"><label>What is an <em>LOD</em> (Level of Development), and why does it matter to coordination?</label><textarea name="q43" rows="2"></textarea></div>
+        <div class="q-item"><label>Describe a <em>clash detection</em> workflow and what it prevents.</label><textarea name="q44" rows="2"></textarea></div>
+        <div class="q-item"><label>How would you use <em>parametric / generative design</em> to test many options against a goal?</label><textarea name="q45" rows="3"></textarea></div>
+        <div class="q-item"><label>What is a <em>digital twin</em>, and how might a practice use one after handover?</label><textarea name="q46" rows="2"></textarea></div>
+        <div class="q-item"><label>Have you used AI tools in your workflow? Describe one use and its limitations.</label><textarea name="q47" rows="3"></textarea></div>
+        <div class="q-item"><label>Rate your hand-sketching ability and tell us how you use it in early design.</label><textarea name="q48" rows="2"></textarea></div>
+
+        <!-- F. Heritage, context, urbanism -->
+        <div class="q-cat">F · Heritage, Context &amp; Urbanism</div>
+        <div class="q-item"><label>What is <em>adaptive reuse</em>, and why is it often more sustainable than new build?</label><textarea name="q49" rows="2"></textarea></div>
+        <div class="q-item"><label>How do you intervene in a historic fabric without erasing its character?</label><textarea name="q50" rows="3"></textarea></div>
+        <div class="q-item"><label>Explain the difference between <em>restoration</em>, <em>conservation</em> and <em>renovation</em>.</label><textarea name="q51" rows="2"></textarea></div>
+        <div class="q-item"><label>What did Italian-era planning leave on the urban fabric of Libyan cities like Benghazi?</label><textarea name="q52" rows="3"></textarea></div>
+        <div class="q-item"><label>Define <em>figure-ground</em> and what it reveals about urban density and public space.</label><textarea name="q53" rows="2"></textarea></div>
+        <div class="q-item"><label>How would you approach a post-conflict reconstruction brief that must preserve identity?</label><textarea name="q54" rows="3"></textarea></div>
+        <div class="q-item"><label>What is a <em>masterplan</em>, and what should it fix versus leave open?</label><textarea name="q55" rows="2"></textarea></div>
+        <div class="q-item"><label>How do you design a building to be a good neighbour at street level?</label><textarea name="q56" rows="2"></textarea></div>
+
+        <!-- G. Communication & professional English -->
+        <div class="q-cat">G · Communication &amp; Professional English</div>
+        <div class="q-item"><label>Write a concise design rationale (3–4 sentences) for a small coastal villa, as you would for a client.</label><textarea name="q57" rows="4"></textarea></div>
+        <div class="q-item"><label>Rewrite this sentence in clear professional English: "The thing is the wall it gets too hot in summer so maybe we do something for cooling it down a bit."</label><textarea name="q58" rows="3"></textarea></div>
+        <div class="q-item"><label>Use these three terms correctly in one sentence each: <em>fenestration</em>, <em>massing</em>, <em>articulation</em>.</label><textarea name="q59" rows="3"></textarea></div>
+        <div class="q-item"><label>Define, precisely: <em>RFI</em>, <em>tender</em>, <em>snagging</em>, <em>handover</em>.</label><textarea name="q60" rows="3"></textarea></div>
+        <div class="q-item"><label>Draft a two-sentence email asking a contractor to clarify a discrepancy between the plan and section.</label><textarea name="q61" rows="3"></textarea></div>
+        <div class="q-item"><label>Explain a technical idea (your choice) to a non-technical client in plain English, in under 60 words.</label><textarea name="q62" rows="3"></textarea></div>
+        <div class="q-item"><label>What is the difference between <em>specification</em> and <em>schedule</em> in construction documents?</label><textarea name="q63" rows="2"></textarea></div>
+        <div class="q-item"><label>Summarise, in one strong sentence, why a client should choose a climate-responsive design.</label><textarea name="q64" rows="2"></textarea></div>
+
+        <!-- H. Scenarios -->
+        <div class="q-cat">H · Scenarios &amp; Problem-Solving</div>
+        <div class="q-item"><label>A client wants floor-to-ceiling glass on a west facade in a desert climate. How do you respond and what do you propose instead?</label><textarea name="q65" rows="3"></textarea></div>
+        <div class="q-item"><label>The budget is cut 25% mid-design. Which decisions do you protect, and which do you sacrifice?</label><textarea name="q66" rows="3"></textarea></div>
+        <div class="q-item"><label>On site you discover the as-built dimensions differ from the drawings. Walk through your next steps.</label><textarea name="q67" rows="3"></textarea></div>
+        <div class="q-item"><label>You are given a vague brief and a tight deadline. How do you structure your first week?</label><textarea name="q68" rows="3"></textarea></div>
+        <div class="q-item"><label>You disagree with a senior architect's detail that you believe will fail. What do you do?</label><textarea name="q69" rows="3"></textarea></div>
+        <div class="q-item"><label>Describe a project (academic or real) you are proud of: the problem, your move, and the result.</label><textarea name="q70" rows="4"></textarea></div>
+
+        <div class="q-actions">
+          <button type="submit" class="btn btn-primary" data-i18n="cr_submit">Submit application</button>
+          <p id="careers-status" class="q-send-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="foot-name">ETR Architectural Consultants</p>
+      <p data-i18n="foot_p">ETR Architectural Consultants · Benghazi, Libya — climate-smart, heritage-rooted design.</p>
+      <p class="foot-contact">Dr. Ali Hassan A. Eltrapolsi · <span data-i18n="foot_ceo">CEO &amp; Principal Architect</span> · <a href="tel:+218922763420">+218 92 276 3420</a> · <a href="mailto:hsn.importazioni@outlook.com">hsn.importazioni@outlook.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/home-i18n.js"></script>
+  <script src="js/careers-i18n.js"></script>
+  <script src="js/careers.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
