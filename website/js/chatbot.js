@@ -250,11 +250,17 @@
     els = { launch: launch, panel: panel, titleEl: titleEl, closeBtn: closeBtn,
             log: log, quick: quick, input: input, sendBtn: sendBtn };
 
-    launch.addEventListener("click", function () {
-      panel.hidden = !panel.hidden;
-      if (!panel.hidden && !log.children.length) askType();
+    function setOpen(open) {
+      panel.hidden = !open;
+      launch.innerHTML = open ? "&times;" : "N";
+      launch.setAttribute("aria-expanded", open ? "true" : "false");
+      if (open && !log.children.length) askType();
+    }
+    launch.addEventListener("click", function () { setOpen(panel.hidden); });
+    closeBtn.addEventListener("click", function () { setOpen(false); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !panel.hidden) setOpen(false);
     });
-    closeBtn.addEventListener("click", function () { panel.hidden = true; });
     sendBtn.addEventListener("click", onSend);
     input.addEventListener("keydown", function (e) { if (e.key === "Enter") onSend(); });
 
