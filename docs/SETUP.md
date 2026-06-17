@@ -28,8 +28,13 @@ To capture leads silently in your inbox (recommended), use **Formspree** (free t
    ```js
    FORMSPREE_ENDPOINT: "https://formspree.io/f/abcdwxyz",
    ```
-5. Done. Submissions now POST to Formspree and arrive in your inbox; the mailto
-   fallback is used only if the endpoint is left blank.
+5. Done. **All four forms** — the questionnaire "Send to ETR", the Contact form,
+   the Careers application, and the "Join our Network" form — POST to that one
+   endpoint and arrive in your inbox; the `mailto:` fallback is used only if the
+   endpoint is left blank.
+
+Spam protection: the contact, careers and network forms include a hidden
+`_gotcha` honeypot field, which Formspree silently discards when filled by bots.
 
 > Any equivalent service (Getform, Basin, Web3Forms) works the same way — just
 > paste its POST URL into `FORMSPREE_ENDPOINT`.
