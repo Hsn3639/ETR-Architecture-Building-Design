@@ -19,7 +19,7 @@
 
   var CB = {
     en: {
-      launch: "Chat with Nero", title: "Nero", persona: "Architect · ETR", close: "Close",
+      launch: "Chat with Nero", title: "Nero", persona: "Architect · ETR", close: "Close", minimize: "Minimize",
       greeting: "I'm Nero, ETR's resident architect. I think in light, proportion and climate. Tell me what you're planning to build — and where — and I'll help you shape it.",
       t_res: "Residential", t_villa: "Villa", t_comm: "Commercial", t_ind: "Industrial", t_herit: "Heritage", t_mixed: "Mixed-use",
       ask_area: "Great choice. Roughly how many square metres (m²)?",
@@ -31,7 +31,7 @@
       placeholder: "Type your answer…", send: "Send", restart: "Start over"
     },
     ar: {
-      launch: "تحدّث مع نيرو", title: "نيرو", persona: "معماري · ETR", close: "إغلاق",
+      launch: "تحدّث مع نيرو", title: "نيرو", persona: "معماري · ETR", close: "إغلاق", minimize: "تصغير",
       greeting: "أنا نيرو، المعماري المقيم في ETR. أفكّر بالضوء والتناسب والمناخ. أخبرني بما تنوي بناءه — وأين — وسأساعدك على تشكيله.",
       t_res: "سكني", t_villa: "فيلا", t_comm: "تجاري", t_ind: "صناعي", t_herit: "تراث", t_mixed: "متعدد الاستخدامات",
       ask_area: "اختيار ممتاز. كم تبلغ المساحة تقريباً بالمتر المربع (م²)؟",
@@ -43,7 +43,7 @@
       placeholder: "اكتب إجابتك…", send: "إرسال", restart: "ابدأ من جديد"
     },
     fr: {
-      launch: "Discuter avec Nero", title: "Nero", persona: "Architecte · ETR", close: "Fermer",
+      launch: "Discuter avec Nero", title: "Nero", persona: "Architecte · ETR", close: "Fermer", minimize: "Réduire",
       greeting: "Je suis Nero, l'architecte d'ETR. Je pense en lumière, proportion et climat. Dites-moi ce que vous prévoyez de construire — et où — et je vous aiderai à le concevoir.",
       t_res: "Résidentiel", t_villa: "Villa", t_comm: "Commercial", t_ind: "Industriel", t_herit: "Patrimoine", t_mixed: "Mixte",
       ask_area: "Excellent choix. Environ combien de mètres carrés (m²) ?",
@@ -55,7 +55,7 @@
       placeholder: "Tapez votre réponse…", send: "Envoyer", restart: "Recommencer"
     },
     es: {
-      launch: "Chatear con Nero", title: "Nero", persona: "Arquitecto · ETR", close: "Cerrar",
+      launch: "Chatear con Nero", title: "Nero", persona: "Arquitecto · ETR", close: "Cerrar", minimize: "Minimizar",
       greeting: "Soy Nero, el arquitecto de ETR. Pienso en luz, proporción y clima. Dígame qué planea construir — y dónde — y le ayudaré a darle forma.",
       t_res: "Residencial", t_villa: "Villa", t_comm: "Comercial", t_ind: "Industrial", t_herit: "Patrimonio", t_mixed: "Uso mixto",
       ask_area: "Buena elección. ¿Aproximadamente cuántos metros cuadrados (m²)?",
@@ -67,7 +67,7 @@
       placeholder: "Escriba su respuesta…", send: "Enviar", restart: "Empezar de nuevo"
     },
     ru: {
-      launch: "Чат с Неро", title: "Неро", persona: "Архитектор · ETR", close: "Закрыть",
+      launch: "Чат с Неро", title: "Неро", persona: "Архитектор · ETR", close: "Закрыть", minimize: "Свернуть",
       greeting: "Я Неро, архитектор ETR. Я мыслю светом, пропорцией и климатом. Расскажите, что вы планируете построить — и где — и я помогу придать этому форму.",
       t_res: "Жильё", t_villa: "Вилла", t_comm: "Коммерция", t_ind: "Промышленность", t_herit: "Наследие", t_mixed: "Смешанное",
       ask_area: "Отличный выбор. Примерно сколько квадратных метров (м²)?",
@@ -79,7 +79,7 @@
       placeholder: "Введите ответ…", send: "Отправить", restart: "Начать заново"
     },
     zh: {
-      launch: "与 Nero 对话", title: "Nero", persona: "建筑师 · ETR", close: "关闭",
+      launch: "与 Nero 对话", title: "Nero", persona: "建筑师 · ETR", close: "关闭", minimize: "最小化",
       greeting: "我是 Nero，ETR 的常驻建筑师。我以光线、比例与气候来思考。请告诉我您打算建造什么、在哪里建造，我来帮您塑造它。",
       t_res: "住宅", t_villa: "别墅", t_comm: "商业", t_ind: "工业", t_herit: "遗产", t_mixed: "综合用途",
       ask_area: "很好。大约多少平方米（m²）？",
@@ -91,7 +91,7 @@
       placeholder: "输入您的回答…", send: "发送", restart: "重新开始"
     },
     it: {
-      launch: "Chatta con Nero", title: "Nero", persona: "Architetto · ETR", close: "Chiudi",
+      launch: "Chatta con Nero", title: "Nero", persona: "Architetto · ETR", close: "Chiudi", minimize: "Riduci a icona",
       greeting: "Sono Nero, l'architetto di ETR. Penso in luce, proporzione e clima. Dimmi cosa intendi costruire — e dove — e ti aiuterò a dargli forma.",
       t_res: "Residenziale", t_villa: "Villa", t_comm: "Commerciale", t_ind: "Industriale", t_herit: "Patrimonio", t_mixed: "Uso misto",
       ask_area: "Ottima scelta. All'incirca quanti metri quadri (m²)?",
@@ -226,6 +226,7 @@
     els.input.placeholder = t().placeholder;
     els.sendBtn.textContent = t().send;
     els.closeBtn.setAttribute("aria-label", t().close);
+    els.minBtn.setAttribute("aria-label", t().minimize || "Minimize");
   }
 
   function build() {
@@ -233,8 +234,10 @@
     var panel = el("div", "cb-panel"); panel.hidden = true;
     var header = el("div", "cb-header");
     var titleEl = el("span", "cb-title");
-    var closeBtn = el("button", "cb-close"); closeBtn.type = "button"; closeBtn.innerHTML = "×";
-    header.appendChild(titleEl); header.appendChild(closeBtn);
+    var minBtn = el("button", "cb-min"); minBtn.type = "button"; minBtn.innerHTML = "&minus;";
+    var closeBtn = el("button", "cb-close"); closeBtn.type = "button"; closeBtn.innerHTML = "&times;";
+    var ctrls = el("div", "cb-ctrls"); ctrls.appendChild(minBtn); ctrls.appendChild(closeBtn);
+    header.appendChild(titleEl); header.appendChild(ctrls);
     var log = el("div", "cb-log");
     var quick = el("div", "cb-quick");
     var inputRow = el("div", "cb-inputrow");
@@ -247,20 +250,20 @@
     wrap.appendChild(panel); wrap.appendChild(launch);
     document.body.appendChild(wrap);
 
-    els = { launch: launch, panel: panel, titleEl: titleEl, closeBtn: closeBtn,
+    els = { launch: launch, panel: panel, titleEl: titleEl, closeBtn: closeBtn, minBtn: minBtn,
             log: log, quick: quick, input: input, sendBtn: sendBtn };
 
-    function setOpen(open) {
-      panel.hidden = !open;
-      launch.innerHTML = open ? "&times;" : "N";
-      launch.setAttribute("aria-expanded", open ? "true" : "false");
-      if (open && !log.children.length) askType();
-    }
-    launch.addEventListener("click", function () { setOpen(panel.hidden); });
-    closeBtn.addEventListener("click", function () { setOpen(false); });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !panel.hidden) setOpen(false);
-    });
+    function showPanel() { panel.hidden = false; launch.setAttribute("aria-expanded", "true"); if (!log.children.length) askType(); }
+    function minimize() { panel.hidden = true; launch.setAttribute("aria-expanded", "false"); }   // "put it down" → floating bubble
+    function dismiss() { wrap.style.display = "none"; try { sessionStorage.setItem("etr_nero_closed", "1"); } catch (e) {} }
+
+    launch.addEventListener("click", function () { if (panel.hidden) showPanel(); else minimize(); });
+    minBtn.addEventListener("click", minimize);
+    closeBtn.addEventListener("click", dismiss);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !panel.hidden) minimize(); });
+
+    // Stay dismissed across page navigations within the same browsing session.
+    try { if (sessionStorage.getItem("etr_nero_closed")) wrap.style.display = "none"; } catch (e) {}
     sendBtn.addEventListener("click", onSend);
     input.addEventListener("keydown", function (e) { if (e.key === "Enter") onSend(); });
 

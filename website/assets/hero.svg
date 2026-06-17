@@ -5,8 +5,8 @@
       <stop offset="1" stop-color="#15140f"/>
     </linearGradient>
     <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#b29a78" stop-opacity="0.0"/>
-      <stop offset="1" stop-color="#b29a78" stop-opacity="0.22"/>
+      <stop offset="0" stop-color="#C9B27E" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#C9B27E" stop-opacity="0.22"/>
     </linearGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#sky)"/>
@@ -38,7 +38,7 @@
   </g>
 
   <!-- lit windows (sand) -->
-  <g fill="#b29a78" fill-opacity="0.85">
+  <g fill="#C9B27E" fill-opacity="0.85">
     <rect x="470" y="340" width="28" height="48"/><rect x="520" y="340" width="28" height="48"/>
     <rect x="470" y="420" width="28" height="48"/><rect x="620" y="500" width="28" height="48"/>
     <rect x="860" y="280" width="26" height="44"/><rect x="910" y="360" width="26" height="44"/>
