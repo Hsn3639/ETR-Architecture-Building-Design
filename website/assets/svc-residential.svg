@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Residential — courtyard home">
+  <defs><linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efe9dd"/><stop offset="1" stop-color="#e2dbcc"/></linearGradient></defs>
+  <rect width="800" height="500" fill="url(#r)"/>
+  <rect x="0" y="360" width="800" height="140" fill="#d8d0bf"/>
+  <g fill="#1b1a18">
+    <rect x="150" y="200" width="210" height="160"/>
+    <rect x="470" y="160" width="180" height="200"/>
+  </g>
+  <polygon points="150,200 255,140 360,200" fill="#26241f"/>
+  <rect x="360" y="250" width="110" height="110" fill="#b29a78"/>
+  <g fill="#b29a78" fill-opacity="0.9">
+    <rect x="185" y="240" width="34" height="46"/><rect x="250" y="240" width="34" height="46"/>
+    <rect x="510" y="200" width="36" height="50"/><rect x="575" y="200" width="36" height="50"/>
+  </g>
+  <g stroke="#1b1a18" stroke-opacity="0.16" stroke-dasharray="4 7"><line x1="0" y1="360" x2="800" y2="360"/></g>
+</svg>
