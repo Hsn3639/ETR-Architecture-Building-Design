@@ -23,6 +23,8 @@
         <a href="index.html" data-i18n="h_nav_home">Home</a>
         <a href="services.html" data-i18n="h_nav_services">Services</a>
         <a href="research-evidence.html" data-i18n="h_nav_research">Research</a>
+        <a href="journal.html" data-i18n="nav_journal">Journal</a>
+        <a href="resilience.html" data-i18n="nav_toolkit">Toolkit</a>
         <a href="careers.html" data-i18n="nav_careers">Careers</a>
         <a href="contact-about.html" data-i18n="h_nav_contact">Contact</a>
         <label class="lang-picker">
@@ -108,6 +110,39 @@
     </div>
   </section>
 
+  <!-- ============ JOIN OUR NETWORK ============ -->
+  <section id="join">
+    <div class="container form-wrap">
+      <span class="tag section-kicker" data-i18n="jn_tag">Join the Network</span>
+      <h2 class="section-title" data-i18n="jn_h">Are you a specialist? Build with us.</h2>
+      <p class="section-sub" data-i18n="jn_p">ETR collaborates with trusted civil engineers, interior designers, surveyors and contractors.</p>
+      <form id="network-form">
+        <div class="q-grid">
+          <label class="field"><span data-i18n="jn_l_name">Full name</span><input type="text" name="name" required /></label>
+          <label class="field"><span data-i18n="jn_l_contact">Email or phone</span><input type="text" name="contact" required /></label>
+          <label class="field">
+            <span data-i18n="jn_l_discipline">Your discipline</span>
+            <select name="discipline">
+              <option value="civil" data-i18n="sv_net_civil">Civil &amp; Structural Engineering</option>
+              <option value="interior" data-i18n="sv_net_interior">Interior Design</option>
+              <option value="survey" data-i18n="sv_net_survey">Surveying &amp; Mapping</option>
+              <option value="mep" data-i18n="sv_net_mep">MEP Engineering</option>
+              <option value="cost" data-i18n="sv_net_cost">Cost &amp; Quantity Surveying</option>
+              <option value="contract" data-i18n="sv_net_contract">Contracting &amp; Turnkey</option>
+              <option value="other" data-i18n="jn_d_other">Other</option>
+            </select>
+          </label>
+          <label class="field"><span data-i18n="jn_l_portfolio">Portfolio / profile URL</span><input type="text" name="portfolio" /></label>
+        </div>
+        <label class="field" style="margin-top:18px"><span data-i18n="jn_l_msg">Tell us about your experience</span><textarea name="message" rows="3"></textarea></label>
+        <div class="q-actions">
+          <button type="submit" class="btn btn-primary" data-i18n="jn_send">Apply to join</button>
+          <p id="network-status" class="q-send-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
   <!-- ============ CTA ============ -->
   <section class="cta-band">
     <div class="container">
@@ -129,6 +164,8 @@
   <script src="js/i18n.js"></script>
   <script src="js/home-i18n.js"></script>
   <script src="js/services-i18n.js"></script>
+  <script src="js/network-i18n.js"></script>
+  <script src="js/network.js"></script>
   <script src="js/reveal.js"></script>
   <script src="js/chatbot.js"></script>
 </body>
