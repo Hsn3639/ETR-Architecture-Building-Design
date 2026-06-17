@@ -1,0 +1,156 @@
+/* ETR Services page strings — extends the shared I18N dictionary (see i18n.js).
+ * All 7 languages. Loaded after i18n.js / home-i18n.js, before DOMContentLoaded.
+ */
+Object.assign(I18N.en, {
+  sv_meta_title: "Services & Capabilities | ETR Architectural Consultants",
+  sv_tag: "Capabilities",
+  sv_h1: "A complete consultancy — design, engineering and delivery.",
+  sv_sub: "ETR leads each project end to end, coordinating a trusted network of specialists so you receive a full team under one accountable name.",
+  sv_tag_inhouse: "In-house", sv_tag_partners: "With our network", sv_tag_led: "ETR-led",
+  sv_p1_t: "Architectural Design", sv_p1_d: "From concept and massing to permit-ready construction documents.",
+  sv_p2_t: "Climate-Smart & Sustainable Design", sv_p2_d: "Passive cooling, energy modelling and material strategy proven for desert and coastal climates.",
+  sv_p3_t: "Interior Design & Fit-Out", sv_p3_d: "Interiors, finishes, marble and material selection, and detailed layout design.",
+  sv_p4_t: "Civil & Structural Engineering", sv_p4_d: "Structural analysis, civil works and site engineering, coordinated under ETR.",
+  sv_p5_t: "Surveying, Mapping & Site Layout", sv_p5_d: "Topographic surveys, land plans and precise site-layout drawings.",
+  sv_p6_t: "Supervision & Project Management", sv_p6_d: "On-site supervision, cost control and turnkey coordination through to handover.",
+  sv_net_tag: "Our Network",
+  sv_net_h: "Collaborative delivery — one team, one point of accountability.",
+  sv_net_p: "ETR leads every project. When specialist expertise is required, we bring in trusted associates from our professional network — coordinated under one roof, one contract, one responsible name.",
+  sv_net_civil: "Civil & Structural Engineering", sv_net_interior: "Interior Design",
+  sv_net_survey: "Surveying & Mapping", sv_net_mep: "MEP Engineering",
+  sv_net_cost: "Cost & Quantity Surveying", sv_net_contract: "Contracting & Turnkey",
+  sv_net_note: "Specialists are engaged per project and coordinated directly by ETR — a complete team without managing multiple vendors.",
+  sv_cta_h: "Have a project in mind?", sv_cta_p: "Tell us what you're planning and we'll assemble the right team."
+});
+
+Object.assign(I18N.ar, {
+  sv_meta_title: "الخدمات والقدرات | ETR للاستشارات المعمارية",
+  sv_tag: "القدرات",
+  sv_h1: "استشارات متكاملة — تصميم وهندسة وتنفيذ.",
+  sv_sub: "تقود ETR كل مشروع من بدايته إلى نهايته، وتنسّق شبكة موثوقة من المتخصصين لتحصل على فريق كامل تحت اسم مسؤول واحد.",
+  sv_tag_inhouse: "داخلياً", sv_tag_partners: "عبر شبكتنا", sv_tag_led: "بقيادة ETR",
+  sv_p1_t: "التصميم المعماري", sv_p1_d: "من الفكرة والكتلة إلى مخططات تنفيذية جاهزة للترخيص.",
+  sv_p2_t: "تصميم ذكي مناخياً ومستدام", sv_p2_d: "تبريد سلبي ونمذجة طاقة واستراتيجية مواد مُثبَتة للمناخات الصحراوية والساحلية.",
+  sv_p3_t: "التصميم الداخلي والتشطيب", sv_p3_d: "الديكور والتشطيبات واختيار الرخام والمواد، وتصميم التوزيعات بالتفصيل.",
+  sv_p4_t: "الهندسة المدنية والإنشائية", sv_p4_d: "تحليل إنشائي وأعمال مدنية وهندسة موقع، بتنسيق ETR.",
+  sv_p5_t: "المساحة ورسم الخرائط وتوزيع الموقع", sv_p5_d: "مساحات طبوغرافية ومخططات أراضٍ ورسومات توزيع موقع دقيقة.",
+  sv_p6_t: "الإشراف وإدارة المشاريع", sv_p6_d: "إشراف ميداني وضبط للتكلفة وتنسيق تسليم مفتاح حتى التسليم النهائي.",
+  sv_net_tag: "شبكتنا",
+  sv_net_h: "تنفيذ تعاوني — فريق واحد، ومسؤولية واحدة.",
+  sv_net_p: "تقود ETR كل مشروع. وعند الحاجة لخبرة متخصصة، نستعين بشركاء موثوقين من شبكتنا المهنية — بتنسيق تحت سقف واحد وعقد واحد واسم مسؤول واحد.",
+  sv_net_civil: "الهندسة المدنية والإنشائية", sv_net_interior: "التصميم الداخلي",
+  sv_net_survey: "المساحة ورسم الخرائط", sv_net_mep: "الهندسة الكهروميكانيكية",
+  sv_net_cost: "حساب الكميات والتكلفة", sv_net_contract: "المقاولات والتسليم المفتاحي",
+  sv_net_note: "يُستعان بالمتخصصين لكل مشروع وتنسّقهم ETR مباشرةً — فريق كامل دون إدارة موردين متعددين.",
+  sv_cta_h: "لديك مشروع في ذهنك؟", sv_cta_p: "أخبرنا بما تخطّط له وسنجمع لك الفريق المناسب."
+});
+
+Object.assign(I18N.fr, {
+  sv_meta_title: "Services & Compétences | ETR Consultants en Architecture",
+  sv_tag: "Compétences",
+  sv_h1: "Un cabinet complet — conception, ingénierie et réalisation.",
+  sv_sub: "ETR pilote chaque projet de bout en bout et coordonne un réseau de spécialistes de confiance, pour une équipe complète sous une seule responsabilité.",
+  sv_tag_inhouse: "En interne", sv_tag_partners: "Avec notre réseau", sv_tag_led: "Piloté par ETR",
+  sv_p1_t: "Conception architecturale", sv_p1_d: "Du concept et de la volumétrie aux documents d'exécution prêts pour le permis.",
+  sv_p2_t: "Conception durable et climato-intelligente", sv_p2_d: "Refroidissement passif, modélisation énergétique et stratégie des matériaux éprouvés en climat désertique et côtier.",
+  sv_p3_t: "Architecture d'intérieur & aménagement", sv_p3_d: "Intérieurs, finitions, choix du marbre et des matériaux, et plans d'aménagement détaillés.",
+  sv_p4_t: "Ingénierie civile & structurelle", sv_p4_d: "Analyse structurelle, travaux civils et ingénierie de site, coordonnés par ETR.",
+  sv_p5_t: "Topographie, cartographie & implantation", sv_p5_d: "Relevés topographiques, plans fonciers et plans d'implantation précis.",
+  sv_p6_t: "Supervision & gestion de projet", sv_p6_d: "Supervision de chantier, maîtrise des coûts et coordination clé en main jusqu'à la livraison.",
+  sv_net_tag: "Notre réseau",
+  sv_net_h: "Réalisation collaborative — une équipe, une seule responsabilité.",
+  sv_net_p: "ETR pilote chaque projet. Lorsqu'une expertise spécialisée est nécessaire, nous mobilisons des associés de confiance de notre réseau — coordonnés sous un même toit, un seul contrat, un seul nom responsable.",
+  sv_net_civil: "Ingénierie civile & structurelle", sv_net_interior: "Architecture d'intérieur",
+  sv_net_survey: "Topographie & cartographie", sv_net_mep: "Ingénierie CVC/électricité",
+  sv_net_cost: "Économie de la construction", sv_net_contract: "Entreprise & clé en main",
+  sv_net_note: "Les spécialistes sont mobilisés par projet et coordonnés directement par ETR — une équipe complète sans gérer plusieurs prestataires.",
+  sv_cta_h: "Un projet en tête ?", sv_cta_p: "Décrivez votre projet et nous réunirons la bonne équipe."
+});
+
+Object.assign(I18N.es, {
+  sv_meta_title: "Servicios y Capacidades | ETR Consultores de Arquitectura",
+  sv_tag: "Capacidades",
+  sv_h1: "Una consultoría completa — diseño, ingeniería y ejecución.",
+  sv_sub: "ETR dirige cada proyecto de principio a fin y coordina una red de especialistas de confianza, para que reciba un equipo completo bajo un único responsable.",
+  sv_tag_inhouse: "Interno", sv_tag_partners: "Con nuestra red", sv_tag_led: "Dirigido por ETR",
+  sv_p1_t: "Diseño arquitectónico", sv_p1_d: "Del concepto y la volumetría a los documentos de obra listos para licencia.",
+  sv_p2_t: "Diseño sostenible y climáticamente inteligente", sv_p2_d: "Enfriamiento pasivo, modelado energético y estrategia de materiales probados en clima desértico y costero.",
+  sv_p3_t: "Interiorismo y acondicionamiento", sv_p3_d: "Interiores, acabados, selección de mármol y materiales, y diseño detallado de distribución.",
+  sv_p4_t: "Ingeniería civil y estructural", sv_p4_d: "Análisis estructural, obra civil e ingeniería de sitio, coordinados por ETR.",
+  sv_p5_t: "Topografía, cartografía y replanteo", sv_p5_d: "Levantamientos topográficos, planos de terreno y planos de replanteo precisos.",
+  sv_p6_t: "Supervisión y gestión de proyecto", sv_p6_d: "Supervisión en obra, control de costes y coordinación llave en mano hasta la entrega.",
+  sv_net_tag: "Nuestra red",
+  sv_net_h: "Ejecución colaborativa — un equipo, un único responsable.",
+  sv_net_p: "ETR dirige cada proyecto. Cuando se requiere experiencia especializada, incorporamos asociados de confianza de nuestra red — coordinados bajo un mismo techo, un contrato y un nombre responsable.",
+  sv_net_civil: "Ingeniería civil y estructural", sv_net_interior: "Interiorismo",
+  sv_net_survey: "Topografía y cartografía", sv_net_mep: "Ingeniería MEP",
+  sv_net_cost: "Mediciones y presupuestos", sv_net_contract: "Contratación y llave en mano",
+  sv_net_note: "Los especialistas se incorporan por proyecto y los coordina directamente ETR — un equipo completo sin gestionar múltiples proveedores.",
+  sv_cta_h: "¿Tiene un proyecto en mente?", sv_cta_p: "Cuéntenos qué planea y reuniremos al equipo adecuado."
+});
+
+Object.assign(I18N.ru, {
+  sv_meta_title: "Услуги и компетенции | ETR Архитектурные консультанты",
+  sv_tag: "Компетенции",
+  sv_h1: "Полноценная консультация — проектирование, инжиниринг и реализация.",
+  sv_sub: "ETR ведёт каждый проект от начала до конца и координирует надёжную сеть специалистов, чтобы вы получили полную команду под единой ответственностью.",
+  sv_tag_inhouse: "Собственными силами", sv_tag_partners: "С нашей сетью", sv_tag_led: "Под управлением ETR",
+  sv_p1_t: "Архитектурное проектирование", sv_p1_d: "От концепции и объёмов до рабочей документации, готовой к согласованию.",
+  sv_p2_t: "Климатически разумное и устойчивое проектирование", sv_p2_d: "Пассивное охлаждение, энергомоделирование и стратегия материалов, проверенные в пустынном и прибрежном климате.",
+  sv_p3_t: "Дизайн интерьера и отделка", sv_p3_d: "Интерьеры, отделка, подбор мрамора и материалов, детальная планировка.",
+  sv_p4_t: "Гражданское и конструктивное проектирование", sv_p4_d: "Расчёт конструкций, гражданские работы и инженерия участка под координацией ETR.",
+  sv_p5_t: "Геодезия, картография и разбивка участка", sv_p5_d: "Топосъёмка, планы участков и точные разбивочные чертежи.",
+  sv_p6_t: "Надзор и управление проектом", sv_p6_d: "Авторский надзор, контроль затрат и координация «под ключ» вплоть до сдачи.",
+  sv_net_tag: "Наша сеть",
+  sv_net_h: "Совместная реализация — одна команда, одна ответственность.",
+  sv_net_p: "ETR ведёт каждый проект. Когда нужна узкая экспертиза, мы привлекаем проверенных партнёров из нашей профессиональной сети — под одной крышей, одним договором и одним ответственным именем.",
+  sv_net_civil: "Гражданское и конструктивное проектирование", sv_net_interior: "Дизайн интерьера",
+  sv_net_survey: "Геодезия и картография", sv_net_mep: "Инженерные системы (MEP)",
+  sv_net_cost: "Сметы и объёмы работ", sv_net_contract: "Подряд и «под ключ»",
+  sv_net_note: "Специалисты привлекаются под проект и координируются напрямую ETR — полная команда без управления множеством подрядчиков.",
+  sv_cta_h: "Есть проект на примете?", sv_cta_p: "Расскажите о планах — и мы соберём нужную команду."
+});
+
+Object.assign(I18N.zh, {
+  sv_meta_title: "服务与能力 | ETR 建筑顾问",
+  sv_tag: "能力",
+  sv_h1: "完整的咨询——设计、工程与交付。",
+  sv_sub: "ETR 全程主导每个项目，并协调一个值得信赖的专家网络，让您在单一责任方下获得完整团队。",
+  sv_tag_inhouse: "自有团队", sv_tag_partners: "携手网络", sv_tag_led: "ETR 主导",
+  sv_p1_t: "建筑设计", sv_p1_d: "从概念与体量到可报建的施工图文件。",
+  sv_p2_t: "气候智慧与可持续设计", sv_p2_d: "在沙漠与沿海气候中经验证的被动式降温、能耗模拟与材料策略。",
+  sv_p3_t: "室内设计与精装", sv_p3_d: "室内、饰面、大理石与材料选型，以及详细的平面布局设计。",
+  sv_p4_t: "土木与结构工程", sv_p4_d: "由 ETR 协调的结构分析、土建与场地工程。",
+  sv_p5_t: "测量、制图与场地放线", sv_p5_d: "地形测量、土地图纸与精确的场地放线图。",
+  sv_p6_t: "监理与项目管理", sv_p6_d: "现场监理、成本控制与交钥匙协调，直至竣工交付。",
+  sv_net_tag: "我们的网络",
+  sv_net_h: "协作交付——一个团队，一个责任方。",
+  sv_net_p: "ETR 主导每个项目。当需要专项专长时，我们引入网络中值得信赖的合作伙伴——在同一屋檐、同一合同、同一责任人之下协调。",
+  sv_net_civil: "土木与结构工程", sv_net_interior: "室内设计",
+  sv_net_survey: "测量与制图", sv_net_mep: "机电工程",
+  sv_net_cost: "造价与工程量", sv_net_contract: "承包与交钥匙",
+  sv_net_note: "专家按项目引入并由 ETR 直接协调——无需管理多家供应商即可获得完整团队。",
+  sv_cta_h: "已有项目构想？", sv_cta_p: "告诉我们您的计划，我们将组建合适的团队。"
+});
+
+Object.assign(I18N.it, {
+  sv_meta_title: "Servizi e Competenze | ETR Consulenti di Architettura",
+  sv_tag: "Competenze",
+  sv_h1: "Una consulenza completa — progettazione, ingegneria e realizzazione.",
+  sv_sub: "ETR guida ogni progetto dall'inizio alla fine e coordina una rete fidata di specialisti, così ricevi un team completo sotto un'unica responsabilità.",
+  sv_tag_inhouse: "Interno", sv_tag_partners: "Con la nostra rete", sv_tag_led: "Guidato da ETR",
+  sv_p1_t: "Progettazione architettonica", sv_p1_d: "Dal concept e dalle volumetrie ai documenti esecutivi pronti per il permesso.",
+  sv_p2_t: "Progettazione sostenibile e climaticamente intelligente", sv_p2_d: "Raffrescamento passivo, modellazione energetica e strategia dei materiali, comprovati in clima desertico e costiero.",
+  sv_p3_t: "Interior design & allestimenti", sv_p3_d: "Interni, finiture, selezione di marmo e materiali e layout di dettaglio.",
+  sv_p4_t: "Ingegneria civile & strutturale", sv_p4_d: "Analisi strutturale, opere civili e ingegneria del sito, coordinate da ETR.",
+  sv_p5_t: "Rilievo, cartografia & tracciamento", sv_p5_d: "Rilievi topografici, planimetrie catastali e precisi disegni di tracciamento.",
+  sv_p6_t: "Direzione lavori & project management", sv_p6_d: "Direzione in cantiere, controllo dei costi e coordinamento chiavi in mano fino alla consegna.",
+  sv_net_tag: "La nostra rete",
+  sv_net_h: "Realizzazione collaborativa — un team, un'unica responsabilità.",
+  sv_net_p: "ETR guida ogni progetto. Quando serve una competenza specialistica, coinvolgiamo associati fidati della nostra rete — coordinati sotto un solo tetto, un contratto e un nome responsabile.",
+  sv_net_civil: "Ingegneria civile & strutturale", sv_net_interior: "Interior design",
+  sv_net_survey: "Rilievo & cartografia", sv_net_mep: "Ingegneria impiantistica (MEP)",
+  sv_net_cost: "Computo metrico & costi", sv_net_contract: "Appalto & chiavi in mano",
+  sv_net_note: "Gli specialisti sono coinvolti per progetto e coordinati direttamente da ETR — un team completo senza gestire più fornitori.",
+  sv_cta_h: "Hai un progetto in mente?", sv_cta_p: "Raccontaci cosa stai pianificando e comporremo il team giusto."
+});
