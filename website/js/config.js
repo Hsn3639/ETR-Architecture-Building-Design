@@ -4,10 +4,13 @@
  */
 window.ETR_CONFIG = {
   // --- Lead delivery (questionnaire + contact form) ---
-  // Paste your Formspree form URL here to receive submissions by email with no
-  // backend, e.g. "https://formspree.io/f/abcdwxyz". Leave blank to fall back to
-  // opening the visitor's email client (mailto). See docs/SETUP.md.
-  FORMSPREE_ENDPOINT: "",
+  // TODO(ETR): paste your Formspree form URL between the quotes to start
+  // receiving questionnaire / contact / careers / network submissions by email.
+  //   1. Create a free form at https://formspree.io (send to CONTACT_EMAIL below)
+  //   2. Copy its endpoint, e.g. "https://formspree.io/f/abcdwxyz"
+  //   3. Paste it here and save — done. (See docs/SETUP.md.)
+  // Leave blank to use the email-client (mailto) fallback.
+  FORMSPREE_ENDPOINT: "",  // <-- paste "https://formspree.io/f/XXXXXXXX" here
 
   // Where mailto fallbacks and the contact page send to.
   CONTACT_EMAIL: "hsn.importazioni@outlook.com",
