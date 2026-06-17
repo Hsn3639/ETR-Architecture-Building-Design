@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Urban planning — city blocks">
-  <rect width="800" height="500" fill="#1b1a18"/>
+  <rect width="800" height="500" fill="#1A1A1A"/>
   <!-- street grid -->
-  <g stroke="#b29a78" stroke-opacity="0.5" stroke-width="2">
+  <g stroke="#C9B27E" stroke-opacity="0.5" stroke-width="2">
     <line x1="0" y1="160" x2="800" y2="160"/><line x1="0" y1="320" x2="800" y2="320"/>
     <line x1="220" y1="0" x2="220" y2="500"/><line x1="440" y1="0" x2="440" y2="500"/><line x1="600" y1="0" x2="600" y2="500"/>
   </g>
@@ -12,6 +12,6 @@
     <rect x="260" y="360" width="150" height="100"/><rect x="630" y="360" width="130" height="100"/>
   </g>
   <!-- highlighted parcel -->
-  <rect x="260" y="200" width="150" height="90" fill="#b29a78"/>
+  <rect x="260" y="200" width="150" height="90" fill="#C9B27E"/>
   <g fill="#f5f3ee" fill-opacity="0.08"><circle cx="330" cy="245" r="60"/></g>
 </svg>

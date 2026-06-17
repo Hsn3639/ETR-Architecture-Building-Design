@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Heritage — dome and arches">
   <defs><linearGradient id="h" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efe9dd"/><stop offset="1" stop-color="#ddd5c4"/></linearGradient></defs>
   <rect width="800" height="500" fill="url(#h)"/>
-  <rect x="120" y="220" width="560" height="240" fill="#1b1a18"/>
+  <rect x="120" y="220" width="560" height="240" fill="#1A1A1A"/>
   <!-- dome -->
   <path d="M320 220 a80 90 0 0 1 160 0 Z" fill="#26241f"/>
-  <rect x="392" y="95" width="16" height="40" fill="#b29a78"/>
+  <rect x="392" y="95" width="16" height="40" fill="#C9B27E"/>
   <!-- arcade -->
   <g fill="#efe9dd">
     <path d="M160 460 V320 a40 40 0 0 1 80 0 V460 Z"/>
@@ -12,5 +12,5 @@
     <path d="M440 460 V320 a40 40 0 0 1 80 0 V460 Z"/>
     <path d="M560 460 V320 a40 40 0 0 1 80 0 V460 Z"/>
   </g>
-  <rect x="120" y="220" width="560" height="26" fill="#b29a78" fill-opacity="0.6"/>
+  <rect x="120" y="220" width="560" height="26" fill="#C9B27E" fill-opacity="0.6"/>
 </svg>

@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Commercial — office tower">
   <rect width="800" height="500" fill="#eee8dc"/>
-  <rect x="250" y="40" width="300" height="460" fill="#1b1a18"/>
+  <rect x="250" y="40" width="300" height="460" fill="#1A1A1A"/>
   <g stroke="#eee8dc" stroke-width="3">
     <line x1="330" y1="40" x2="330" y2="500"/><line x1="410" y1="40" x2="410" y2="500"/><line x1="490" y1="40" x2="490" y2="500"/>
     <line x1="250" y1="120" x2="550" y2="120"/><line x1="250" y1="200" x2="550" y2="200"/><line x1="250" y1="280" x2="550" y2="280"/><line x1="250" y1="360" x2="550" y2="360"/><line x1="250" y1="440" x2="550" y2="440"/>
   </g>
-  <g fill="#b29a78" fill-opacity="0.75">
+  <g fill="#C9B27E" fill-opacity="0.75">
     <rect x="330" y="120" width="80" height="80"/><rect x="410" y="280" width="80" height="80"/><rect x="250" y="360" width="80" height="80"/>
   </g>
   <rect x="120" y="300" width="120" height="200" fill="#cfc6b4"/>

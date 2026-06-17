@@ -2,10 +2,10 @@
   <defs><linearGradient id="v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26241f"/><stop offset="1" stop-color="#15140f"/></linearGradient></defs>
   <rect width="800" height="500" fill="url(#v)"/>
   <rect x="120" y="150" width="560" height="190" fill="#0f0e0b"/>
-  <g stroke="#b29a78" stroke-width="4">
+  <g stroke="#C9B27E" stroke-width="4">
     <line x1="120" y1="200" x2="680" y2="200"/><line x1="120" y1="250" x2="680" y2="250"/><line x1="120" y1="300" x2="680" y2="300"/>
   </g>
-  <rect x="220" y="160" width="160" height="170" fill="#b29a78" fill-opacity="0.7"/>
+  <rect x="220" y="160" width="160" height="170" fill="#C9B27E" fill-opacity="0.7"/>
   <!-- pool -->
   <rect x="160" y="380" width="480" height="80" rx="4" fill="#3a4a52"/>
   <g stroke="#ffffff" stroke-opacity="0.14"><line x1="180" y1="400" x2="620" y2="400"/><line x1="180" y1="430" x2="620" y2="430"/></g>
