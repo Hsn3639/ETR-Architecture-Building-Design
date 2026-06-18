@@ -14,6 +14,9 @@
   --muted:    #6b665d;   /* secondary text — darkened for AA contrast on white */
   --sand:     #c9b27e;   /* soft gold — single restrained accent */
   --sand-dk:  #a8915c;   /* darker gold for text/links */
+  --amber:    #c98a3c;   /* warm wood/amber — concept-board accent */
+  --terra:    #b4602a;   /* terracotta — annotation accent */
+  --board:    #efe7d6;   /* drawing-board paper */
   --line:     rgba(26,26,26,0.12);
   --line-soft:rgba(26,26,26,0.07);
 
@@ -356,6 +359,32 @@ section { padding: var(--sp) 0; }
 .hero-image h1 { color: #fff; }
 .hero-image p { color: rgba(255,255,255,0.85); }
 .hero-scroll { margin-top: 56px; font-family: var(--display); font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+
+/* ---------- Concept-board hero (architectural sketch identity) ---------- */
+.hero-board {
+  position: relative;
+  background: var(--board) url("../assets/hero-board.svg") center / cover no-repeat;
+  border-bottom: 1px solid var(--line);
+  min-height: 92vh;
+  display: flex; align-items: center;
+  color: var(--charcoal);
+}
+.hero-board::after { display: none; }              /* the artwork carries the texture */
+/* cream scrim so the headline stays readable over the drawing */
+.hero-board::before {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(90deg, rgba(239,231,214,0.94) 0%, rgba(239,231,214,0.66) 40%, rgba(239,231,214,0) 72%);
+}
+[dir="rtl"] .hero-board::before {
+  background: linear-gradient(270deg, rgba(239,231,214,0.94) 0%, rgba(239,231,214,0.66) 40%, rgba(239,231,214,0) 72%);
+}
+.hero-board .container { position: relative; z-index: 2; }
+.hero-board .tag { color: var(--terra); }
+.hero-board h1 { color: var(--charcoal); }
+.hero-board p  { color: #5b5145; }                 /* warm muted, AA on cream */
+/* dark buttons read correctly on the light board */
+.hero-board .btn-ghost { border-color: var(--charcoal); color: var(--charcoal); }
+.hero-board .btn-ghost:hover { background: var(--charcoal); color: #fff; }
 
 /* ============================================================
    PORTFOLIO / SELECTED WORK
