@@ -387,6 +387,10 @@ section { padding: var(--sp) 0; }
     url("../assets/hero-board.jpg") center / cover no-repeat,
     url("../assets/hero-board.svg") center / cover no-repeat,
     var(--board);
+  background:
+    image-set(url("../assets/hero-board.webp") type("image/webp"), url("../assets/hero-board.jpg") type("image/jpeg")) center / cover no-repeat,
+    url("../assets/hero-board.svg") center / cover no-repeat,
+    var(--board);
   border-bottom: 1px solid var(--line);
   min-height: 92vh;
   display: flex; align-items: center;
