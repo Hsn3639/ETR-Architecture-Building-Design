@@ -1,17 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="ETR mark">
   <defs>
-    <linearGradient id="etrArch" x1="22" y1="18" x2="82" y2="88" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#e0c789"/>
-      <stop offset=".5" stop-color="#c98a3c"/>
-      <stop offset="1" stop-color="#a8472a"/>
+    <linearGradient id="etrGold" x1="30" y1="18" x2="72" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e7cd82"/>
+      <stop offset=".5" stop-color="#c79a3e"/>
+      <stop offset="1" stop-color="#9c7426"/>
     </linearGradient>
   </defs>
-  <!-- ground line -->
-  <line x1="18" y1="85" x2="82" y2="85" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"/>
-  <!-- outer arch (warm gradient) -->
-  <path d="M26 85 V46 a24 24 0 0 1 48 0 V85" fill="none" stroke="url(#etrArch)" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- inner doorway arch -->
-  <path d="M40 85 V51 a10 10 0 0 1 20 0 V85" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- keystone accent -->
-  <circle cx="50" cy="17" r="3.6" fill="#a8472a"/>
+  <!-- "e" ring, open to the right -->
+  <path d="M66 30 A30 30 0 1 0 66 74" fill="none" stroke="#1A1A1A" stroke-width="9" stroke-linecap="round"/>
+  <!-- "e" bar -->
+  <line x1="40" y1="52" x2="67" y2="52" stroke="#1A1A1A" stroke-width="9" stroke-linecap="round"/>
+  <!-- drafting compass legs -->
+  <line x1="52" y1="25" x2="34" y2="86" stroke="url(#etrGold)" stroke-width="5.4" stroke-linecap="round"/>
+  <line x1="52" y1="25" x2="68" y2="86" stroke="url(#etrGold)" stroke-width="5.4" stroke-linecap="round"/>
+  <!-- compass hinge -->
+  <circle cx="52" cy="24" r="4.6" fill="url(#etrGold)"/>
+  <!-- bright centre pivot -->
+  <circle cx="49" cy="52" r="3.4" fill="#ecd596"/>
 </svg>
