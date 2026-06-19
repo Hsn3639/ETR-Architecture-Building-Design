@@ -258,7 +258,35 @@
     function minimize() { panel.hidden = true; launch.setAttribute("aria-expanded", "false"); }   // "put it down" → floating bubble
     function dismiss() { wrap.style.display = "none"; try { sessionStorage.setItem("etr_nero_closed", "1"); } catch (e) {} }
 
-    launch.addEventListener("click", function () { if (panel.hidden) showPanel(); else minimize(); });
+    var suppressClick = false;
+    launch.addEventListener("click", function () { if (suppressClick) return; if (panel.hidden) showPanel(); else minimize(); });
+
+    // draggable launcher — Nero can be moved anywhere on screen
+    (function () {
+      var dragging = false, moved = false, sx = 0, sy = 0, ox = 0, oy = 0;
+      launch.addEventListener("pointerdown", function (e) {
+        dragging = true; moved = false; sx = e.clientX; sy = e.clientY;
+        var r = wrap.getBoundingClientRect(); ox = r.left; oy = r.top;
+        wrap.style.transition = "none";
+        try { launch.setPointerCapture(e.pointerId); } catch (_) {}
+      });
+      window.addEventListener("pointermove", function (e) {
+        if (!dragging) return;
+        var dx = e.clientX - sx, dy = e.clientY - sy;
+        if (Math.abs(dx) > 4 || Math.abs(dy) > 4) moved = true;
+        if (!moved) return;
+        var w = wrap.offsetWidth, h = wrap.offsetHeight;
+        var nx = Math.min(Math.max(8, ox + dx), window.innerWidth - w - 8);
+        var ny = Math.min(Math.max(8, oy + dy), window.innerHeight - h - 8);
+        wrap.style.left = nx + "px"; wrap.style.top = ny + "px";
+        wrap.style.right = "auto"; wrap.style.bottom = "auto";
+      });
+      window.addEventListener("pointerup", function () {
+        if (!dragging) return; dragging = false;
+        if (moved) { suppressClick = true; setTimeout(function () { suppressClick = false; }, 30); }
+      });
+    })();
+
     minBtn.addEventListener("click", minimize);
     closeBtn.addEventListener("click", dismiss);
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !panel.hidden) minimize(); });
