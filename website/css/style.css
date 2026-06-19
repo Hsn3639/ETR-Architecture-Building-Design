@@ -596,6 +596,8 @@ body.loaded .page-wipe { transform: translateY(-100%); }
 .cursor-tools.on { opacity: 1; }
 .ct-item { position: absolute; top: 0; left: 0; width: 32px; height: 32px; opacity: var(--o, .5); will-change: transform; }
 .ct-item svg { width: 100%; height: 100%; display: block; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4)) drop-shadow(0 0 1.5px rgba(255,255,255,0.55)); }
+.ct-soft { width: 36px; height: 36px; }
+.ct-soft svg { filter: drop-shadow(0 4px 10px rgba(0,0,0,0.30)); }
 .cb-launch:hover { background: var(--sand-dk); border-color: var(--sand-dk); transform: translateY(-2px); }
 .cb-panel {
   width: 360px; max-width: calc(100vw - 56px); height: 480px; max-height: calc(100vh - 140px);
