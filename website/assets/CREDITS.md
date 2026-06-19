@@ -27,11 +27,20 @@ page still renders cleanly if a JPG ever fails to load.
 > licence does not require attribution but it is appreciated. Add the
 > photographer name + photo URL in the "Source / licence" column when known.
 
-## Optimisation note
+## Optimisation (done)
 
-These originals are full-resolution (some 10–14 MP, up to ~14 MB). For best
-load performance they should be **resized to ~2000 px on the long edge and
-re-encoded as WebP/optimised JPEG** before going to production — the build
-environment here had no image tooling (Pillow/ImageMagick/cwebp unavailable,
-network-blocked), so they are committed at source resolution. Below-the-fold
-images use `loading="lazy"` to mitigate this in the meantime.
+All photos have been **resized to ≤ 2000 px on the long edge** and re-encoded
+as both **optimised JPEG (q ≈ 0.82)** and **WebP (q ≈ 0.80)**. Total JPEG
+payload dropped from ~52 MB to ~5 MB; WebP totals ~3.7 MB. The 14 MB heritage
+original is now 821 KB (JPEG) / 773 KB (WebP).
+
+- Each `<img>` is wrapped in a `<picture>` with a `<source type="image/webp">`,
+  so WebP-capable browsers load the smaller file and others fall back to the
+  optimised JPEG (and to the SVG via `onerror` if both are missing).
+- The hero uses CSS `image-set()` to prefer WebP, with the JPEG as the
+  fallback declaration for older browsers.
+- Below-the-fold images keep `loading="lazy"` and `decoding="async"`.
+
+> Re-encoding was performed with a headless-Chromium `<canvas>` pipeline
+> (`tmp/optimize-images.js` in the build session) because Pillow / ImageMagick /
+> cwebp and the npm registry were all unavailable/network-blocked.
