@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -44,18 +44,33 @@
     </div>
   </header>
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ HERO (featured project) ============ -->
   <section class="hero hero-home hero-board">
-    <div class="container">
+    <a class="hero-card" href="questionnaire.html" aria-label="Featured project — Courtyard House, Benghazi, Residential, 2025">
+      <span class="hc-mono" aria-hidden="true">ETR</span>
+      <div class="hc-top">
+        <span class="hc-name">Courtyard House</span>
+        <span class="hc-arrow" aria-hidden="true">↗</span>
+      </div>
+      <div class="hc-bottom">
+        <span class="hc-loc">Benghazi</span>
+        <span class="hc-meta"><span class="hc-cat" data-i18n="h_s1_t">Residential</span><span class="hc-year">2025</span></span>
+      </div>
+    </a>
+    <a class="hero-scroll-cue" href="#work" aria-label="Scroll to selected work"><span data-i18n="h_hero_scroll">Scroll</span></a>
+  </section>
+
+  <!-- ============ STATEMENT ============ -->
+  <section class="statement">
+    <div class="container statement-inner">
       <span class="tag" data-i18n="h_hero_tag">CLIMATE-SMART · HERITAGE-ROOTED</span>
-      <h1 data-i18n="h_hero_h1">Architecture for Libya's climate — and the world's future.</h1>
-      <p data-i18n="h_hero_p">ETR designs energy-efficient, identity-rich buildings backed by peer-reviewed building science.</p>
+      <h1 class="statement-h" data-i18n="h_hero_h1">Architecture for Libya's climate — and the world's future.</h1>
+      <p class="statement-lead" data-i18n="h_hero_p">ETR designs energy-efficient, identity-rich buildings backed by peer-reviewed building science.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="questionnaire.html" data-i18n="h_cta_quote">Get a project estimate</a>
-        <a class="btn btn-ghost" href="#work" data-i18n="h_cta_services">Explore our work</a>
+        <a class="btn btn-ghost-dark" href="#work" data-i18n="h_cta_services">Explore our work</a>
       </div>
     </div>
-    <a class="hero-scroll-cue" href="#work" aria-label="Scroll to selected work"><span data-i18n="h_hero_scroll">Scroll</span></a>
   </section>
 
   <!-- ============ SELECTED WORK ============ -->
@@ -68,25 +83,25 @@
         <a class="work-item" href="questionnaire.html">
           <div class="work-frame">
             <picture><source type="image/webp" srcset="assets/project-1.webp" /><img src="assets/project-1.jpg" alt="Courtyard house, Benghazi — Mediterranean white facade with balcony and bougainvillea" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/project-1.svg'" /></picture>
-            <div class="work-overlay"><h3>Courtyard House</h3><span class="work-info">Benghazi · <span data-i18n="h_s1_t">Residential</span> · 2025</span></div>
+            <div class="work-overlay"><div class="wo-text"><h3>Courtyard House</h3><span class="work-info">Benghazi · <span data-i18n="h_s1_t">Residential</span> · 2025</span></div><span class="wo-arrow" aria-hidden="true">↗</span></div>
           </div>
         </a>
         <a class="work-item" href="questionnaire.html">
           <div class="work-frame">
             <picture><source type="image/webp" srcset="assets/project-2.webp" /><img src="assets/project-2.jpg" alt="Coastal villa with sea views" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/project-2.svg'" /></picture>
-            <div class="work-overlay"><h3>Coastal Villa</h3><span class="work-info">Tripoli · <span data-i18n="h_s2_t">Villa</span> · 2025</span></div>
+            <div class="work-overlay"><div class="wo-text"><h3>Coastal Villa</h3><span class="work-info">Tripoli · <span data-i18n="h_s2_t">Villa</span> · 2025</span></div><span class="wo-arrow" aria-hidden="true">↗</span></div>
           </div>
         </a>
         <a class="work-item" href="questionnaire.html">
           <div class="work-frame">
             <picture><source type="image/webp" srcset="assets/project-3.webp" /><img src="assets/project-3.jpg" alt="City Exchange — modern commercial office facade" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/project-3.svg'" /></picture>
-            <div class="work-overlay"><h3>City Exchange</h3><span class="work-info">Benghazi · <span data-i18n="h_s3_t">Commercial</span> · 2024</span></div>
+            <div class="work-overlay"><div class="wo-text"><h3>City Exchange</h3><span class="work-info">Benghazi · <span data-i18n="h_s3_t">Commercial</span> · 2024</span></div><span class="wo-arrow" aria-hidden="true">↗</span></div>
           </div>
         </a>
         <a class="work-item" href="questionnaire.html">
           <div class="work-frame">
             <picture><source type="image/webp" srcset="assets/project-4.webp" /><img src="assets/project-4.jpg" alt="Restored heritage building with arched colonnade" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/project-4.svg'" /></picture>
-            <div class="work-overlay"><h3>Old Town Arcade</h3><span class="work-info">Benghazi · <span data-i18n="h_s5_t">Heritage</span> · 2024</span></div>
+            <div class="work-overlay"><div class="wo-text"><h3>Old Town Arcade</h3><span class="work-info">Benghazi · <span data-i18n="h_s5_t">Heritage</span> · 2024</span></div><span class="wo-arrow" aria-hidden="true">↗</span></div>
           </div>
         </a>
       </div>

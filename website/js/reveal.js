@@ -24,7 +24,7 @@
 
   /* ---- scroll reveal ---- */
   function reveal() {
-    var sel = ".section-title, .section-sub, .card, .step, .q-section, .callout, .about-grid > *, .careers-meta, .q-cat, .hero h1, .hero p, .hero .tag, .hero-cta, .work-item, .impact-item, .net-node";
+    var sel = ".section-title, .section-sub, .card, .step, .q-section, .callout, .about-grid > *, .careers-meta, .q-cat, .hero h1, .hero p, .hero .tag, .hero-cta, .work-item, .impact-item, .net-node, .statement .tag, .statement-h, .statement-lead";
     var nodes = Array.prototype.slice.call(document.querySelectorAll(sel));
     if (!nodes.length) return;
     if (REDUCE || !("IntersectionObserver" in window)) { nodes.forEach(function (n) { n.classList.add("in"); }); return; }
