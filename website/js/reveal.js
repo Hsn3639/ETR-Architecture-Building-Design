@@ -178,14 +178,23 @@
     var tools = buildLayer(TOOLS, "");
     var soft = buildLayer(SOFT, "ct-soft");
     var svc = document.getElementById("services");
+    // On the dedicated Services page, software follows everywhere; on the home
+    // page it's scoped to the #services section.
+    var wholeSvcPage = location.pathname.indexOf("services.html") !== -1;
 
     var mx = window.innerWidth / 2, my = window.innerHeight / 2, inSvc = false, idle;
     document.addEventListener("mousemove", function (e) {
       mx = e.clientX; my = e.clientY;
-      inSvc = false;
-      if (svc) { var r = svc.getBoundingClientRect(); inSvc = e.clientY >= r.top && e.clientY <= r.bottom && e.clientX >= r.left && e.clientX <= r.right; }
-      tools.el.classList.toggle("on", !inSvc);   // drafting tools everywhere except Services
-      soft.el.classList.toggle("on", inSvc);     // software logos inside Services only
+      if (wholeSvcPage) {
+        inSvc = true;
+      } else if (svc) {
+        var r = svc.getBoundingClientRect();
+        inSvc = e.clientY >= r.top && e.clientY <= r.bottom && e.clientX >= r.left && e.clientX <= r.right;
+      } else {
+        inSvc = false;
+      }
+      tools.el.classList.toggle("on", !inSvc);   // drafting tools (home, outside Services)
+      soft.el.classList.toggle("on", inSvc);     // software logos (Services section / page)
       clearTimeout(idle); idle = setTimeout(function () { tools.el.classList.remove("on"); soft.el.classList.remove("on"); }, 900);
     }, { passive: true });
 
