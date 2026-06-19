@@ -142,7 +142,46 @@
     update();
   }
 
-  function init() { a11y(); reveal(); header(); menu(); transitions(); scrollFx(); }
+  /* ---- architecture-tool cursor trail (desktop, motion-safe) ----
+     A chain of small drafting-tool icons eases after the pointer. */
+  function cursorTools() {
+    if (REDUCE) return;
+    if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) return;
+    if (window.innerWidth < 820) return;
+    var TOOLS = [
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.2" r="1.5"/><path d="M12 5.7 7 20"/><path d="M12 5.7 17 20"/><path d="M9.2 13h5.6"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 15 9"/><path d="M13 7 17 11"/><path d="M5 19l-1 1 2-1z"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 20 19 4 6Z"/><path d="M7 16v-3M10 16v-2"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h18"/><path d="M4.5 16a7.5 7.5 0 0 1 15 0"/><path d="M12 16v-5"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="9" width="19" height="6" rx="1"/><path d="M6 9v2.5M9 9v3.5M12 9v2.5M15 9v3.5M18 9v2.5"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="6" height="12"/><rect x="12" y="5" width="7" height="16"/><path d="M6 12h2M6 15h2M15 8h2M15 11h2M15 14h2"/></svg>'
+    ];
+    var layer = document.createElement("div"); layer.className = "cursor-tools"; document.body.appendChild(layer);
+    var nodes = [];
+    for (var i = 0; i < TOOLS.length; i++) {
+      var s = document.createElement("span"); s.className = "ct-item"; s.innerHTML = TOOLS[i];
+      s.style.setProperty("--o", (0.6 - i * 0.07).toFixed(2));
+      layer.appendChild(s);
+      nodes.push({ el: s, x: window.innerWidth / 2, y: window.innerHeight / 2 });
+    }
+    var mx = window.innerWidth / 2, my = window.innerHeight / 2, idle;
+    document.addEventListener("mousemove", function (e) {
+      mx = e.clientX; my = e.clientY; layer.classList.add("on");
+      clearTimeout(idle); idle = setTimeout(function () { layer.classList.remove("on"); }, 900);
+    }, { passive: true });
+    (function loop() {
+      var px = mx, py = my;
+      for (var i = 0; i < nodes.length; i++) {
+        var n = nodes[i];
+        n.x += (px - n.x) * 0.30; n.y += (py - n.y) * 0.30;
+        n.el.style.transform = "translate(" + (n.x - 14) + "px," + (n.y - 14) + "px) rotate(" + (i * 16 - 20) + "deg)";
+        px = n.x; py = n.y;
+      }
+      requestAnimationFrame(loop);
+    })();
+  }
+
+  function init() { a11y(); reveal(); header(); menu(); transitions(); scrollFx(); cursorTools(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
