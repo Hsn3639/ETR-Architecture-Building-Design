@@ -157,11 +157,11 @@
       /* building */ '<svg viewBox="0 0 24 24"><path d="M2.5 20 8 21.6 22 18.8 16.5 17.2Z" fill="#5b8fd0" stroke="#2b2b2b" stroke-width="1" stroke-linejoin="round"/><rect x="6" y="7.5" width="4.5" height="10.5" fill="#cfd3d8" stroke="#2b2b2b" stroke-width="1.1"/><rect x="11.5" y="4.5" width="5" height="13.5" fill="#bfc4cb" stroke="#2b2b2b" stroke-width="1.1"/><path d="M7.2 10h2M7.2 12.4h2M7.2 14.8h2M12.6 7h2.6M12.6 9.4h2.6M12.6 11.8h2.6M12.6 14.2h2.6" stroke="#2b2b2b" stroke-width="0.7"/></svg>'
     ];
     var SOFT = [
-      /* AutoCAD */ '<svg viewBox="0 0 24 24"><defs><linearGradient id="swAc" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e11d3a"/><stop offset="1" stop-color="#a50f24"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="5.5" fill="url(#swAc)"/><text x="12" y="17.2" font-family="Arial,Helvetica,sans-serif" font-size="13.5" font-weight="800" fill="#fff" text-anchor="middle">A</text></svg>',
-      /* Revit */ '<svg viewBox="0 0 24 24"><defs><linearGradient id="swRv" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2a83c6"/><stop offset="1" stop-color="#155a92"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="5.5" fill="url(#swRv)"/><text x="12" y="17.2" font-family="Arial,Helvetica,sans-serif" font-size="13.5" font-weight="800" fill="#fff" text-anchor="middle">R</text></svg>',
-      /* ArchiCAD */ '<svg viewBox="0 0 24 24"><defs><linearGradient id="swAr" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1d3c69"/><stop offset="1" stop-color="#0c1f3a"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="5.5" fill="url(#swAr)"/><path d="M7 17.5V12a5 5 0 0 1 10 0v5.5" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round"/></svg>',
-      /* SketchUp */ '<svg viewBox="0 0 24 24"><defs><linearGradient id="swSu" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f15a2b"/><stop offset="1" stop-color="#d83f1d"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="5.5" fill="url(#swSu)"/><path d="M12 5.5 18.5 9 12 12.5 5.5 9Z" fill="#fff"/><path d="M5.5 9v6l6.5 3.5v-6Z" fill="#fff" fill-opacity="0.7"/><path d="M18.5 9v6L12 18.5v-6Z" fill="#fff" fill-opacity="0.88"/></svg>',
-      /* Rhino */ '<svg viewBox="0 0 24 24"><defs><linearGradient id="swRh" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3c3c3c"/><stop offset="1" stop-color="#191919"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="5.5" fill="url(#swRh)"/><text x="12" y="16.6" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="800" fill="#fff" text-anchor="middle">Rh</text></svg>'
+      /* Lumion */ '<svg viewBox="0 0 24 24"><defs><linearGradient id="swLu" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2aa6e0"/><stop offset="1" stop-color="#1577b0"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="5.5" fill="url(#swLu)"/><text x="12" y="17.2" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">L</text></svg>',
+      /* Enscape */ '<svg viewBox="0 0 24 24"><defs><linearGradient id="swEn" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4a93a"/><stop offset="1" stop-color="#e07a16"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="5.5" fill="url(#swEn)"/><text x="12" y="17.2" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">E</text></svg>',
+      /* 3ds Max */ '<svg viewBox="0 0 24 24"><defs><linearGradient id="sw3d" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1cb3aa"/><stop offset="1" stop-color="#0c6f6a"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="5.5" fill="url(#sw3d)"/><text x="12" y="16.6" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="800" fill="#fff" text-anchor="middle">3D</text></svg>',
+      /* V-Ray */ '<svg viewBox="0 0 24 24"><defs><linearGradient id="swVr" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#141414"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="5.5" fill="url(#swVr)"/><text x="12" y="17.2" font-family="Arial,Helvetica,sans-serif" font-size="13.5" font-weight="800" fill="#ef3a2d" text-anchor="middle">V</text></svg>',
+      /* Grasshopper */ '<svg viewBox="0 0 24 24"><defs><linearGradient id="swGh" x1="0" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5aa83f"/><stop offset="1" stop-color="#2f7a2a"/></linearGradient></defs><rect x="1" y="1" width="22" height="22" rx="5.5" fill="url(#swGh)"/><text x="12" y="16.6" font-family="Arial,Helvetica,sans-serif" font-size="9.5" font-weight="800" fill="#fff" text-anchor="middle">GH</text></svg>'
     ];
 
     function buildLayer(arr, cls) {
@@ -178,14 +178,23 @@
     var tools = buildLayer(TOOLS, "");
     var soft = buildLayer(SOFT, "ct-soft");
     var svc = document.getElementById("services");
+    // On the dedicated Services page, software follows everywhere; on the home
+    // page it's scoped to the #services section.
+    var wholeSvcPage = location.pathname.indexOf("services.html") !== -1;
 
     var mx = window.innerWidth / 2, my = window.innerHeight / 2, inSvc = false, idle;
     document.addEventListener("mousemove", function (e) {
       mx = e.clientX; my = e.clientY;
-      inSvc = false;
-      if (svc) { var r = svc.getBoundingClientRect(); inSvc = e.clientY >= r.top && e.clientY <= r.bottom && e.clientX >= r.left && e.clientX <= r.right; }
-      tools.el.classList.toggle("on", !inSvc);   // drafting tools everywhere except Services
-      soft.el.classList.toggle("on", inSvc);     // software logos inside Services only
+      if (wholeSvcPage) {
+        inSvc = true;
+      } else if (svc) {
+        var r = svc.getBoundingClientRect();
+        inSvc = e.clientY >= r.top && e.clientY <= r.bottom && e.clientX >= r.left && e.clientX <= r.right;
+      } else {
+        inSvc = false;
+      }
+      tools.el.classList.toggle("on", !inSvc);   // drafting tools (home, outside Services)
+      soft.el.classList.toggle("on", inSvc);     // software logos (Services section / page)
       clearTimeout(idle); idle = setTimeout(function () { tools.el.classList.remove("on"); soft.el.classList.remove("on"); }, 900);
     }, { passive: true });
 
