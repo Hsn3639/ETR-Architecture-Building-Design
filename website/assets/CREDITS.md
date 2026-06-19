@@ -23,9 +23,11 @@ page still renders cleanly if a JPG ever fails to load.
 | Service · Heritage | `svc-heritage.jpg` | Old town arcade | Client-supplied / royalty-free |
 | Service · Urban Planning | `svc-urban.jpg` | City aerial / masterplan | Client-supplied / royalty-free |
 
-> **Attribution:** If any image was downloaded from Unsplash/Pexels, the
-> licence does not require attribution but it is appreciated. Add the
-> photographer name + photo URL in the "Source / licence" column when known.
+> **Attribution:** These images were supplied by the client from royalty-free
+> sources (Unsplash / Pexels), whose licences **permit commercial use without
+> attribution**. Source URLs were not retained, so no per-photo credit is
+> listed. If a link surfaces later, add the photographer name + photo URL in
+> the "Source / licence" column — it is appreciated though not required.
 
 ## Optimisation (done)
 
