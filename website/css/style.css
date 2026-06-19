@@ -383,7 +383,10 @@ section { padding: var(--sp) 0; }
 /* ---------- Concept-board hero (architectural sketch identity) ---------- */
 .hero-board {
   position: relative;
-  background: var(--board) url("../assets/hero-board.svg") center / cover no-repeat;
+  background:
+    url("../assets/hero-board.jpg") center / cover no-repeat,
+    url("../assets/hero-board.svg") center / cover no-repeat,
+    var(--board);
   border-bottom: 1px solid var(--line);
   min-height: 92vh;
   display: flex; align-items: center;
