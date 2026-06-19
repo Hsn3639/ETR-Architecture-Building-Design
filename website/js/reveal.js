@@ -156,29 +156,49 @@
       /* ruler */ '<svg viewBox="0 0 24 24"><g transform="rotate(-22 12 12)"><rect x="2" y="9.5" width="20" height="5" rx="0.5" fill="#d9b985" stroke="#2b2b2b" stroke-width="1.2"/><path d="M5 9.5v2M8 9.5v2.6M11 9.5v2M14 9.5v2.6M17 9.5v2M20 9.5v2.6" stroke="#2b2b2b" stroke-width="0.8"/></g></svg>',
       /* building */ '<svg viewBox="0 0 24 24"><path d="M2.5 20 8 21.6 22 18.8 16.5 17.2Z" fill="#5b8fd0" stroke="#2b2b2b" stroke-width="1" stroke-linejoin="round"/><rect x="6" y="7.5" width="4.5" height="10.5" fill="#cfd3d8" stroke="#2b2b2b" stroke-width="1.1"/><rect x="11.5" y="4.5" width="5" height="13.5" fill="#bfc4cb" stroke="#2b2b2b" stroke-width="1.1"/><path d="M7.2 10h2M7.2 12.4h2M7.2 14.8h2M12.6 7h2.6M12.6 9.4h2.6M12.6 11.8h2.6M12.6 14.2h2.6" stroke="#2b2b2b" stroke-width="0.7"/></svg>'
     ];
-    var layer = document.createElement("div"); layer.className = "cursor-tools"; document.body.appendChild(layer);
-    var nodes = [];
-    for (var i = 0; i < TOOLS.length; i++) {
-      var s = document.createElement("span"); s.className = "ct-item"; s.innerHTML = TOOLS[i];
-      s.style.setProperty("--o", (0.92 - i * 0.09).toFixed(2));
-      layer.appendChild(s);
-      nodes.push({ el: s, x: window.innerWidth / 2, y: window.innerHeight / 2 });
+    var SOFT = [
+      /* AutoCAD */ '<svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="5" fill="#c8102e"/><text x="12" y="17" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">A</text></svg>',
+      /* Revit */ '<svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="5" fill="#1b6cb3"/><text x="12" y="17" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">R</text></svg>',
+      /* ArchiCAD */ '<svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="5" fill="#13284a"/><path d="M7 17V12a5 5 0 0 1 10 0v5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
+      /* SketchUp */ '<svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="5" fill="#ee4a2b"/><path d="M12 6 18 9.2 12 12.5 6 9.2Z" fill="#fff"/><path d="M6 9.2v5.8l6 3.2v-5.7Z" fill="#fff" fill-opacity="0.72"/><path d="M18 9.2v5.8l-6 3.2v-5.7Z" fill="#fff" fill-opacity="0.88"/></svg>',
+      /* Rhino */ '<svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="5" fill="#232323"/><text x="12" y="16.4" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">Rh</text></svg>'
+    ];
+
+    function buildLayer(arr, cls) {
+      var l = document.createElement("div"); l.className = "cursor-tools"; document.body.appendChild(l);
+      var ns = [];
+      for (var i = 0; i < arr.length; i++) {
+        var s = document.createElement("span"); s.className = "ct-item" + (cls ? " " + cls : "");
+        s.innerHTML = arr[i]; s.style.setProperty("--o", (0.94 - i * 0.10).toFixed(2));
+        l.appendChild(s); ns.push({ el: s, x: window.innerWidth / 2, y: window.innerHeight / 2 });
+      }
+      return { el: l, nodes: ns };
     }
-    var mx = window.innerWidth / 2, my = window.innerHeight / 2, idle;
+
+    var tools = buildLayer(TOOLS, "");
+    var soft = buildLayer(SOFT, "ct-soft");
+    var svc = document.getElementById("services");
+
+    var mx = window.innerWidth / 2, my = window.innerHeight / 2, inSvc = false, idle;
     document.addEventListener("mousemove", function (e) {
-      mx = e.clientX; my = e.clientY; layer.classList.add("on");
-      clearTimeout(idle); idle = setTimeout(function () { layer.classList.remove("on"); }, 900);
+      mx = e.clientX; my = e.clientY;
+      inSvc = false;
+      if (svc) { var r = svc.getBoundingClientRect(); inSvc = e.clientY >= r.top && e.clientY <= r.bottom && e.clientX >= r.left && e.clientX <= r.right; }
+      tools.el.classList.toggle("on", !inSvc);   // drafting tools everywhere except Services
+      soft.el.classList.toggle("on", inSvc);     // software logos inside Services only
+      clearTimeout(idle); idle = setTimeout(function () { tools.el.classList.remove("on"); soft.el.classList.remove("on"); }, 900);
     }, { passive: true });
-    (function loop() {
+
+    function step(layer, rotate) {
       var px = mx, py = my;
-      for (var i = 0; i < nodes.length; i++) {
-        var n = nodes[i];
+      for (var i = 0; i < layer.nodes.length; i++) {
+        var n = layer.nodes[i];
         n.x += (px - n.x) * 0.20; n.y += (py - n.y) * 0.20;
-        n.el.style.transform = "translate(" + (n.x - 16) + "px," + (n.y - 16) + "px) rotate(" + (i * 14 - 16) + "deg)";
+        n.el.style.transform = "translate(" + (n.x - 16) + "px," + (n.y - 16) + "px)" + (rotate ? " rotate(" + (i * 14 - 16) + "deg)" : "");
         px = n.x; py = n.y;
       }
-      requestAnimationFrame(loop);
-    })();
+    }
+    (function loop() { step(tools, true); step(soft, false); requestAnimationFrame(loop); })();
   }
 
   function init() { a11y(); reveal(); header(); menu(); transitions(); scrollFx(); cursorTools(); }
