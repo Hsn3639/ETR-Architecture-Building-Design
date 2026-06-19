@@ -230,7 +230,8 @@
   }
 
   function build() {
-    var launch = el("button", "cb-launch"); launch.type = "button"; launch.innerHTML = "N";
+    var launch = el("button", "cb-launch"); launch.type = "button";
+    launch.innerHTML = '<img class="cb-launch-mark" src="assets/logo-hero.svg" alt="" aria-hidden="true" />';
     var panel = el("div", "cb-panel"); panel.hidden = true;
     var header = el("div", "cb-header");
     var titleEl = el("span", "cb-title");
