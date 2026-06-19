@@ -5,27 +5,28 @@
    ============================================================ */
 
 :root {
-  --paper:    #ffffff;   /* white — cards / lifts above ivory */
-  --ivory:    #f5f1e8;   /* warm ivory — page background (quiet luxury) */
-  --bone:     #ece4d5;   /* soft warm sand — alt sections */
+  --paper:    #f6f2ea;   /* warm off-white — cards / lifts above the page */
+  --ivory:    #ebe5da;   /* warm greige — page background (monochrome base) */
+  --bone:     #ddd4c4;   /* taupe — alt sections, frosted card base */
   --stone:    #e5e5e5;   /* stone grey — hairlines, light fills */
   --beige:    #d8cfc4;   /* sand beige */
-  --charcoal: #1a1a1a;   /* charcoal — ink / dark sections */
-  --ink:      #1a1a1a;
-  --muted:    #6b665d;   /* secondary text — darkened for AA contrast on white */
+  --charcoal: #241f19;   /* warm espresso — ink / dark sections */
+  --ink:      #241f19;
+  --muted:    #726a5d;   /* warm grey — secondary text (AA on greige) */
   --sand:     #c9b27e;   /* soft gold — single restrained accent */
   --sand-dk:  #a8915c;   /* darker gold for text/links */
   --amber:    #c98a3c;   /* warm wood/amber — concept-board accent */
   --terra:    #b4602a;   /* terracotta — annotation accent */
-  --board:    #efe7d6;   /* drawing-board paper */
-  --line:     rgba(26,26,26,0.12);
-  --line-soft:rgba(26,26,26,0.07);
+  --board:    #ddd4c4;   /* taupe — page-wipe + overlay menu */
+  --taupe:    #b8ab97;   /* mid taupe — frosted surfaces */
+  --line:     rgba(36,31,25,0.14);
+  --line-soft:rgba(36,31,25,0.07);
 
-  /* Quiet-luxury type: elegant serif display + grotesk labels + humanist body */
-  --serif:   "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --head:    "Cormorant Garamond", Georgia, "Times New Roman", serif;  /* display headlines */
-  --sans:    "Inter", "Manrope", "Helvetica Neue", Arial, sans-serif;
-  --display: "Space Grotesk", "Inter", sans-serif;                      /* eyebrows, nav, buttons */
+  /* Distinctive grotesk system: geometric display + grotesk labels + humanist body */
+  --serif:   "Syne", "Space Grotesk", sans-serif;
+  --head:    "Syne", "Space Grotesk", sans-serif;   /* bold geometric display */
+  --sans:    "Inter", "Helvetica Neue", Arial, sans-serif;
+  --display: "Space Grotesk", "Inter", sans-serif;  /* eyebrows, nav, buttons */
 
   --maxw: 1280px;
   --gut: 30px;
@@ -51,11 +52,11 @@ a:hover { color: var(--sand-dk); }
 
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gut); }
 
-/* ---------- Headings (elegant Cormorant serif) ---------- */
-h1, h2 { font-family: var(--head); font-weight: 500; letter-spacing: -0.005em; line-height: 1.04; color: var(--charcoal); }
+/* ---------- Headings (bold geometric grotesk — Syne) ---------- */
+h1, h2 { font-family: var(--head); font-weight: 700; letter-spacing: -0.03em; line-height: 1.0; color: var(--charcoal); }
 h3 { font-family: var(--display); font-weight: 500; letter-spacing: -0.01em; line-height: 1.12; color: var(--charcoal); }
-h1 { font-size: clamp(3rem, 6.6vw, 5.8rem); }
-h2 { font-size: clamp(2.2rem, 4.2vw, 3.5rem); }
+h1 { font-size: clamp(2.7rem, 6vw, 5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
 h3 { font-size: 1.3rem; }
 
 /* ---------- Blueprint micro-label ---------- */
@@ -144,6 +145,7 @@ h3 { font-size: 1.3rem; }
 .btn-ghost:hover { background: #fff; color: var(--charcoal); text-decoration: none; }
 .btn-ghost-light { border-color: rgba(255,255,255,0.5); color: #fff; background: transparent; }
 .btn-ghost-dark { border-color: var(--charcoal); color: var(--charcoal); background: transparent; }
+.btn-ghost-dark:hover { background: var(--charcoal); color: var(--paper); }
 .btn:hover { text-decoration: none; }
 
 /* ============================================================
@@ -351,7 +353,9 @@ section { padding: var(--sp) 0; }
   .svc-img img, .project-img img, .btn, .cb-launch { transition: none !important; }
   .card.svc:hover .svc-img img, .project:hover .project-img img { transform: none !important; }
   .hero-scroll-cue::after { animation: none; }
-  .work-overlay, .work-overlay h3, .work-overlay .work-info, .work-frame img { transition: none !important; transform: none !important; }
+  .work-overlay, .work-overlay h3, .work-overlay .work-info, .work-frame img { transition: none !important; transform: translateY(0) !important; }
+  .hero-card { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .hero-scroll-cue { opacity: 1 !important; transform: translateX(-50%) !important; transition: none !important; }
 }
 
 /* ============================================================
@@ -386,12 +390,12 @@ section { padding: var(--sp) 0; }
 .hero-scroll { margin-top: 56px; font-family: var(--display); font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
 
 /* ---------- Concept-board hero (architectural sketch identity) ---------- */
-/* full-bleed image hero — content anchored lower-left, white serif headline */
+/* full-bleed project-showcase hero — centered frosted project card (Mersi-style) */
 .hero-board {
   position: relative; padding: 0; overflow: hidden;
   min-height: 100vh; min-height: 100svh;
-  display: flex; align-items: flex-end;
-  border-bottom: none; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: none;
   background:
     url("../assets/hero-board.jpg") center / cover no-repeat,
     url("../assets/hero-board.svg") center / cover no-repeat,
@@ -402,25 +406,47 @@ section { padding: var(--sp) 0; }
     var(--board);
 }
 .hero-board::after { display: none; }
-/* cinematic scrim — dark at top (for the header) and bottom (for the text) */
+/* soft scrim — header legibility at top, card grounding at the edges */
 .hero-board::before {
   content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-  background: linear-gradient(180deg, rgba(18,16,12,0.34) 0%, rgba(18,16,12,0) 26%, rgba(18,16,12,0.08) 52%, rgba(18,16,12,0.80) 100%);
+  background: linear-gradient(180deg, rgba(28,24,18,0.32) 0%, rgba(28,24,18,0.05) 24%, rgba(28,24,18,0.08) 58%, rgba(28,24,18,0.42) 100%);
 }
-.hero-board .container { position: relative; z-index: 2; width: 100%; padding-top: clamp(130px, 22vh, 220px); padding-bottom: clamp(64px, 12vh, 132px); }
-.hero-board .tag { color: rgba(255,255,255,0.82); margin-bottom: 22px; }
-.hero-board h1 { color: #fff; max-width: 20ch; }
-.hero-board p  { color: rgba(255,255,255,0.86); }
-.hero-board .btn-primary { background: #fff; color: var(--charcoal); border-color: #fff; }
-.hero-board .btn-primary:hover { background: var(--sand); border-color: var(--sand); color: var(--charcoal); }
-.hero-board .btn-ghost { border-color: rgba(255,255,255,0.6); color: #fff; }
-.hero-board .btn-ghost:hover { background: #fff; color: var(--charcoal); }
-[dir="rtl"] .hero-board .container { text-align: right; }
+
+/* frosted project card */
+.hero-card {
+  position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: space-between;
+  width: min(760px, 88vw); min-height: clamp(150px, 24vh, 220px);
+  padding: clamp(22px, 3vw, 34px);
+  color: var(--ink); overflow: hidden;
+  background: rgba(231,224,210,0.46);
+  -webkit-backdrop-filter: blur(16px) saturate(125%);
+  backdrop-filter: blur(16px) saturate(125%);
+  border: 1px solid rgba(255,255,255,0.30);
+  border-radius: 8px;
+  box-shadow: 0 30px 70px rgba(28,24,18,0.22);
+}
+.hero-card:hover { text-decoration: none; color: var(--ink); background: rgba(231,224,210,0.56); }
+.hc-mono {
+  position: absolute; right: clamp(14px, 3vw, 30px); top: 50%; transform: translateY(-50%); z-index: 0;
+  font-family: var(--head); font-weight: 800; font-size: clamp(4.5rem, 12vw, 9rem); line-height: 1;
+  color: rgba(255,255,255,0.18); letter-spacing: -0.05em; pointer-events: none; user-select: none;
+}
+.hc-top, .hc-bottom { position: relative; z-index: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.hc-bottom { align-items: flex-end; }
+.hc-name { font-family: var(--head); font-weight: 700; letter-spacing: -0.03em; line-height: 1; font-size: clamp(1.8rem, 3.4vw, 2.8rem); color: var(--charcoal); }
+.hc-arrow { font-family: var(--display); font-size: 1.4rem; line-height: 1; color: var(--charcoal); transition: transform .4s cubic-bezier(.22,.61,.36,1); }
+.hero-card:hover .hc-arrow { transform: translate(4px, -4px); }
+.hc-loc { font-family: var(--display); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.hc-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; font-family: var(--display); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.hc-cat { color: var(--charcoal); }
+.hc-year { color: var(--muted); }
+[dir="rtl"] .hc-meta { align-items: flex-start; }
+
 /* scroll cue */
 .hero-scroll-cue {
   position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 3;
   display: flex; flex-direction: column; align-items: center; gap: 12px;
-  color: rgba(255,255,255,0.72); font-family: var(--display);
+  color: rgba(255,255,255,0.80); font-family: var(--display);
   font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase;
 }
 .hero-scroll-cue:hover { color: #fff; }
@@ -435,6 +461,22 @@ section { padding: var(--sp) 0; }
   55% { transform: scaleY(1); transform-origin: bottom; }
   100% { transform: scaleY(0); transform-origin: bottom; }
 }
+
+/* staggered reveal on page load (transition-based so hover still works) */
+.hero-card { opacity: 0; transform: translateY(22px); transition: opacity .9s cubic-bezier(.22,.61,.36,1), transform .9s cubic-bezier(.22,.61,.36,1); }
+.hero-scroll-cue { opacity: 0; transform: translate(-50%, 22px); transition: opacity .9s cubic-bezier(.22,.61,.36,1), transform .9s cubic-bezier(.22,.61,.36,1), color .25s ease; }
+body.loaded .hero-card { opacity: 1; transform: translateY(0); transition-delay: .25s; }
+body.loaded .hero-scroll-cue { opacity: 1; transform: translateX(-50%); transition-delay: .55s; }
+.hero-card:hover { transform: translateY(-3px); }
+
+/* ---------- Statement (brand message, just below the hero) ---------- */
+.statement { background: var(--bone); }
+.statement-inner { max-width: 1000px; }
+.statement .tag { color: var(--muted); margin-bottom: 16px; }
+.statement-h { font-size: clamp(2.4rem, 5.4vw, 4.6rem); max-width: 17ch; margin: 6px 0 22px; }
+.statement-lead { color: var(--muted); font-size: clamp(1.05rem, 1.6vw, 1.35rem); max-width: 60ch; margin-bottom: 0; }
+.statement .hero-cta { margin-top: 38px; display: flex; gap: 14px; flex-wrap: wrap; }
+[dir="rtl"] .statement-inner { text-align: right; }
 
 /* ============================================================
    PORTFOLIO / SELECTED WORK
@@ -483,22 +525,25 @@ body.loaded .page-wipe { transform: translateY(-100%); }
 .work-frame { position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--bone); }
 .work-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.1s cubic-bezier(.22,.61,.36,1); }
 .work-item:hover .work-frame img, .work-item:focus-visible .work-frame img { transform: scale(1.06); }
+/* frosted info panel slides up on hover (matches the hero card) */
 .work-overlay {
-  position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column; justify-content: flex-end;
-  padding: clamp(20px, 2.6vw, 38px);
-  background: linear-gradient(180deg, rgba(18,16,12,0) 38%, rgba(18,16,12,0.20) 62%, rgba(18,16,12,0.82) 100%);
-  opacity: 0; transition: opacity .55s cubic-bezier(.22,.61,.36,1);
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 14px;
+  padding: clamp(16px, 2vw, 24px) clamp(18px, 2.4vw, 28px);
+  background: rgba(231,224,210,0.82);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  backdrop-filter: blur(12px) saturate(120%);
+  border-top: 1px solid rgba(255,255,255,0.30);
+  transform: translateY(101%); transition: transform .55s cubic-bezier(.22,.61,.36,1);
 }
-.work-item:hover .work-overlay, .work-item:focus-visible .work-overlay { opacity: 1; }
-.work-overlay h3 { color: #fff; font-family: var(--head); font-size: clamp(1.6rem, 2.4vw, 2.1rem); transform: translateY(14px); transition: transform .55s cubic-bezier(.22,.61,.36,1); }
-.work-item:hover .work-overlay h3, .work-item:focus-visible .work-overlay h3 { transform: none; }
-.work-overlay .work-info { display: block; margin-top: 8px; font-family: var(--display); font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.78); transform: translateY(14px); transition: transform .55s cubic-bezier(.22,.61,.36,1) .06s; }
-.work-item:hover .work-overlay .work-info, .work-item:focus-visible .work-overlay .work-info { transform: none; }
+.work-item:hover .work-overlay, .work-item:focus-visible .work-overlay { transform: translateY(0); }
+.work-overlay h3 { color: var(--charcoal); font-family: var(--head); font-weight: 700; letter-spacing: -0.02em; font-size: clamp(1.3rem, 1.9vw, 1.7rem); }
+.work-overlay .work-info { display: block; margin-top: 6px; font-family: var(--display); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.wo-arrow { font-family: var(--display); font-size: 1.2rem; line-height: 1; color: var(--charcoal); flex-shrink: 0; }
 @media (max-width: 760px) {
   .work-grid { grid-template-columns: 1fr; }
   .work-item:nth-child(even) { margin-top: 0; }
-  .work-overlay { opacity: 1; }
-  .work-overlay h3, .work-overlay .work-info { transform: none; }
+  .work-overlay { transform: translateY(0); }
 }
 
 /* ============================================================
