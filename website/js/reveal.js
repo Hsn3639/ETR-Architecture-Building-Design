@@ -103,113 +103,46 @@
     });
   }
 
-  /* ---- smooth inertia scroll (Lenis-style, dependency-free) ----
-     Eases the real window scroll toward a target so the wheel/keys/anchors
-     glide. Uses native scroll (not transform) so the sticky header, fixed
-     chatbot and reveal observers keep working. Off for reduced-motion, touch
-     and small screens (native scrolling is better there). */
-  function smoothScroll() {
+  /* ---- scroll effects (native scroll for instant response) ----
+     We do NOT hijack the wheel — native scrolling is immediate and smooth.
+     A rAF-throttled scroll listener drives the parallax + progress bar, and
+     CSS `scroll-behavior: smooth` (with scroll-margin offsets) handles anchors.
+     Parallax is desktop-only; everything is off for reduced-motion. */
+  function scrollFx() {
     if (REDUCE) return;
-    if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) return;
-    if (window.innerWidth < 820) return;
+    var desktop = !(window.matchMedia && window.matchMedia("(pointer: coarse)").matches) && window.innerWidth >= 820;
 
-    var target = window.scrollY || window.pageYOffset || 0;
-    var current = target;
-    var EASE = 0.085;          // per-60fps-frame smoothing factor (lower = more glide)
-
-    function maxY() { return Math.max(0, (document.documentElement.scrollHeight || 0) - window.innerHeight); }
-    function clamp(v) { return Math.max(0, Math.min(v, maxY())); }
-
-    /* ---- scroll-progress bar (accent gradient) ---- */
+    /* scroll-progress bar (accent gradient) */
     var bar = document.createElement("div"); bar.className = "scroll-progress"; document.body.appendChild(bar);
 
-    /* ---- parallax: images drift within their fixed frames ---- */
-    var pxEls = Array.prototype.slice.call(document.querySelectorAll(".work-frame picture, .svc-img picture"));
-    pxEls.forEach(function (p) { p.classList.add("is-parallax"); });
+    /* parallax: images drift within their fixed frames (desktop only) */
+    var pxEls = desktop ? Array.prototype.slice.call(document.querySelectorAll(".work-frame picture, .svc-img picture")) : [];
+
+    function maxY() { return Math.max(0, (document.documentElement.scrollHeight || 0) - window.innerHeight); }
     function applyParallax() {
       var vh = window.innerHeight;
       for (var i = 0; i < pxEls.length; i++) {
-        var p = pxEls[i], frame = p.parentElement, r = frame.getBoundingClientRect();
+        var p = pxEls[i], r = p.parentElement.getBoundingClientRect();
         if (r.bottom < -120 || r.top > vh + 120) continue;
         var progress = ((r.top + r.height / 2) - vh / 2) / vh;   // -1 (above) .. 1 (below)
-        var shift = -progress * r.height * 0.08;                 // up to ~8% drift
-        p.style.transform = "translate3d(0," + shift.toFixed(1) + "px,0)";
+        p.style.transform = "translate3d(0," + (-progress * r.height * 0.08).toFixed(1) + "px,0)";
       }
     }
 
-    /* ---- single persistent rAF: eases scroll + drives parallax + progress ---- */
-    var last = (typeof performance !== "undefined" ? performance.now() : Date.now());
-    function frame(now) {
-      var dt = Math.min(64, now - last); last = now;
-      var t = 1 - Math.pow(1 - EASE, dt / 16.667);               // frame-rate-independent easing
-      if (Math.abs(target - current) > 0.4) {
-        current += (target - current) * t;
-        window.scrollTo(0, current);
-      } else {
-        current = target;
-      }
-      applyParallax();
+    var ticking = false;
+    function update() {
+      ticking = false;
       var my = maxY();
-      bar.style.width = (my > 0 ? (current / my) * 100 : 0) + "%";
-      requestAnimationFrame(frame);
+      bar.style.width = (my > 0 ? (window.scrollY / my) * 100 : 0) + "%";
+      if (pxEls.length) applyParallax();
     }
-    requestAnimationFrame(frame);
-
-    function innerScrollable(node) {
-      while (node && node !== document.body && node.nodeType === 1) {
-        if (node.scrollHeight > node.clientHeight + 2) {
-          var oy = getComputedStyle(node).overflowY;
-          if (oy === "auto" || oy === "scroll") return true;
-        }
-        node = node.parentElement;
-      }
-      return false;
-    }
-
-    window.addEventListener("wheel", function (e) {
-      if (e.ctrlKey) return;                                              // pinch-zoom
-      if (document.documentElement.style.overflow === "hidden") return;  // menu open / scroll-locked
-      if (innerScrollable(e.target)) return;                             // let panels (chat log) scroll
-      e.preventDefault();
-      target = clamp(target + e.deltaY * (e.deltaMode === 1 ? 16 : 1));
-    }, { passive: false });
-
-    // keep target in sync when the user drags the scrollbar / find-in-page jumps
-    window.addEventListener("scroll", function () {
-      if (Math.abs(window.scrollY - current) > 2 && Math.abs(target - current) < 1) { target = current = window.scrollY; }
-    }, { passive: true });
-    window.addEventListener("resize", function () { target = clamp(target); }, { passive: true });
-
-    // smooth in-page anchor links
-    document.addEventListener("click", function (e) {
-      var a = e.target.closest && e.target.closest('a[href^="#"]');
-      if (!a) return;
-      var hash = a.getAttribute("href");
-      if (!hash || hash === "#" || hash.length < 2) return;
-      var el; try { el = document.querySelector(hash); } catch (_) { return; }
-      if (!el) return;
-      e.preventDefault();
-      target = clamp(el.getBoundingClientRect().top + window.scrollY - 90);
-      if (history.replaceState) history.replaceState(null, "", hash);
-    });
-
-    // smooth keyboard scrolling
-    window.addEventListener("keydown", function (e) {
-      var t = e.target, tag = (t && t.tagName || "").toLowerCase();
-      if (tag === "input" || tag === "textarea" || tag === "select" || (t && t.isContentEditable)) return;
-      if (document.documentElement.style.overflow === "hidden") return;
-      var page = window.innerHeight * 0.9, d = null;
-      if (e.key === "PageDown" || (e.key === " " && !e.shiftKey)) d = page;
-      else if (e.key === "PageUp" || (e.key === " " && e.shiftKey)) d = -page;
-      else if (e.key === "ArrowDown") d = 90;
-      else if (e.key === "ArrowUp") d = -90;
-      else if (e.key === "Home") { target = 0; e.preventDefault(); return; }
-      else if (e.key === "End") { target = maxY(); e.preventDefault(); return; }
-      if (d !== null) { target = clamp(target + d); e.preventDefault(); }
-    });
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    update();
   }
 
-  function init() { a11y(); reveal(); header(); menu(); transitions(); smoothScroll(); }
+  function init() { a11y(); reveal(); header(); menu(); transitions(); scrollFx(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
