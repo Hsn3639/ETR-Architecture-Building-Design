@@ -149,18 +149,18 @@
     if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) return;
     if (window.innerWidth < 820) return;
     var TOOLS = [
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.2" r="1.5"/><path d="M12 5.7 7 20"/><path d="M12 5.7 17 20"/><path d="M9.2 13h5.6"/></svg>',
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 15 9"/><path d="M13 7 17 11"/><path d="M5 19l-1 1 2-1z"/></svg>',
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19 20 19 4 6Z"/><path d="M7 16v-3M10 16v-2"/></svg>',
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h18"/><path d="M4.5 16a7.5 7.5 0 0 1 15 0"/><path d="M12 16v-5"/></svg>',
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="9" width="19" height="6" rx="1"/><path d="M6 9v2.5M9 9v3.5M12 9v2.5M15 9v3.5M18 9v2.5"/></svg>',
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="6" height="12"/><rect x="12" y="5" width="7" height="16"/><path d="M6 12h2M6 15h2M15 8h2M15 11h2M15 14h2"/></svg>'
+      /* compass */ '<svg viewBox="0 0 24 24"><g fill="none" stroke="#2b2b2b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6 7.5 20"/><path d="M12 6 16.5 20"/><path d="M9.5 14h5"/></g><circle cx="12" cy="5" r="2" fill="#d8a93f" stroke="#2b2b2b" stroke-width="1"/></svg>',
+      /* pencil */ '<svg viewBox="0 0 24 24"><g transform="rotate(35 12 12)" stroke="#2b2b2b" stroke-width="1.1" stroke-linejoin="round"><rect x="10" y="3.5" width="4" height="12.5" rx="0.6" fill="#ecc24a"/><polygon points="10,16 14,16 12,20.5" fill="#efe9dc"/><polygon points="11,19 13,19 12,20.8" fill="#2b2b2b" stroke="none"/><rect x="10" y="3.5" width="4" height="2.4" fill="#e89aa6"/></g></svg>',
+      /* set square */ '<svg viewBox="0 0 24 24"><polygon points="4,19 20,19 4,6" fill="#cfd3d8" fill-opacity="0.92" stroke="#2b2b2b" stroke-width="1.3" stroke-linejoin="round"/><polygon points="8,17 16.5,17 8,8.5" fill="none" stroke="#2b2b2b" stroke-width="0.8" stroke-opacity="0.5"/></svg>',
+      /* protractor */ '<svg viewBox="0 0 24 24"><path d="M3 16 A9 9 0 0 1 21 16 Z" fill="#cfd3d8" fill-opacity="0.92" stroke="#2b2b2b" stroke-width="1.3" stroke-linejoin="round"/><path d="M7 16 A5 5 0 0 1 17 16" fill="none" stroke="#2b2b2b" stroke-width="0.8" stroke-opacity="0.5"/><path d="M12 16v-3.5M8.2 15.2 7.4 13.4M15.8 15.2 16.6 13.4" stroke="#2b2b2b" stroke-width="0.8"/></svg>',
+      /* ruler */ '<svg viewBox="0 0 24 24"><g transform="rotate(-22 12 12)"><rect x="2" y="9.5" width="20" height="5" rx="0.5" fill="#d9b985" stroke="#2b2b2b" stroke-width="1.2"/><path d="M5 9.5v2M8 9.5v2.6M11 9.5v2M14 9.5v2.6M17 9.5v2M20 9.5v2.6" stroke="#2b2b2b" stroke-width="0.8"/></g></svg>',
+      /* building */ '<svg viewBox="0 0 24 24"><path d="M2.5 20 8 21.6 22 18.8 16.5 17.2Z" fill="#5b8fd0" stroke="#2b2b2b" stroke-width="1" stroke-linejoin="round"/><rect x="6" y="7.5" width="4.5" height="10.5" fill="#cfd3d8" stroke="#2b2b2b" stroke-width="1.1"/><rect x="11.5" y="4.5" width="5" height="13.5" fill="#bfc4cb" stroke="#2b2b2b" stroke-width="1.1"/><path d="M7.2 10h2M7.2 12.4h2M7.2 14.8h2M12.6 7h2.6M12.6 9.4h2.6M12.6 11.8h2.6M12.6 14.2h2.6" stroke="#2b2b2b" stroke-width="0.7"/></svg>'
     ];
     var layer = document.createElement("div"); layer.className = "cursor-tools"; document.body.appendChild(layer);
     var nodes = [];
     for (var i = 0; i < TOOLS.length; i++) {
       var s = document.createElement("span"); s.className = "ct-item"; s.innerHTML = TOOLS[i];
-      s.style.setProperty("--o", (0.6 - i * 0.07).toFixed(2));
+      s.style.setProperty("--o", (0.92 - i * 0.09).toFixed(2));
       layer.appendChild(s);
       nodes.push({ el: s, x: window.innerWidth / 2, y: window.innerHeight / 2 });
     }
@@ -173,8 +173,8 @@
       var px = mx, py = my;
       for (var i = 0; i < nodes.length; i++) {
         var n = nodes[i];
-        n.x += (px - n.x) * 0.30; n.y += (py - n.y) * 0.30;
-        n.el.style.transform = "translate(" + (n.x - 14) + "px," + (n.y - 14) + "px) rotate(" + (i * 16 - 20) + "deg)";
+        n.x += (px - n.x) * 0.20; n.y += (py - n.y) * 0.20;
+        n.el.style.transform = "translate(" + (n.x - 16) + "px," + (n.y - 16) + "px) rotate(" + (i * 14 - 16) + "deg)";
         px = n.x; py = n.y;
       }
       requestAnimationFrame(loop);
