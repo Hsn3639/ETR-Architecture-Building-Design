@@ -1,14 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" role="img" aria-label="ETR Architectural Consultants">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 110" role="img" aria-label="ETR Architectural Consultants">
+  <defs>
+    <linearGradient id="etrArchL" x1="14" y1="14" x2="92" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e0c789"/>
+      <stop offset=".5" stop-color="#c98a3c"/>
+      <stop offset="1" stop-color="#a8472a"/>
+    </linearGradient>
+  </defs>
   <!-- mark -->
-  <g transform="translate(8,18)">
-    <rect x="0" y="0" width="74" height="74" fill="none" stroke="#1A1A1A" stroke-width="2.5"/>
-    <rect x="37" y="37" width="37" height="37" fill="#C9B27E" fill-opacity="0.20"/>
-    <line x1="37" y1="0" x2="37" y2="74" stroke="#1A1A1A" stroke-width="2.5"/>
-    <line x1="0" y1="37" x2="74" y2="37" stroke="#1A1A1A" stroke-width="2.5"/>
-    <rect x="30.5" y="30.5" width="13" height="13" fill="#C9B27E"/>
+  <g transform="translate(8,6)">
+    <line x1="16" y1="83" x2="80" y2="83" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"/>
+    <path d="M24 83 V44 a24 24 0 0 1 48 0 V83" fill="none" stroke="url(#etrArchL)" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M38 83 V49 a10 10 0 0 1 20 0 V83" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="48" cy="15" r="3.6" fill="#a8472a"/>
   </g>
-  <!-- wordmark (grotesk) -->
-  <text x="108" y="56" font-family="'Space Grotesk','Inter',Arial,sans-serif" font-size="46" font-weight="600" letter-spacing="3" fill="#1A1A1A">ETR</text>
-  <!-- micro label -->
-  <text x="110" y="82" font-family="'Space Grotesk','Inter',Arial,sans-serif" font-size="12" letter-spacing="5" fill="#8a857b">ARCHITECTURAL CONSULTANTS</text>
+  <!-- wordmark (elegant serif) -->
+  <text x="118" y="58" font-family="'Cormorant Garamond',Georgia,serif" font-size="54" font-weight="600" letter-spacing="4" fill="#1A1A1A">ETR</text>
+  <!-- micro label (grotesk) -->
+  <text x="120" y="84" font-family="'Space Grotesk','Inter',Arial,sans-serif" font-size="11.5" letter-spacing="5" fill="#8a857b">ARCHITECTURAL CONSULTANTS</text>
 </svg>
