@@ -28,7 +28,7 @@
     var nodes = Array.prototype.slice.call(document.querySelectorAll(sel));
     if (!nodes.length) return;
     if (REDUCE || !("IntersectionObserver" in window)) { nodes.forEach(function (n) { n.classList.add("in"); }); return; }
-    nodes.forEach(function (n, i) { n.setAttribute("data-reveal", ""); n.style.transitionDelay = (Math.min(i % 6, 5) * 60) + "ms"; });
+    nodes.forEach(function (n, i) { n.setAttribute("data-reveal", ""); n.style.transitionDelay = (Math.min(i % 6, 5) * 90) + "ms"; });
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
@@ -115,18 +115,45 @@
 
     var target = window.scrollY || window.pageYOffset || 0;
     var current = target;
-    var running = false;
-    var EASE = 0.095;
+    var EASE = 0.085;          // per-60fps-frame smoothing factor (lower = more glide)
 
     function maxY() { return Math.max(0, (document.documentElement.scrollHeight || 0) - window.innerHeight); }
     function clamp(v) { return Math.max(0, Math.min(v, maxY())); }
-    function loop() {
-      current += (target - current) * EASE;
-      if (Math.abs(target - current) < 0.5) { current = target; running = false; }
-      window.scrollTo(0, Math.round(current));
-      if (running) requestAnimationFrame(loop);
+
+    /* ---- scroll-progress bar (accent gradient) ---- */
+    var bar = document.createElement("div"); bar.className = "scroll-progress"; document.body.appendChild(bar);
+
+    /* ---- parallax: images drift within their fixed frames ---- */
+    var pxEls = Array.prototype.slice.call(document.querySelectorAll(".work-frame picture, .svc-img picture"));
+    pxEls.forEach(function (p) { p.classList.add("is-parallax"); });
+    function applyParallax() {
+      var vh = window.innerHeight;
+      for (var i = 0; i < pxEls.length; i++) {
+        var p = pxEls[i], frame = p.parentElement, r = frame.getBoundingClientRect();
+        if (r.bottom < -120 || r.top > vh + 120) continue;
+        var progress = ((r.top + r.height / 2) - vh / 2) / vh;   // -1 (above) .. 1 (below)
+        var shift = -progress * r.height * 0.08;                 // up to ~8% drift
+        p.style.transform = "translate3d(0," + shift.toFixed(1) + "px,0)";
+      }
     }
-    function go() { if (!running) { running = true; requestAnimationFrame(loop); } }
+
+    /* ---- single persistent rAF: eases scroll + drives parallax + progress ---- */
+    var last = (typeof performance !== "undefined" ? performance.now() : Date.now());
+    function frame(now) {
+      var dt = Math.min(64, now - last); last = now;
+      var t = 1 - Math.pow(1 - EASE, dt / 16.667);               // frame-rate-independent easing
+      if (Math.abs(target - current) > 0.4) {
+        current += (target - current) * t;
+        window.scrollTo(0, current);
+      } else {
+        current = target;
+      }
+      applyParallax();
+      var my = maxY();
+      bar.style.width = (my > 0 ? (current / my) * 100 : 0) + "%";
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
 
     function innerScrollable(node) {
       while (node && node !== document.body && node.nodeType === 1) {
@@ -145,11 +172,12 @@
       if (innerScrollable(e.target)) return;                             // let panels (chat log) scroll
       e.preventDefault();
       target = clamp(target + e.deltaY * (e.deltaMode === 1 ? 16 : 1));
-      go();
     }, { passive: false });
 
     // keep target in sync when the user drags the scrollbar / find-in-page jumps
-    window.addEventListener("scroll", function () { if (!running) { target = current = window.scrollY; } }, { passive: true });
+    window.addEventListener("scroll", function () {
+      if (Math.abs(window.scrollY - current) > 2 && Math.abs(target - current) < 1) { target = current = window.scrollY; }
+    }, { passive: true });
     window.addEventListener("resize", function () { target = clamp(target); }, { passive: true });
 
     // smooth in-page anchor links
@@ -162,7 +190,6 @@
       if (!el) return;
       e.preventDefault();
       target = clamp(el.getBoundingClientRect().top + window.scrollY - 90);
-      go();
       if (history.replaceState) history.replaceState(null, "", hash);
     });
 
@@ -176,9 +203,9 @@
       else if (e.key === "PageUp" || (e.key === " " && e.shiftKey)) d = -page;
       else if (e.key === "ArrowDown") d = 90;
       else if (e.key === "ArrowUp") d = -90;
-      else if (e.key === "Home") { target = 0; go(); e.preventDefault(); return; }
-      else if (e.key === "End") { target = maxY(); go(); e.preventDefault(); return; }
-      if (d !== null) { target = clamp(target + d); go(); e.preventDefault(); }
+      else if (e.key === "Home") { target = 0; e.preventDefault(); return; }
+      else if (e.key === "End") { target = maxY(); e.preventDefault(); return; }
+      if (d !== null) { target = clamp(target + d); e.preventDefault(); }
     });
   }
 
