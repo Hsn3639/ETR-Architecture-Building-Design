@@ -103,7 +103,86 @@
     });
   }
 
-  function init() { a11y(); reveal(); header(); menu(); transitions(); }
+  /* ---- smooth inertia scroll (Lenis-style, dependency-free) ----
+     Eases the real window scroll toward a target so the wheel/keys/anchors
+     glide. Uses native scroll (not transform) so the sticky header, fixed
+     chatbot and reveal observers keep working. Off for reduced-motion, touch
+     and small screens (native scrolling is better there). */
+  function smoothScroll() {
+    if (REDUCE) return;
+    if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) return;
+    if (window.innerWidth < 820) return;
+
+    var target = window.scrollY || window.pageYOffset || 0;
+    var current = target;
+    var running = false;
+    var EASE = 0.095;
+
+    function maxY() { return Math.max(0, (document.documentElement.scrollHeight || 0) - window.innerHeight); }
+    function clamp(v) { return Math.max(0, Math.min(v, maxY())); }
+    function loop() {
+      current += (target - current) * EASE;
+      if (Math.abs(target - current) < 0.5) { current = target; running = false; }
+      window.scrollTo(0, Math.round(current));
+      if (running) requestAnimationFrame(loop);
+    }
+    function go() { if (!running) { running = true; requestAnimationFrame(loop); } }
+
+    function innerScrollable(node) {
+      while (node && node !== document.body && node.nodeType === 1) {
+        if (node.scrollHeight > node.clientHeight + 2) {
+          var oy = getComputedStyle(node).overflowY;
+          if (oy === "auto" || oy === "scroll") return true;
+        }
+        node = node.parentElement;
+      }
+      return false;
+    }
+
+    window.addEventListener("wheel", function (e) {
+      if (e.ctrlKey) return;                                              // pinch-zoom
+      if (document.documentElement.style.overflow === "hidden") return;  // menu open / scroll-locked
+      if (innerScrollable(e.target)) return;                             // let panels (chat log) scroll
+      e.preventDefault();
+      target = clamp(target + e.deltaY * (e.deltaMode === 1 ? 16 : 1));
+      go();
+    }, { passive: false });
+
+    // keep target in sync when the user drags the scrollbar / find-in-page jumps
+    window.addEventListener("scroll", function () { if (!running) { target = current = window.scrollY; } }, { passive: true });
+    window.addEventListener("resize", function () { target = clamp(target); }, { passive: true });
+
+    // smooth in-page anchor links
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var hash = a.getAttribute("href");
+      if (!hash || hash === "#" || hash.length < 2) return;
+      var el; try { el = document.querySelector(hash); } catch (_) { return; }
+      if (!el) return;
+      e.preventDefault();
+      target = clamp(el.getBoundingClientRect().top + window.scrollY - 90);
+      go();
+      if (history.replaceState) history.replaceState(null, "", hash);
+    });
+
+    // smooth keyboard scrolling
+    window.addEventListener("keydown", function (e) {
+      var t = e.target, tag = (t && t.tagName || "").toLowerCase();
+      if (tag === "input" || tag === "textarea" || tag === "select" || (t && t.isContentEditable)) return;
+      if (document.documentElement.style.overflow === "hidden") return;
+      var page = window.innerHeight * 0.9, d = null;
+      if (e.key === "PageDown" || (e.key === " " && !e.shiftKey)) d = page;
+      else if (e.key === "PageUp" || (e.key === " " && e.shiftKey)) d = -page;
+      else if (e.key === "ArrowDown") d = 90;
+      else if (e.key === "ArrowUp") d = -90;
+      else if (e.key === "Home") { target = 0; go(); e.preventDefault(); return; }
+      else if (e.key === "End") { target = maxY(); go(); e.preventDefault(); return; }
+      if (d !== null) { target = clamp(target + d); go(); e.preventDefault(); }
+    });
+  }
+
+  function init() { a11y(); reveal(); header(); menu(); transitions(); smoothScroll(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
