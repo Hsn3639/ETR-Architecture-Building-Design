@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
 </head>
 <body>
 
@@ -109,37 +109,47 @@
     <div class="container">
       <h2 class="section-title" data-i18n="h_serv_title">What We Do</h2>
       <p class="section-sub" data-i18n="h_serv_sub">End-to-end architecture and building design for every project type.</p>
-      <div class="grid">
-        <article class="card svc">
-          <div class="svc-img"><picture><source type="image/webp" srcset="assets/svc-residential.webp" /><img src="assets/svc-residential.jpg" alt="Residential architecture — modern home exterior" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-residential.svg'" /></picture></div>
-          <h3 data-i18n="h_s1_t">Residential</h3>
-          <p data-i18n="h_s1_d">Climate-smart homes designed for comfort and low running costs.</p>
-        </article>
-        <article class="card svc">
-          <div class="svc-img"><picture><source type="image/webp" srcset="assets/svc-villa.webp" /><img src="assets/svc-villa.jpg" alt="Villa architecture — luxury villa terrace" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-villa.svg'" /></picture></div>
-          <h3 data-i18n="h_s2_t">Villas</h3>
-          <p data-i18n="h_s2_d">Bespoke villas blending modern luxury with Libyan and Mediterranean identity.</p>
-        </article>
-        <article class="card svc">
-          <div class="svc-img"><picture><source type="image/webp" srcset="assets/svc-commercial.webp" /><img src="assets/svc-commercial.jpg" alt="Commercial architecture — modern office building" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-commercial.svg'" /></picture></div>
-          <h3 data-i18n="h_s3_t">Commercial</h3>
-          <p data-i18n="h_s3_d">Offices, retail and hospitality spaces that are efficient and inviting.</p>
-        </article>
-        <article class="card svc">
-          <div class="svc-img"><picture><source type="image/webp" srcset="assets/svc-industrial.webp" /><img src="assets/svc-industrial.jpg" alt="Industrial architecture — warehouse facility" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-industrial.svg'" /></picture></div>
-          <h3 data-i18n="h_s4_t">Industrial</h3>
-          <p data-i18n="h_s4_d">Warehouses and facilities engineered for durability and performance.</p>
-        </article>
-        <article class="card svc">
-          <div class="svc-img"><picture><source type="image/webp" srcset="assets/svc-heritage.webp" /><img src="assets/svc-heritage.jpg" alt="Heritage and restoration — old town arcade" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-heritage.svg'" /></picture></div>
-          <h3 data-i18n="h_s5_t">Heritage &amp; Restoration</h3>
-          <p data-i18n="h_s5_d">Sensitive restoration and adaptive reuse of historic buildings.</p>
-        </article>
-        <article class="card svc">
-          <div class="svc-img"><picture><source type="image/webp" srcset="assets/svc-urban.webp" /><img src="assets/svc-urban.jpg" alt="Urban planning — city aerial and masterplan" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-urban.svg'" /></picture></div>
-          <h3 data-i18n="h_s6_t">Urban Planning</h3>
-          <p data-i18n="h_s6_d">Master plans and city-centre regeneration rooted in cultural identity.</p>
-        </article>
+      <div class="svc-sticky">
+        <div class="svc-media" aria-hidden="true">
+          <div class="svc-shot is-active"><picture><source type="image/webp" srcset="assets/svc-residential.webp" /><img src="assets/svc-residential.jpg" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-residential.svg'" /></picture></div>
+          <div class="svc-shot"><picture><source type="image/webp" srcset="assets/svc-villa.webp" /><img src="assets/svc-villa.jpg" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-villa.svg'" /></picture></div>
+          <div class="svc-shot"><picture><source type="image/webp" srcset="assets/svc-commercial.webp" /><img src="assets/svc-commercial.jpg" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-commercial.svg'" /></picture></div>
+          <div class="svc-shot"><picture><source type="image/webp" srcset="assets/svc-industrial.webp" /><img src="assets/svc-industrial.jpg" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-industrial.svg'" /></picture></div>
+          <div class="svc-shot"><picture><source type="image/webp" srcset="assets/svc-heritage.webp" /><img src="assets/svc-heritage.jpg" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-heritage.svg'" /></picture></div>
+          <div class="svc-shot"><picture><source type="image/webp" srcset="assets/svc-urban.webp" /><img src="assets/svc-urban.jpg" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/svc-urban.svg'" /></picture></div>
+        </div>
+        <div class="svc-list">
+          <article class="svc-entry is-active">
+            <span class="svc-num">01</span>
+            <h3 data-i18n="h_s1_t">Residential</h3>
+            <p data-i18n="h_s1_d">Climate-smart homes designed for comfort and low running costs.</p>
+          </article>
+          <article class="svc-entry">
+            <span class="svc-num">02</span>
+            <h3 data-i18n="h_s2_t">Villas</h3>
+            <p data-i18n="h_s2_d">Bespoke villas blending modern luxury with Libyan and Mediterranean identity.</p>
+          </article>
+          <article class="svc-entry">
+            <span class="svc-num">03</span>
+            <h3 data-i18n="h_s3_t">Commercial</h3>
+            <p data-i18n="h_s3_d">Offices, retail and hospitality spaces that are efficient and inviting.</p>
+          </article>
+          <article class="svc-entry">
+            <span class="svc-num">04</span>
+            <h3 data-i18n="h_s4_t">Industrial</h3>
+            <p data-i18n="h_s4_d">Warehouses and facilities engineered for durability and performance.</p>
+          </article>
+          <article class="svc-entry">
+            <span class="svc-num">05</span>
+            <h3 data-i18n="h_s5_t">Heritage &amp; Restoration</h3>
+            <p data-i18n="h_s5_d">Sensitive restoration and adaptive reuse of historic buildings.</p>
+          </article>
+          <article class="svc-entry">
+            <span class="svc-num">06</span>
+            <h3 data-i18n="h_s6_t">Urban Planning</h3>
+            <p data-i18n="h_s6_d">Master plans and city-centre regeneration rooted in cultural identity.</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -231,7 +241,7 @@
   <script src="js/i18n.js"></script>
   <script src="js/home-i18n.js"></script>
   <script src="js/mission-i18n.js"></script>
-  <script src="js/reveal.js?v=2"></script>
+  <script src="js/reveal.js?v=3"></script>
   <script src="js/chatbot.js"></script>
 </body>
 </html>
