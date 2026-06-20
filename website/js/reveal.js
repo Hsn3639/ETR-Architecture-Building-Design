@@ -218,7 +218,26 @@
     (function loop() { step(tools, true); step(soft, false); requestAnimationFrame(loop); })();
   }
 
-  function init() { a11y(); reveal(); header(); menu(); transitions(); scrollFx(); cursorTools(); }
+  /* ---- smart services: sticky image swaps as the list scrolls ---- */
+  function stickyServices() {
+    var entries = Array.prototype.slice.call(document.querySelectorAll(".svc-entry"));
+    var shots = Array.prototype.slice.call(document.querySelectorAll(".svc-shot"));
+    if (!entries.length || !shots.length) return;
+    function setActive(i) {
+      for (var j = 0; j < entries.length; j++) entries[j].classList.toggle("is-active", j === i);
+      for (var k = 0; k < shots.length; k++) shots[k].classList.toggle("is-active", k === i);
+    }
+    if (!("IntersectionObserver" in window)) { entries.forEach(function (e) { e.classList.add("is-active"); }); shots[0].classList.add("is-active"); return; }
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (en.isIntersecting) { var i = entries.indexOf(en.target); if (i >= 0) setActive(i); }
+      });
+    }, { rootMargin: "-50% 0px -50% 0px", threshold: 0 });
+    entries.forEach(function (e) { io.observe(e); });
+    setActive(0);
+  }
+
+  function init() { a11y(); reveal(); header(); menu(); transitions(); scrollFx(); cursorTools(); stickyServices(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
