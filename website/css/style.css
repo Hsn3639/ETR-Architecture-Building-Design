@@ -485,11 +485,11 @@ body.loaded .hero-scroll-cue { opacity: 1; transform: translateX(-50%); transiti
 .hero-emblem-badge {
   display: flex; align-items: center; justify-content: center;
   width: clamp(176px, 23vw, 248px); aspect-ratio: 1; border-radius: 50%;
-  background: rgba(24,20,15,0.88);
-  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  box-shadow: 0 34px 74px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.14) inset, 0 0 0 1px rgba(201,162,62,0.40);
+  background: rgba(20,16,12,0.16);
+  -webkit-backdrop-filter: blur(2.5px); backdrop-filter: blur(2.5px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.22) inset, 0 0 0 1px rgba(201,162,62,0.45);
 }
-.hero-emblem-mark { width: 60%; height: 60%; display: block; opacity: 1; }
+.hero-emblem-mark { width: 60%; height: 60%; display: block; opacity: 1; filter: drop-shadow(0 2px 12px rgba(0,0,0,0.75)); }
 .hero-emblem-name { display: flex; flex-direction: column; align-items: center; gap: 8px; }
 .hero-emblem-word { font-family: var(--head); font-weight: 700; letter-spacing: 0.12em; font-size: clamp(1.9rem, 4.6vw, 3rem); color: #fff; text-shadow: 0 2px 26px rgba(0,0,0,0.6); }
 .hero-emblem-sub { font-family: var(--display); font-size: clamp(0.6rem, 1vw, 0.78rem); letter-spacing: 0.34em; text-transform: uppercase; color: rgba(255,255,255,0.88); text-shadow: 0 1px 14px rgba(0,0,0,0.55); }
