@@ -193,16 +193,16 @@ section { padding: var(--sp) 0; }
    CTA BAND — dark editorial
    ============================================================ */
 /* ---------- Mission / Impact band ---------- */
-.mission { background: var(--charcoal); color: #fff; }
-.mission .section-kicker { color: var(--sand); }
-.mission-h { color: #fff; max-width: 24ch; margin: 12px 0 20px; }
-.mission-p { color: rgba(255,255,255,0.8); max-width: 70ch; font-weight: 300; margin-bottom: 44px; }
-.impact { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.12); margin-bottom: 40px; }
-.impact-item { background: var(--charcoal); padding: 30px 26px; }
-.impact-n { display: block; font-family: var(--display); font-size: 2.5rem; font-weight: 500; color: var(--sand); line-height: 1; }
-.impact-l { display: block; margin-top: 12px; font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 300; }
-.mission .btn-ghost { border-color: rgba(255,255,255,0.5); color: #fff; }
-.mission .btn-ghost:hover { background: #fff; color: var(--charcoal); }
+.mission { background: #ece5d7; color: var(--ink); }
+.mission .section-kicker { color: var(--muted); }
+.mission-h { color: var(--charcoal); max-width: 22ch; margin: 14px 0 22px; }
+.mission-p { color: var(--muted); max-width: 70ch; font-weight: 300; margin-bottom: 56px; }
+.impact { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; background: transparent; border: none; border-top: 1px solid var(--line); margin-bottom: 44px; }
+.impact-item { background: transparent; padding: 30px 0 8px 34px; border-left: 1px solid var(--line); }
+.impact-item:first-child { border-left: none; padding-left: 0; }
+.impact-n { display: block; font-family: var(--head); font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em; color: var(--charcoal); line-height: 1; }
+.impact-l { display: block; margin-top: 14px; font-family: var(--display); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+@media (max-width: 560px) { .impact-item { border-left: none; padding-left: 0; } }
 
 /* ---------- Journal cards ---------- */
 .jr-card .jr-cat { font-family: var(--display); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sand-dk); display: block; margin-bottom: 14px; }
